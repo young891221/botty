@@ -42,8 +42,11 @@ def should_keep(item_data) -> tuple[bool, str]:
 
     """
     for expression in bnip_expressions:
-        if eval(expression.transpiled):
-            return True, expression.raw
+        try:
+            if eval(expression.transpiled):
+                return True, expression.raw
+        except Exception as err:
+            return True, f"Exception occur but keep exceptionInfo= {err=}, {type(err)=}"
     return False, ""
 
 def _gold_pickup(item_data: dict, expression: BNIPExpression) -> bool | None:

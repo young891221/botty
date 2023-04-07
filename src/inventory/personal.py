@@ -214,6 +214,8 @@ def inspect_items(inp_img: np.ndarray = None, close_window: bool = True, game_st
     already_detected_slots = set()
     for count, slot in enumerate(slots):
         failed = False
+        Logger.debug("skip first slot")
+        if ((slot[1] == 0 or slot[1] == 1) and (slot[2] == 0 or slot[2] == 1)) : continue
         # ignore this slot if it lies within the range of a previous item's dimension property
         if (slot[1], slot[2]) in already_detected_slots: continue
         # ignore this slot if it lies within in a previous item's ROI (no dimension property)
@@ -232,6 +234,8 @@ def inspect_items(inp_img: np.ndarray = None, close_window: bool = True, game_st
             Logger.error(f"personal.inspect_items(): Failed to get item properties for slot {slot}")
             failed = True
         if item_box is None:
+            failed = True
+        elif item_box.ocr_result is None:
             failed = True
         else:
             if item_box.ocr_result:

@@ -370,7 +370,7 @@
 //([Name] == Crownshield || [Name] == Royalshield || [Name] == Sacredtarge || [Name] == Sacredrondache) && [Quality] == Magic # [Sockets] == 4 && [Itemfasterblockrate] == 30  // Paladin Jmoe
 //([Name] == Crownshield || [Name] == Royalshield || [Name] == Sacredtarge || [Name] == Sacredrondache) && [Quality] == Magic # [Sockets] == 4 && [Maxhp] >= 60 // Paladin Jmoc
 //([Name] == Crownshield || [Name] == Royalshield || [Name] == Sacredtarge || [Name] == Sacredrondache) && [Quality] == Magic # [Sockets] == 4 && [Itemreqpercent] == -30 // Paladin Jmos
-//[Type] == Voodooheads && [Quality] == Magic && [Class] >= Exceptional && [Flag] != Ethereal # ([Necromancerskills] >= 1 || [Poisonandboneskilltab] >= 1) && [Fbr] >= 30 && [Skillbonespear] == 1
+//[Type] == Voodooheads && [Quality] == Magic && [Class] >= Exceptional && [Flag] != Ethereal # ([Necromancerskills] >= 1 || [Poisonandboneskilltab] >= 1) && [Fbr] >= 30 && [Skillbonespear] >= 1
 
 //------------------------------------------
 //================= Weapons ================
@@ -605,7 +605,7 @@
 //================= Gloves ================
 //-----------------------------------------
 
-[Type] == Gloves && [Quality] == Rare && [Flag] != Ethereal # [Ias] >= 20 && ([Bowandcrossbowskilltab] == 2 || [Passiveandmagicskilltab] == 2 || [Javelinandspearskilltab] == 2 || Martialartsskilltab == 2) && ([Dexterity] >= 10 || [Strength] >= 10 || [Strength]+[Dexterity] >= 20 || [Dexterity] >= 12 && [Coldresist]+[Fireresist]+[Lightresist] >= 10 || [Lifeleech]+[Manaleech] >= 6)
+[Type] == Gloves && [Quality] == Rare && [Flag] != Ethereal # [Ias] >= 20 && ([Bowandcrossbowskilltab] == 2 || [Passiveandmagicskilltab] == 2 || [Javelinandspearskilltab] == 2 || [Martialartsskilltab] == 2) && ([Dexterity] >= 10 || [Strength] >= 10 || [Strength]+[Dexterity] >= 20 || [Dexterity] >= 12 && [Coldresist]+[Fireresist]+[Lightresist] >= 10 || [Lifeleech]+[Manaleech] >= 6)
 [Type] == Gloves && [Quality] == Rare && [Flag] == Ethereal # [Ias] >= 20 && ([Dexterity] >= 12 || [Strength] >= 12) && ([Bowandcrossbowskilltab] == 2 || [Passiveandmagicskilltab] == 2 || [Javelinandspearskilltab] == 2) && [Coldresist]+[Fireresist]+[Lightresist] >= 25 && [Itemreplenishdurability] >= 1
 [Type] == Gloves && [Quality] == Rare && [Flag] == Ethereal # [Enhanceddefense] >= 180 && [Itemreplenishdurability] >= 1 && ([Bowandcrossbowskilltab] == 2 || [Passiveandmagicskilltab] == 2 || [Javelinandspearskilltab] == 2) && ([Ias] >= 10 || [Dexterity]+[Strength] >= 10 || [Coldresist]+[Fireresist]+[Lightresist] >= 20)
 [Type] == Gloves && [Quality] == Rare && [Flag] == Ethereal # [Ias] >= 20 && [Dexterity]+[Strength] >= 20 && ([Coldresist]+[Fireresist]+[Lightresist] >= 35 || [Coldresist]+[Fireresist] >= 40 || [Coldresist]+[Lightresist] >= 40 || [Fireresist]+[Lightresist] >= 40) && [Itemreplenishdurability] >= 1

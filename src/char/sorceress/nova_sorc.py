@@ -88,8 +88,10 @@ class NovaSorc(Sorceress):
         mouse.move(*pos_m, randomize=80, delay_factor=[0.5, 0.7])
         self._cast_static(0.6)
         self._nova(atk_len)
-        self._move_and_attack((50, 25), atk_len)
-        self._move_and_attack((-70, -35), atk_len)
+        #attack more range for safe
+        self._move_and_attack((100, 50), atk_len)
+        self._move_and_attack((-200, -150), atk_len)
+        self._move_and_attack((200, 200), atk_len)
         return True
 
     def kill_summoner(self) -> bool:

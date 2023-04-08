@@ -10,8 +10,8 @@
 //------------------------------------------
 
 [Type] == Gold # [Gold] >= 5000
-[Name] == Scrolloftownportal
-[Name] == Scrollofidentify
+//[Name] == Scrolloftownportal
+//[Name] == Scrollofidentify
 
 //------------------------------------------------
 //================= Unique Charms ================

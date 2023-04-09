@@ -112,6 +112,7 @@ class GameStats:
         else:
             self._consecutive_runs_failed = 0
             Logger.info(f"End game. Elapsed time: {elapsed_time:.2f}s")
+        self._messenger.send_message(f"[End game] Elapsed time: {elapsed_time:.2f}s")
 
     def log_exp(self):
         exp = player_bar.get_experience()

@@ -146,6 +146,7 @@ def stash_all_items(items: list = None):
             Logger.debug("Wanted to stash item, but it's still in inventory. Assumes full stash. Move to next.")
             if Config().general["info_screenshots"]:
                 cv2.imwrite("./log/screenshots/info/debug_info_inventory_not_empty_" + time.strftime("%Y%m%d_%H%M%S") + ".png", grab())
+                messenger.send_message(f"[Inventory Manager] Inventory assumes full stash. Move to next.")
             if Config().char["fill_shared_stash_first"]:
                 stash.set_curr_stash(items = (stash.get_curr_stash()["items"] - 1))
             else:

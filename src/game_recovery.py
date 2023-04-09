@@ -5,10 +5,12 @@ import keyboard
 from ui_manager import ScreenObjects, is_visible
 from ui import view, loading
 from utils.misc import set_d2r_always_on_top
+from messages import Messenger
 
 class GameRecovery:
     def __init__(self, death_manager: DeathManager):
         self._death_manager = death_manager
+        self._messenger = Messenger()
 
     def go_to_hero_selection(self):
         set_d2r_always_on_top()
@@ -30,7 +32,9 @@ class GameRecovery:
                 return True
             # would have been too easy, maybe we have died?
             if self._death_manager.handle_death_screen():
-                time.sleep(1)
+                sleep_minute = 60 * 5
+                self._messenger.send_message(f"[Death Manager] wait time={sleep_minute}s")
+                time.sleep(sleep_minute)
                 continue
             # check for save/exit button
             if is_visible(ScreenObjects.SaveAndExit):

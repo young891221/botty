@@ -756,8 +756,8 @@
 //[Name] == Crystalsword && [Quality] == Normal && [Flag] != Ethereal # [Sockets] == 0           // Plain
 //[Name] == Flail && [Quality] == Normal && [Flag] != Ethereal # [Sockets] == 0          // Plain
 //[Name] == Phaseblade && [Quality] == Normal && [Flag] != Ethereal # [Sockets] == 0          // Plain
-//[Name] == Warscepter && [Quality] == Normal && [Flag] != Ethereal # ([Skillblessedhammer] >= 3 || [Skillconviction] >= 3 || [Skillfistoftheheavens] >= 3 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3) && [Sockets] == 0          // Plain
-//[Name] == Divinescepter && [Quality] == Normal && [Flag] != Ethereal # ([Skillblessedhammer] >= 3 || [Skillconviction] >= 3 || [Skillfistoftheheavens] >= 3 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3) && [Sockets] == 0          // Plain
+[Name] == Warscepter && [Quality] == Normal && [Flag] != Ethereal # ([Skillblessedhammer] >= 2 || [Skillconviction] >= 2 || [Skillfistoftheheavens] >= 2 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3) && [Sockets] == 0          // Plain
+[Name] == Divinescepter && [Quality] == Normal && [Flag] != Ethereal # ([Skillblessedhammer] >= 2 || [Skillconviction] >= 2 || [Skillfistoftheheavens] >= 2 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3) && [Sockets] == 0          // Plain
 //[Name] == Crypticsword && [Quality] == Normal && [Flag] != Ethereal # [Sockets] == 0    // Plain
 //[Name] == Mythicalsword && [Quality] == Normal && [Flag] != Ethereal # [Sockets] == 0    // Plain
 
@@ -766,8 +766,8 @@
 [Name] == Crystalsword && [Quality] == Superior && [Flag] != Ethereal # [Sockets] == 0 && [Enhanceddamage] >= 10           // Plain Superior
 [Name] == Flail && [Quality] == Superior && [Flag] != Ethereal # [Sockets] == 0 && [Enhanceddamage] >= 10           // Plain Superior
 [Name] == Phaseblade && [Quality] == Superior && [Flag] != Ethereal # [Sockets] == 0 && [Enhanceddamage] >= 10           // Plain Superior
-[Name] == Warscepter && [Quality] == Superior && [Flag] != Ethereal # [Sockets] == 0 && ([Skillblessedhammer] >= 3 || [Skillconviction] >= 3 || [Skillfistoftheheavens] >= 3 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3) && [Enhanceddamage] >= 0           // Plain Superior
-[Name] == Divinescepter && [Quality] == Superior && [Flag] != Ethereal # [Sockets] == 0 && ([Skillblessedhammer] >= 3 || [Skillconviction] >= 3 || [Skillfistoftheheavens] >= 3 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3) && [Enhanceddamage] >= 0           // Plain Superior
+[Name] == Warscepter && [Quality] == Superior && [Flag] != Ethereal # [Sockets] == 0 && ([Skillblessedhammer] >= 2 || [Skillconviction] >= 2 || [Skillfistoftheheavens] >= 2 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3) && [Enhanceddamage] >= 0           // Plain Superior
+[Name] == Divinescepter && [Quality] == Superior && [Flag] != Ethereal # [Sockets] == 0 && ([Skillblessedhammer] >= 2 || [Skillconviction] >= 2 || [Skillfistoftheheavens] >= 2 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3) && [Enhanceddamage] >= 0           // Plain Superior
 [Name] == Caduceus && [Quality] == Superior && [Flag] != Ethereal # [Sockets] == 0 && ([Skillblessedhammer] >= 3 || [Skillconviction] >= 3 || [Skillfistoftheheavens] >= 3 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3) && [Enhanceddamage] >= 0           // Plain Superior
 [Name] == Crypticsword && [Quality] == Superior && [Flag] != Ethereal # [Sockets] == 0 && [Enhanceddamage] >= 10           // Plain Superior
 [Name] == Mythicalsword && [Quality] == Superior && [Flag] != Ethereal # [Sockets] == 0 && [Enhanceddamage] >= 10           // Plain Superior
@@ -777,8 +777,8 @@
 [Name] == Crystalsword && [Quality] == Normal && [Flag] != Ethereal # [Sockets] == 5          // Socketed
 //[Name] == Flail && [Quality] == Normal && [Flag] != Ethereal # [Sockets] >= 4          // Socketed
 [Name] == Phaseblade && [Quality] == Normal && [Flag] != Ethereal # [Sockets] == 5          // Socketed
-//[Name] == Warscepter && [Quality] == Normal && [Flag] != Ethereal # ([Skillblessedhammer] >= 3 || [Skillconviction] >= 3 || [Skillfistoftheheavens] >= 3 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3) && [Sockets] == 5          // Socketed
-//[Name] == Divinescepter && [Quality] == Normal && [Flag] != Ethereal # ([Skillblessedhammer] >= 3 || [Skillconviction] >= 3 || [Skillfistoftheheavens] >= 3 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3) && [Sockets] == 5          // Socketed
+[Name] == Warscepter && [Quality] == Normal && [Flag] != Ethereal # ([Skillblessedhammer] >= 2 || [Skillconviction] >= 2 || [Skillfistoftheheavens] >= 2 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3) && [Sockets] == 5          // Socketed
+[Name] == Divinescepter && [Quality] == Normal && [Flag] != Ethereal # ([Skillblessedhammer] >= 2 || [Skillconviction] >= 2 || [Skillfistoftheheavens] >= 2 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3) && [Sockets] == 5          // Socketed
 //[Name] == Caduceus && [Quality] == Normal && [Flag] != Ethereal # ([Skillblessedhammer] >= 3 || [Skillconviction] >= 3 || [Skillfistoftheheavens] >= 3 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3)          // Socketed
 //[Name] == Caduceus && [Quality] == Normal && [Flag] != Ethereal # ([Skillblessedhammer] >= 3 || [Skillconviction] >= 3 || [Skillfistoftheheavens] >= 3 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3) && [Sockets] == 5          // Socketed
 [Name] == Crypticsword && [Quality] == Normal && [Flag] != Ethereal # [Sockets] == 3           // Socketed
@@ -789,8 +789,8 @@
 [Name] == Crystalsword && [Quality] == Superior && [Flag] != Ethereal # [Sockets] >= 4 && [Enhanceddamage] >= 10          // Socketed Superiro
 [Name] == Flail && [Quality] == Superior && [Flag] != Ethereal # [Sockets] >= 4 && [Enhanceddamage] >= 14           // Socketed Superior
 [Name] == Phaseblade && [Quality] == Superior && [Flag] != Ethereal # [Sockets] >= 5 && [Enhanceddamage] >= 10          // Socketed Superior
-[Name] == Warscepter && [Quality] == Superior && [Flag] != Ethereal # ([Skillblessedhammer] >= 3 || [Skillconviction] >= 3 || [Skillfistoftheheavens] >= 3 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3) && [Sockets] == 5 && [Enhanceddamage] >= 0          // Socketed Superior
-[Name] == Divinescepter && [Quality] == Superior && [Flag] != Ethereal # ([Skillblessedhammer] >= 3 || [Skillconviction] >= 3 || [Skillfistoftheheavens] >= 3 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3) && [Sockets] == 5 && [Enhanceddamage] >= 0          // Socketed Superior
+//[Name] == Warscepter && [Quality] == Superior && [Flag] != Ethereal # ([Skillblessedhammer] >= 3 || [Skillconviction] >= 3 || [Skillfistoftheheavens] >= 3 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3) && [Sockets] == 5 && [Enhanceddamage] >= 0          // Socketed Superior
+//[Name] == Divinescepter && [Quality] == Superior && [Flag] != Ethereal # ([Skillblessedhammer] >= 3 || [Skillconviction] >= 3 || [Skillfistoftheheavens] >= 3 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3) && [Sockets] == 5 && [Enhanceddamage] >= 0          // Socketed Superior
 [Name] == Caduceus && [Quality] == Superior && [Flag] != Ethereal # ([Skillblessedhammer] >= 3 || [Skillconviction] >= 3 || [Skillfistoftheheavens] >= 3 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3) && [Sockets] == 5 && [Enhanceddamage] >= 0          // Socketed Superior
 [Name] == Crypticsword && [Quality] == Superior && [Flag] != Ethereal # [Sockets] == 3           // Socketed Superior
 [Name] == Mythicalsword && [Quality] == Superior && [Flag] != Ethereal # [Sockets] == 3           // Socketed Superior
@@ -800,8 +800,8 @@
 [Name] == Crystalsword && ([Quality] == Normal || [Quality] == Superior) && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 4)          // Socketed Eth
 [Name] == Flail && ([Quality] == Normal || [Quality] == Superior) && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 4)          // Socketed Eth
 [Name] == Phaseblade && ([Quality] == Normal || [Quality] == Superior) && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 5)          // Socketed Eth
-[Name] == Warscepter && ([Quality] == Normal || [Quality] == Superior) && [Flag] == Ethereal # ([Skillblessedhammer] >= 3 || [Skillconviction] >= 3 || [Skillfistoftheheavens] >= 3 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3) && ([Sockets] == 0 || [Sockets] == 5)          // Socketed Eth
-[Name] == Divinescepter && ([Quality] == Normal || [Quality] == Superior) && [Flag] == Ethereal # ([Skillblessedhammer] >= 3 || [Skillconviction] >= 3 || [Skillfistoftheheavens] >= 3 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3) && ([Sockets] == 0 || [Sockets] == 5)          // Socketed Eth
+[Name] == Warscepter && ([Quality] == Normal || [Quality] == Superior) && [Flag] == Ethereal # ([Skillblessedhammer] >= 2 || [Skillconviction] >= 2 || [Skillfistoftheheavens] >= 2 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3) && ([Sockets] == 0 || [Sockets] == 5)          // Socketed Eth
+[Name] == Divinescepter && ([Quality] == Normal || [Quality] == Superior) && [Flag] == Ethereal # ([Skillblessedhammer] >= 2 || [Skillconviction] >= 2 || [Skillfistoftheheavens] >= 2 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3) && ([Sockets] == 0 || [Sockets] == 5)          // Socketed Eth
 [Name] == Caduceus && ([Quality] == Normal || [Quality] == Superior) && [Flag] == Ethereal # ([Skillblessedhammer] >= 3 || [Skillconviction] >= 3 || [Skillfistoftheheavens] >= 3 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3) && ([Sockets] == 0 || [Sockets] == 5)          // Socketed Eth
 [Name] == Crypticsword && ([Quality] == Normal || [Quality] == Superior) && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] == 3)           // Socketed Eth
 [Name] == Mythicalsword && ([Quality] == Normal || [Quality] == Superior) && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] == 3)           // Socketed Eth

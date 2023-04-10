@@ -17,8 +17,8 @@
 //================= Unique Charms ================
 //------------------------------------------------
 
-//[Name] == Grandcharm && [Quality] == Unique     // Gheed's Fortune
-//[Name] == Smallcharm && [Quality] == Unique     // Annihilus Charm
+[Name] == Grandcharm && [Quality] == Unique     // Gheed's Fortune
+[Name] == Smallcharm && [Quality] == Unique     // Annihilus Charm
 
 //------------------------------------------
 //================= Potions ================
@@ -100,27 +100,27 @@
 //[Name] == Chippedsapphire
 //[Name] == Chippedskull
 //[Name] == Chippedtopaz
-//[Name] == Flawedamethyst
+[Name] == Flawedamethyst
 //[Name] == Flaweddiamond
 //[Name] == Flawedemerald
-//[Name] == Flawedruby
-//[Name] == Flawedsapphire
+[Name] == Flawedruby
+[Name] == Flawedsapphire
 //[Name] == Flawedskull
-//[Name] == Flawedtopaz
-//[Name] == Amethyst
+[Name] == Flawedtopaz
+[Name] == Amethyst
 //[Name] == Diamond
 //[Name] == Emerald
 //[Name] == Ruby
 //[Name] == Skull
 //[Name] == Sapphire
 //[Name] == Topaz
-//[Name] == Flawlessamethyst
-//[Name] == Flawlessdiamond
-//[Name] == Flawlessemerald
-//[Name] == Flawlessruby
-//[Name] == Flawlesssapphire
-//[Name] == Flawlessskull
-//[Name] == Flawlesstopaz
+[Name] == Flawlessamethyst
+[Name] == Flawlessdiamond
+[Name] == Flawlessemerald
+[Name] == Flawlessruby
+[Name] == Flawlesssapphire
+[Name] == Flawlessskull
+[Name] == Flawlesstopaz
 [Name] == Perfectamethyst
 [Name] == Perfectdiamond
 [Name] == Perfectemerald

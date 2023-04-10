@@ -191,6 +191,7 @@ class Bot:
             self.stop()
         else:
             Logger.info("Shut down botty")
+            self._messenger.send_message("Shut down botty")
             safe_exit()
 
     def current_game_length(self):

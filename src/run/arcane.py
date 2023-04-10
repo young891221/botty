@@ -49,6 +49,9 @@ class Arcane:
         match_platform = template_finder.search_and_wait(templates_platform, threshold=0.55, timeout=0.5, use_grayscale=True)
         match_summoner = template_finder.search_and_wait(tempaltes_summoner, threshold=0.79, timeout=0.5, use_grayscale=True)
         if not match_platform.valid and not match_summoner.valid:
+            Logger.info("[Arcane] _find_summoner not matching")
+            #prevent death
+            self._char.kill_summoner()
             # We might have arrived at summoner, move up stairs with static traverse
             self._pather.traverse_nodes_fixed(traverse_to_summoner, self._char)
             # try to match summoner again

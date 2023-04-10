@@ -12,6 +12,9 @@ from config import Config
 from screen import convert_abs_to_monitor, convert_monitor_to_screen, convert_screen_to_monitor, grab
 import keyboard
 import os
+from messages import Messenger
+
+messenger = Messenger()
 
 def open(img: np.ndarray = None) -> np.ndarray:
     img = grab() if img is None else img
@@ -109,6 +112,7 @@ def update_pot_needs():
         except TypeError:
             Logger.error("Could not find potions in belt. Most likely due to \"show_belt\" in params.ini having the incorrect hotkey.")
             Logger.error("Closing in 10 seconds..")
+            messenger.send_message("Could not find potions in belt. Most likely due to \"show_belt\" in params.ini having the incorrect hotkey.")
             wait(10)
             os._exit(1)
         if potion_type and potion_type != "empty":

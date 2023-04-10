@@ -8,6 +8,7 @@ from utils.misc import wait
 from pather import Location
 from screen import convert_abs_to_monitor
 from config import Config
+from target_detect import get_visible_targets, TargetInfo, log_targets
 
 
 class NovaSorc(Sorceress):
@@ -106,6 +107,208 @@ class NovaSorc(Sorceress):
         self._nova(Config().char["atk_len_arc"] * 0.5)
         return True
 
+    def kill_diablo(self) -> bool:
+        ### APPROACH ###
+        ### ATTACK ###
+        pos_m = convert_abs_to_monitor((0, 0))
+        mouse.move(*pos_m, randomize=80, delay_factor=[0.5, 0.7])
+        Logger.debug("Attacking Diablo at position 1/1")
+        self._cast_static(0.6)
+        self._move_and_attack((60, 30), Config().char["atk_len_diablo"])
+        self._move_and_attack((-60, -30), Config().char["atk_len_diablo"])
+        wait(0.1, 0.15)
+        self._move_and_attack((0, 0), Config().char["atk_len_diablo"])
+        ### LOOT ###
+        self._picked_up_items |= self._pickit.pick_up_items(self)
+        return True
+
+    def kill_deseis(self, seal_layout:str) -> bool:
+        if seal_layout == "B1-S":
+            ### APPROACH ###
+            self._pather.traverse_nodes_fixed("dia_b1s_seal_deseis", self) # quite aggressive path, but has high possibility of directly killing De Seis with first hammers, for 50% of his spawn locations
+            nodes1 = [632]
+            nodes2 = [631]
+            nodes3 = [632]
+            ### ATTACK ###
+            Logger.debug(seal_layout + ": Attacking De Seis at position 1/4")
+            if not Config().char['cs_mob_detect'] or get_visible_targets():
+                pos_m = convert_abs_to_monitor((0, 0))
+                mouse.move(*pos_m, randomize=80, delay_factor=[0.5, 0.7])
+                self._cast_static(0.6)
+                self._move_and_attack((30, 15), Config().char["atk_len_diablo_deseis"] * 0.2)
+                self._move_and_attack((-30, -15), Config().char["atk_len_diablo_deseis"] * 0.2)
+            Logger.debug(seal_layout + ": Attacking De Seis at position 2/4")
+            self._pather.traverse_nodes(nodes1, self, timeout=3)
+            if not Config().char['cs_mob_detect'] or get_visible_targets():
+                self._cast_static(0.6)
+                self._move_and_attack((30, 15), Config().char["atk_len_diablo_deseis"] * 0.2)
+                self._move_and_attack((-30, -15), Config().char["atk_len_diablo_deseis"] * 0.2)
+            Logger.debug(seal_layout + ": Attacking De Seis at position 3/4")
+            self._pather.traverse_nodes(nodes2, self, timeout=3)
+            if not Config().char['cs_mob_detect'] or get_visible_targets():
+                self._cast_static(0.6)
+                self._move_and_attack((0, 0), Config().char["atk_len_diablo_deseis"] * 0.4)
+            Logger.debug(seal_layout + ": Attacking De Seis at position 4/4")
+            self._pather.traverse_nodes(nodes3, self, timeout=3)
+            if not Config().char['cs_mob_detect'] or get_visible_targets():
+                self._cast_static(0.6)
+                self._move_and_attack((0, 0), Config().char["atk_len_diablo_deseis"])  # no factor, so merc is not reset by teleport and he his some time to move & kill stray bosses
+                wait(0.1, 0.2)
+            if self._skill_hotkeys["redemption"]:
+                keyboard.send(self._skill_hotkeys["redemption"])
+                wait(2.5, 3.5) # to keep redemption on for a couple of seconds before the next teleport to have more corpses cleared & increase chance to find next template
+                Logger.debug(seal_layout + ": Waiting with Redemption active to clear more corpses.")
+            #if Config().general["info_screenshots"]: cv2.imwrite(f"./log/screenshots/info/info_check_deseis_dead" + seal_layout + "_" + time.strftime("%Y%m%d_%H%M%S") + ".png", grab())
+            ### LOOT ###
+            self._picked_up_items |= self._pickit.pick_up_items(self)
+
+        elif seal_layout == "B2-U":
+            ### APPROACH ###
+            self._pather.traverse_nodes_fixed("dia_b2u_644_646", self) # We try to breaking line of sight, sometimes makes De Seis walk into the hammercloud. A better attack sequence here could make sense.
+            #self._pather.traverse_nodes_fixed("dia_b2u_seal_deseis", self) # We try to breaking line of sight, sometimes makes De Seis walk into the hammercloud. A better attack sequence here could make sense.
+            nodes1 = [640]
+            nodes2 = [646]
+            nodes3 = [641]
+            ### ATTACK ###
+            Logger.debug(seal_layout + ": Attacking De Seis at position 1/4")
+            if not Config().char['cs_mob_detect'] or get_visible_targets():
+                pos_m = convert_abs_to_monitor((0, 0))
+                mouse.move(*pos_m, randomize=80, delay_factor=[0.5, 0.7])
+                self._cast_static(0.6)
+                self._move_and_attack((30, 15), Config().char["atk_len_diablo_deseis"] * 0.2)
+                self._move_and_attack((-30, -15), Config().char["atk_len_diablo_deseis"] * 0.2)
+            Logger.debug(seal_layout + ": Attacking De Seis at position 2/4")
+            self._pather.traverse_nodes(nodes1, self, timeout=3)
+            if not Config().char['cs_mob_detect'] or get_visible_targets():
+                self._cast_static(0.6)
+                self._move_and_attack((30, 15), Config().char["atk_len_diablo_deseis"] * 0.2)
+                self._move_and_attack((-30, -15), Config().char["atk_len_diablo_deseis"] * 0.2)
+            Logger.debug(seal_layout + ": Attacking De Seis at position 3/4")
+            self._pather.traverse_nodes(nodes2, self, timeout=3)
+            if not Config().char['cs_mob_detect'] or get_visible_targets():
+                self._cast_static(0.6)
+                self._move_and_attack((0, 0), Config().char["atk_len_diablo_deseis"] * 0.4)
+            Logger.debug(seal_layout + ": Attacking De Seis at position 4/4")
+            self._pather.traverse_nodes(nodes3, self, timeout=3)
+            if not Config().char['cs_mob_detect'] or get_visible_targets():
+                self._cast_static(0.6)
+                self._move_and_attack((0, 0), Config().char["atk_len_diablo_deseis"])  # no factor, so merc is not reset by teleport and he his some time to move & kill stray bosses
+                wait(0.1, 0.2)
+                self._move_and_attack((0, 0), Config().char["atk_len_diablo_deseis"] * 0.3)
+                if self._skill_hotkeys["redemption"]:
+                    keyboard.send(self._skill_hotkeys["redemption"])
+                    wait(0.3, 0.6)
+            #if Config().general["info_screenshots"]: cv2.imwrite(f"./log/screenshots/info/info_check_deseis_dead" + seal_layout + "_" + time.strftime("%Y%m%d_%H%M%S") + ".png", grab())
+            ### LOOT ###
+            self._picked_up_items |= self._pickit.pick_up_items(self)
+            if not self._pather.traverse_nodes([641], self): return False # , timeout=3):
+            if not self._pather.traverse_nodes([646], self): return False # , timeout=3):
+            self._picked_up_items |= self._pickit.pick_up_items(self)
+            if not self._pather.traverse_nodes([646], self): return False # , timeout=3):
+            if not self._pather.traverse_nodes([640], self): return False # , timeout=3):
+            self._picked_up_items |= self._pickit.pick_up_items(self)
+
+        else:
+            Logger.warning(seal_layout + ": Invalid location for kill_deseis("+ seal_layout +"), should not happen.")
+            return False
+        return True
+
+    def kill_infector(self, seal_layout:str) -> bool:
+        if seal_layout == "C1-F":
+            ### APPROACH ###
+            self._pather.traverse_nodes_fixed("dia_c1f_652", self)
+            ### ATTACK ###
+            pos_m = convert_abs_to_monitor((0, 0))
+            mouse.move(*pos_m, randomize=80, delay_factor=[0.5, 0.7])
+            Logger.debug(seal_layout + ": Attacking Infector at position 1/1")
+            self._cast_static(0.6)
+            self._move_and_attack((30, 15), Config().char["atk_len_diablo_infector"] * 0.2)
+            self._move_and_attack((30, -15), Config().char["atk_len_diablo_infector"] * 0.3)
+            wait(0.1, 0.15)
+            ### LOOT ###
+            self._picked_up_items |= self._pickit.pick_up_items(self)
+        elif seal_layout == "C2-G":
+            # NOT killing infector here, because for C2G its the only seal where a bossfight occures BETWEEN opening seals his attack sequence can be found in C2-G_seal2
+            Logger.debug(seal_layout + ": No need for attacking Infector at position 1/1 - he was killed during clearing the seal")
+
+        else:
+            Logger.warning(seal_layout + ": Invalid location for kill_infector("+ seal_layout +"), should not happen.")
+            return False
+        return True
+
+    def kill_vizier(self, seal_layout:str) -> bool:
+        if seal_layout == "A1-L":
+            ### APPROACH ###
+            if not self._pather.traverse_nodes([612], self): return False # , timeout=3):
+            ### ATTACK ###
+            Logger.debug(seal_layout + ": Attacking Vizier at position 1/2")
+            if not Config().char['cs_mob_detect'] or get_visible_targets():
+                pos_m = convert_abs_to_monitor((0, 0))
+                mouse.move(*pos_m, randomize=80, delay_factor=[0.5, 0.7])
+                self._cast_static(0.6)
+                self._move_and_attack((30, 15), Config().char["atk_len_diablo_vizier"] * 0.3)
+                self._move_and_attack((-30, -15), Config().char["atk_len_diablo_vizier"] * 0.3)
+            Logger.debug(seal_layout + ": Attacking Vizier at position 2/2")
+            self._pather.traverse_nodes([611], self, timeout=3)
+            if not Config().char['cs_mob_detect'] or get_visible_targets():
+                self._cast_static(0.6)
+                self._move_and_attack((30, 15), Config().char["atk_len_diablo_vizier"] * 0.3)
+                self._move_and_attack((-30, -15), Config().char["atk_len_diablo_vizier"]) # no factor, so merc is not reset by teleport and he his some time to move & kill stray bosses
+                if self._skill_hotkeys["cleansing"]:
+                    keyboard.send(self._skill_hotkeys["cleansing"])
+                    wait(0.1, 0.2)
+                if self._skill_hotkeys["redemption"]:
+                    keyboard.send(self._skill_hotkeys["redemption"])
+                    wait(0.3, 0.6)
+                wait(0.3, 1.2)
+            ### LOOT ###
+            self._picked_up_items |= self._pickit.pick_up_items(self)
+            if not self._pather.traverse_nodes([612], self): return False # , timeout=3):
+            if self._skill_hotkeys["redemption"]:
+                keyboard.send(self._skill_hotkeys["redemption"])
+                wait(0.3, 0.6)
+            self._picked_up_items |= self._pickit.pick_up_items(self)
+            if not self._pather.traverse_nodes([612], self): return False # , timeout=3): # recalibrate after loot
+
+        elif seal_layout == "A2-Y":
+            ### APPROACH ###
+            if not self._pather.traverse_nodes([627, 622], self): return False # , timeout=3):
+            ### ATTACK ###
+            Logger.debug(seal_layout + ": Attacking Vizier at position 1/2")
+            if not Config().char['cs_mob_detect'] or get_visible_targets():
+                pos_m = convert_abs_to_monitor((0, 0))
+                mouse.move(*pos_m, randomize=80, delay_factor=[0.5, 0.7])
+                self._cast_static(0.6)
+                self._move_and_attack((30, 15), Config().char["atk_len_diablo_vizier"] * 0.3)
+                self._move_and_attack((-30, -15), Config().char["atk_len_diablo_vizier"] * 0.3)
+            Logger.debug(seal_layout + ": Attacking Vizier at position 2/2")
+            self._pather.traverse_nodes([623], self, timeout=3)
+            if not Config().char['cs_mob_detect'] or get_visible_targets():
+                self._cast_static(0.6)
+                self._move_and_attack((30, 15), Config().char["atk_len_diablo_vizier"] * 0.3)
+                self._move_and_attack((-30, -15), Config().char["atk_len_diablo_vizier"] * 0.3)
+            Logger.debug(seal_layout + ": Attacking Vizier at position 3/3")
+            if not self._pather.traverse_nodes([624], self): return False
+            if not Config().char['cs_mob_detect'] or get_visible_targets():
+                self._cast_static(0.6)
+                self._move_and_attack((30, 15), Config().char["atk_len_diablo_vizier"] * 0.3)
+                self._move_and_attack((-30, -15), Config().char["atk_len_diablo_vizier"])
+                wait(0.1, 0.15)
+                if self._skill_hotkeys["redemption"]:
+                    keyboard.send(self._skill_hotkeys["redemption"])
+                    wait(0.3, 0.6)
+            ### LOOT ###
+            self._picked_up_items |= self._pickit.pick_up_items(self)
+            if not self._pather.traverse_nodes([624], self): return False
+            if not self._pather.traverse_nodes_fixed("dia_a2y_hop_622", self): return False
+            Logger.debug(seal_layout + ": Hop!")
+            if not self._pather.traverse_nodes([622], self): return False #, timeout=3):
+            self._picked_up_items |= self._pickit.pick_up_items(self)
+            if not self._pather.traverse_nodes([622], self): return False # , timeout=3): #recalibrate after loot
+        else:
+            Logger.warning(seal_layout + ": Invalid location for kill_deseis("+ seal_layout +"), should not happen.")
+            return False
+        return True
 
 if __name__ == "__main__":
     import os

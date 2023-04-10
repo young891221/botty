@@ -154,10 +154,6 @@ class NovaSorc(Sorceress):
                 self._cast_static(0.6)
                 self._move_and_attack((0, 0), Config().char["atk_len_diablo_deseis"])  # no factor, so merc is not reset by teleport and he his some time to move & kill stray bosses
                 wait(0.1, 0.2)
-            if self._skill_hotkeys["redemption"]:
-                keyboard.send(self._skill_hotkeys["redemption"])
-                wait(2.5, 3.5) # to keep redemption on for a couple of seconds before the next teleport to have more corpses cleared & increase chance to find next template
-                Logger.debug(seal_layout + ": Waiting with Redemption active to clear more corpses.")
             #if Config().general["info_screenshots"]: cv2.imwrite(f"./log/screenshots/info/info_check_deseis_dead" + seal_layout + "_" + time.strftime("%Y%m%d_%H%M%S") + ".png", grab())
             ### LOOT ###
             self._picked_up_items |= self._pickit.pick_up_items(self)
@@ -195,9 +191,6 @@ class NovaSorc(Sorceress):
                 self._move_and_attack((0, 0), Config().char["atk_len_diablo_deseis"])  # no factor, so merc is not reset by teleport and he his some time to move & kill stray bosses
                 wait(0.1, 0.2)
                 self._move_and_attack((0, 0), Config().char["atk_len_diablo_deseis"] * 0.3)
-                if self._skill_hotkeys["redemption"]:
-                    keyboard.send(self._skill_hotkeys["redemption"])
-                    wait(0.3, 0.6)
             #if Config().general["info_screenshots"]: cv2.imwrite(f"./log/screenshots/info/info_check_deseis_dead" + seal_layout + "_" + time.strftime("%Y%m%d_%H%M%S") + ".png", grab())
             ### LOOT ###
             self._picked_up_items |= self._pickit.pick_up_items(self)
@@ -254,19 +247,10 @@ class NovaSorc(Sorceress):
                 self._cast_static(0.6)
                 self._move_and_attack((30, 15), Config().char["atk_len_diablo_vizier"] * 0.3)
                 self._move_and_attack((-30, -15), Config().char["atk_len_diablo_vizier"]) # no factor, so merc is not reset by teleport and he his some time to move & kill stray bosses
-                if self._skill_hotkeys["cleansing"]:
-                    keyboard.send(self._skill_hotkeys["cleansing"])
-                    wait(0.1, 0.2)
-                if self._skill_hotkeys["redemption"]:
-                    keyboard.send(self._skill_hotkeys["redemption"])
-                    wait(0.3, 0.6)
                 wait(0.3, 1.2)
             ### LOOT ###
             self._picked_up_items |= self._pickit.pick_up_items(self)
             if not self._pather.traverse_nodes([612], self): return False # , timeout=3):
-            if self._skill_hotkeys["redemption"]:
-                keyboard.send(self._skill_hotkeys["redemption"])
-                wait(0.3, 0.6)
             self._picked_up_items |= self._pickit.pick_up_items(self)
             if not self._pather.traverse_nodes([612], self): return False # , timeout=3): # recalibrate after loot
 
@@ -294,9 +278,6 @@ class NovaSorc(Sorceress):
                 self._move_and_attack((30, 15), Config().char["atk_len_diablo_vizier"] * 0.3)
                 self._move_and_attack((-30, -15), Config().char["atk_len_diablo_vizier"])
                 wait(0.1, 0.15)
-                if self._skill_hotkeys["redemption"]:
-                    keyboard.send(self._skill_hotkeys["redemption"])
-                    wait(0.3, 0.6)
             ### LOOT ###
             self._picked_up_items |= self._pickit.pick_up_items(self)
             if not self._pather.traverse_nodes([624], self): return False
@@ -673,9 +654,6 @@ class NovaSorc(Sorceress):
                 if not self._pather.traverse_nodes([612], self): return False # , timeout=3):
                 ### ATTACK ###
                 if not Config().char['cs_mob_detect'] or get_visible_targets():
-                    if self._skill_hotkeys["redemption"]:
-                        keyboard.send(self._skill_hotkeys["redemption"])
-                        wait(0.3, 0.6)
                     pos_m = convert_abs_to_monitor((0, 0))
                     mouse.move(*pos_m, randomize=80, delay_factor=[0.5, 0.7])
                     self._cast_static(0.6)
@@ -702,9 +680,7 @@ class NovaSorc(Sorceress):
                 self._picked_up_items |= self._pickit.pick_up_items(self)
                 if not self._pather.traverse_nodes([614], self): return False
                 ### ATTACK ###
-                if self._skill_hotkeys["redemption"]:
-                    keyboard.send(self._skill_hotkeys["redemption"])
-                    wait(0.3, 0.6)
+                self._move_and_attack((-30, -15), Config().char["atk_len_cs_trashmobs"] * 0.4)
                 ### LOOT ###
                 # we loot at boss
 
@@ -712,6 +688,7 @@ class NovaSorc(Sorceress):
                 ### APPROACH ###
                 if not self._pather.traverse_nodes([613, 615], self): return False # , timeout=3):
                 ### ATTACK ###
+                self._move_and_attack((-30, -15), Config().char["atk_len_cs_trashmobs"] * 0.4)
                 ### LOOT ###
                 # we loot at boss
 
@@ -727,9 +704,6 @@ class NovaSorc(Sorceress):
                 if not self._pather.traverse_nodes([622], self): return False
                 wait(1)#give merc the chance to activate holy freeze
                 if not Config().char['cs_mob_detect'] or get_visible_targets():
-                    if self._skill_hotkeys["redemption"]:
-                        keyboard.send(self._skill_hotkeys["redemption"])
-                        wait(0.3, 0.6)
                     ### ATTACK ###
                     pos_m = convert_abs_to_monitor((0, 0))
                     mouse.move(*pos_m, randomize=80, delay_factor=[0.5, 0.7])

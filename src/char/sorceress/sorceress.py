@@ -10,11 +10,14 @@ import time
 from pather import Pather
 from config import Config
 from ui_manager import ScreenObjects, is_visible
+from item.pickit import PickIt #for Diablo
 
 class Sorceress(IChar):
-    def __init__(self, skill_hotkeys: dict, pather: Pather):
+    def __init__(self, skill_hotkeys: dict, pather: Pather, pickit: PickIt):
         super().__init__(skill_hotkeys)
         self._pather = pather
+        self._pickit = pickit #for Diablo
+        self._picked_up_items = False #for Diablo
 
     def pick_up_item(self, pos: tuple[float, float], item_name: str = None, prev_cast_start: float = 0):
         if self._skill_hotkeys["telekinesis"] and any(x in item_name for x in ['potion', 'misc_gold', 'tp_scroll']):

@@ -315,9 +315,11 @@
 //------------------------------------------
 
 // <<<<<<<<< [ Magic Jewels ] >>>>>>>>>
-[Name] == Jewel && [Quality] == Magic # [Enhanceddamage] >= 35 && ([Ias] == 15 || [Itemreqpercent] <= -15 || [Fireresist] >= 30 || [Mindamage] >= 10 || [Maxdamage] >= 15)		// Ruby Jewel Of X
+[Name] == Jewel && [Quality] == Magic # [Ias] >= 15
+[Name] == Jewel && [Quality] == Magic # [Enhanceddamage] >= 35
+//[Name] == Jewel && [Quality] == Magic # [Enhanceddamage] >= 35 && ([Ias] == 15 || [Itemreqpercent] <= -15 || [Fireresist] >= 30 || [Mindamage] >= 10 || [Maxdamage] >= 15)		// Ruby Jewel Of X
 [Name] == Jewel && [Quality] == Magic # [Fireresist]+[Coldresist]+[Lightresist]+[Poisonresist] >= 60 && [Ias] >= 15		// Scintillating Jewel Of Fervor
-[Name] == Jewel && [Quality] == Magic # [Tohit] >= 100 && [Ias] >= 15		// Argent Jewel Of Fervor
+//[Name] == Jewel && [Quality] == Magic # [Tohit] >= 100 && [Ias] >= 15		// Argent Jewel Of Fervor
 [Name] == Jewel && [Quality] == Magic # [Maxdamage] >= 30		// Vermilion Jewel Of Carnage
 [Name] == Jewel && [Quality] == Magic # [Maxdamage] >= 15 && ([Itemreqpercent] <= -15 || [Ias] >= 15)		// Vermilion Jewel Of X
 [Name] == Jewel && [Quality] == Magic # [Mindamage] >= 8 && [Maxdamage] >= 15	// Crimson Jewel Of Carnage

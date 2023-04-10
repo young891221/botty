@@ -9,7 +9,9 @@ from logger import Logger
 from utils.custom_mouse import mouse
 from ui_manager import center_mouse, is_visible, select_screen_object_match, wait_until_visible, ScreenObjects
 from inventory import personal, common, stash
+from messages import Messenger
 
+messenger = Messenger()
 gamble_count = 0
 gamble_status = False
 
@@ -44,6 +46,7 @@ def repair() -> bool:
     select_screen_object_match(repair_btn)
     if wait_until_visible(ScreenObjects.NotEnoughGold, 1).valid:
         Logger.warning("Couldn't repair--out of gold. Continue.")
+        messenger.send_message("Couldn't repair--out of gold. Continue.")
         keyboard.send("esc")
         return False
     return True

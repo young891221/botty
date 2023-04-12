@@ -385,10 +385,10 @@
 ([Name] == Club || [Name] == Spikedclub) && [Quality] == Magic # [Warcriesskilltab] >= 3 && [Strength] > 0
 
 // <<<<<<<<< [ Magic Scepters ] >>>>>>>>>
-//[Type] == Scepter && [Quality] == Magic # [Paladinskills]+[Skillblessedhammer] >= 5 && ([Skillconcentration] >= 3 || [Fcr] >= 10 && [Skillconcentration] >= 2)
-//[Type] == Scepter && [Quality] == Magic # [Paladinskills]+[Skillfistoftheheavens] >= 5 && ([Skillconviction] >= 3 || [Fcr] >= 10 && [Skillconviction] >= 2)
-//[Type] == Scepter && [Quality] == Magic # [Palicombatskilltab]+[Skillblessedhammer] >= 6 && ([Skillconcentration] >= 3 || [Fcr] >= 10 && [Skillconcentration] >= 2)
-//[Type] == Scepter && [Quality] == Magic # [Palicombatskilltab]+[Skillfistoftheheavens] >= 6 && ([Skillconviction] >= 3 || [Fcr] >= 10 && [Skillconviction] >= 2)
+[Type] == Scepter && [Quality] == Magic # [Paladinskills]+[Skillblessedhammer] >= 5 && ([Skillconcentration] >= 3 || [Fcr] >= 10 && [Skillconcentration] >= 2)
+[Type] == Scepter && [Quality] == Magic # [Paladinskills]+[Skillfistoftheheavens] >= 5 && ([Skillconviction] >= 3 || [Fcr] >= 10 && [Skillconviction] >= 2)
+[Type] == Scepter && [Quality] == Magic # [Palicombatskilltab]+[Skillblessedhammer] >= 6 && ([Skillconcentration] >= 3 || [Fcr] >= 10 && [Skillconcentration] >= 2)
+[Type] == Scepter && [Quality] == Magic # [Palicombatskilltab]+[Skillfistoftheheavens] >= 6 && ([Skillconviction] >= 3 || [Fcr] >= 10 && [Skillconviction] >= 2)
 
 // <<<<<<<<< [ Magic Sorceress Orbs ] >>>>>>>>>
 //[Type] == Orb && [Quality] == Magic # [Sorceressskills]+[Skilllightning] >= 5 && ([Fcr] >= 20 && [Skilllightningmastery] >= 1 || [Skilllightningmastery] >= 3)     // Light Orb
@@ -426,7 +426,7 @@
 //================= Gloves =================
 //------------------------------------------
 
-//[Type] == Gloves && [Quality] == Magic && [Flag] != Ethereal # [Ias] >= 20 && ([Javelinandspearskilltab] == 3 || [Bowandcrossbowskilltab] == 3 || [Martialartsskilltab] == 3)     // 3/20 Gloves
+[Type] == Gloves && [Quality] == Magic && [Flag] != Ethereal # [Ias] >= 20 && ([Javelinandspearskilltab] == 3 || [Bowandcrossbowskilltab] == 3 || [Martialartsskilltab] == 3)     // 3/20 Gloves
 
 //========================================================================//
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<< Rare Items >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//

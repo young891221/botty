@@ -105,8 +105,10 @@ def _single_template_match(template: Template, inp_img: np.ndarray = None, roi: 
     if not (img.shape[0] > template_img.shape[0] and img.shape[1] > template_img.shape[1]):
         Logger.error(f"Image shape and template shape are incompatible: {template.name}. Image: {img.shape}, Template: {template_img.shape}, roi: {roi}")
     else:
+        # 원본이미지와 타겟이미지의 유사정도 체크하여 반환
         res = cv2.matchTemplate(img, template_img, cv2.TM_CCOEFF_NORMED, mask = template.alpha_mask)
         np.nan_to_num(res, copy=False, nan=0.0, posinf=0.0, neginf=0.0)
+        # 유사정도의 최소/최대값을 찾음.
         _, max_val, _, max_pos = cv2.minMaxLoc(res)
 
         # save rectangle corresponding to matched region

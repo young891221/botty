@@ -330,7 +330,7 @@
 
 // <<<<<<<<< [ Magic Amulets ] >>>>>>>>>
 //[Name] == Amulet && [Quality] == Magic # [Itemchargedskill] == 54		// Tele Amulet
-//[Type] == Amulet && [Quality] == Magic # [Itemaddskilltab] >= 3 && ([Fcr] >= 10 || [Itemmagicbonus] >= 35)        // +3 Skill Fcr/Mf Amulet
+[Type] == Amulet && [Quality] == Magic # [Itemaddskilltab] >= 3 && ([Fcr] >= 10 || [Itemmagicbonus] >= 35)        // +3 Skill Fcr/Mf Amulet
 
 //-------------------------------------------
 //================= Circlets ================
@@ -442,7 +442,7 @@
 
 // <<<<<<<<< [ Rare Caster Amulet ] >>>>>>>>>
 //[Type] == Amulet && [Quality] == Rare # [Itemaddclassskills] >= 2 && [Fcr] >= 10        // All 2/10 Amulets
-[Type] == Amulet && [Quality] == Rare # [Itemaddclassskills] == 2 && [Fcr] == 10 && ([Strength]+[Maxhp]+[Maxmana] >= 60 || [Dexterity]+[Maxhp]+[Maxmana] >= 60 || [Strength]+[Dexterity]+[Maxhp] >= 50 || [Strength]+[Dexterity]+[Maxmana] >= 55)		// Fcr Stat Amulet
+[Type] == Amulet && [Quality] == Rare # [Itemaddclassskills] == 2 && [Fcr] >= 10 && ([Strength]+[Maxhp]+[Maxmana] >= 60 || [Dexterity]+[Maxhp]+[Maxmana] >= 60 || [Strength]+[Dexterity]+[Maxhp] >= 50 || [Strength]+[Dexterity]+[Maxmana] >= 55)		// Fcr Stat Amulet
 //[Type] == Amulet && [Quality] == Rare # [Druidskills] == 2 && [Fcr] == 10 && ([Strength] >= 10 || [Dexterity] >= 10 || [Strength]+[Dexterity] >= 20) && ([Maxhp] >= 30 || [Maxmana] >= 50 || [Itemmagicbonus] >= 25 || [Fireresist]+[Lightresist]+[Coldresist]+[Poisonresist] >= 30)
 //[Type] == Amulet && [Quality] == Rare # [Barbarianskills] == 2 && [Fcr] == 10 && ([Strength] >= 10 || [Dexterity] >= 10 || [Strength]+[Dexterity] >= 20) && ([Maxhp] >= 30 || [Maxmana] >= 50 || [Itemmagicbonus] >= 25 || [Fireresist]+[Lightresist]+[Coldresist]+[Poisonresist] >= 30)
 //[Type] == Amulet && [Quality] == Rare # [Necromancerskills] == 2 && [Fcr] == 10 && ([Strength] >= 10 || [Dexterity] >= 10 || [Strength]+[Dexterity] >= 20) && ([Maxhp] >= 30 || [Maxmana] >= 50 || [Itemmagicbonus] >= 25 || [Fireresist]+[Lightresist]+[Coldresist]+[Poisonresist] >= 30)
@@ -462,7 +462,7 @@
 [Type] == Amulet && [Quality] == Rare # [Itemaddskilltab] >= 2 && ([Maxhp] >= 25 || [Maxmana] >= 60 || [Fireresist]+[Lightresist]+[Coldresist]+[Poisonresist] >= 20 || [Itemdamagetomana] >= 12)
 
 // <<<<<<<<< [ Rare Rings ] >>>>>>>>>
-[Type] == Ring && [Quality] == Rare # [Fcr] >= 10 && [Strength] >= 15 && [Dexterity] >= 10 && ([Maxmana] >= 65 || [Hpregen] >= 5 || [Maxhp] >= 20 || [Fireresist]+[Lightresist]+[Coldresist]+[Poisonresist] >= 30)     // Caster Ring
+[Type] == Ring && [Quality] == Rare # [Fcr] >= 10 && ([Maxmana] >= 65 || [Hpregen] >= 5 || [Maxhp] >= 20 || [Fireresist]+[Lightresist]+[Coldresist]+[Poisonresist] >= 30)     // Caster Ring
 [Type] == Ring && [Quality] == Rare # [Tohit] >= 100 && [Lifeleech]+[Manaleech] >= 9      // Melee Dual Leech Ring
 [Type] == Ring && [Quality] == Rare # [Tohit] >= 100 && [Strength] >= 15 && [Dexterity] >= 10 && ([Maxhp] >= 30 || [Fireresist]+[Lightresist]+[Coldresist]+[Poisonresist] >= 30)      // Melee Dual Stat Ring
 [Type] == Ring && [Quality] == Rare # [Tohit] >= 100 && ([Mindamage] > 7 || [Maxdamage] > 9) && ([Strength]+[Dexterity] >= 10 || [Maxhp] >= 30 || [Fireresist]+[Lightresist]+[Coldresist]+[Poisonresist] >= 20)      // Bva Ring

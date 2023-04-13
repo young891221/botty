@@ -394,7 +394,8 @@ class Bot:
                 return self.trigger_or_stop("end_game", failed=True)
 
         # Gamble if needed
-        while vendor.get_gamble_status() and Config().char["gamble_items"]:
+        #while vendor.get_gamble_status() and Config().char["gamble_items"]:
+        while Config().char["gamble_items"]:
             Logger.debug("Head to gamble")
             self._curr_loc = self._town_manager.gamble(self._curr_loc)
             items = vendor.gamble()

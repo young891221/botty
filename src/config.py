@@ -24,6 +24,7 @@ class Config:
     ui_pos = {}
     routes = {}
     routes_order = []
+    terror_routes = []
     char = {}
     colors = {}
     shop = {}
@@ -153,6 +154,8 @@ class Config:
             self.routes[key] = True
         # Botty only knows "run_shenk" but in orders we split run_eldritch and run_eldritch_shenk
         self.routes_order = ["run_shenk" if x in ["run_eldritch", "run_eldritch_shenk"] else x for x in self.routes_order]
+
+        self.terror_routes = [x.strip() for x in self._select_val("routes", "terror_routes").split(",")]
 
         self.char = {
             "type": self._select_val("char", "type"),

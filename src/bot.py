@@ -149,6 +149,14 @@ class Bot:
         ]
         self.machine = Machine(model=self, states=self._states, initial="initialization", transitions=self._transitions, queued=True)
         self._transmute = Transmute(self._game_stats)
+        self._do_runs_prev = []
+        self._terror_zones = [
+            { 'trigger': ['Foothills', 'Frigid', 'Highlands'], 'target': "run_shenk"},
+            { 'trigger': ['Travincal'], 'target': "run_trav"},
+            { 'trigger': ['Nihlathak', 'Temple Halls'], 'target': "run_nihlathak"},
+            { 'trigger': ['Arcane'], 'target': "run_arcane"},
+            { 'trigger': ['Chaos'], 'target': "run_diablo"},
+        ]
 
 
     def draw_graph(self):
@@ -428,9 +436,19 @@ class Bot:
             check_known_errors = False,
             correct_words = False,
         )[0]
-        msg += f": {ocr_result.text.splitlines()}"
-        Logger.debug(f"[Terrorized] msg={msg}")
-        #change self._do_runs
+        Logger.debug(f"[Terrorized] read_msg={ocr_result.text.splitlines()}")
+        terror_zone = False
+        for msg_zone in ocr_result.text.splitlines():
+            for terror_zone in self._terror_zones:
+                if terror_zone.trigger[msg_zone]:
+                    self._do_runs_prev = self._do_runs
+                    self._do_runs = {terror_zone.target: True}
+                    terror_zone = True
+                    Logger.debug(f"[Terrorized] run={terror_zone.target}")
+
+        if not terror_zone and self._do_runs_prev:
+            self._do_runs = self._do_runs_prev
+            self._do_runs_prev = []
 
         # Start a new run
         started_run = False

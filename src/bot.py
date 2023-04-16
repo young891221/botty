@@ -408,11 +408,10 @@ class Bot:
 
         # Check Terrorized
         #when first time && one hour
-        #tab key
         keyboard.send("tab")
-        #grab
+        wait(0.5, 0.1)
         img = grab()
-        #read terror zone
+        keyboard.send("tab")
         x, y, w, h = Config().ui_roi["terror_zone_msg"]
         msg=""
         ocr_result = ocr.image_to_text(
@@ -429,11 +428,9 @@ class Bot:
             check_known_errors = False,
             correct_words = False,
         )[0]
-        msg += f": {ocr_result.text.splitlines()[0]}"
+        msg += f": {ocr_result.text.splitlines()}"
         Logger.debug(f"[Terrorized] msg={msg}")
         #change self._do_runs
-        #tab key
-        keyboard.send("tab")
 
         # Start a new run
         started_run = False

@@ -11,7 +11,7 @@ from collections import OrderedDict
 
 from health_manager import set_pause_state
 from transmute import Transmute
-from utils.misc import wait, hms
+from utils.misc import wait, hms, cut_roi
 from utils.restart import safe_exit, restart_game
 from game_stats import GameStats
 from logger import Logger
@@ -35,6 +35,7 @@ from char.basic_ranged import Basic_Ranged
 from ui_manager import wait_until_hidden, wait_until_visible, ScreenObjects, is_visible, detect_screen_object
 from ui import meters, skills, view, character_select, main_menu
 from inventory import personal, vendor, belt, common
+from d2r_image import ocr
 
 from run import Pindle, ShenkEld, Trav, Nihlathak, Arcane, Diablo
 from town import TownManager, A1, A2, A3, A4, A5, town_manager
@@ -404,6 +405,35 @@ class Bot:
                 common.close()
             if not self._curr_loc:
                 return self.trigger_or_stop("end_game", failed=True)
+
+        # Check Terrorized
+        #when first time && one hour
+        #tab key
+        keyboard.send("tab")
+        #grab
+        img = grab()
+        #read terror zone
+        x, y, w, h = Config().ui_roi["terror_zone_msg"]
+        msg=""
+        ocr_result = ocr.image_to_text(
+            images = cut_roi(img, [x, y, w, h]),
+            model = "hover-eng_inconsolata_inv_th_fast",
+            psm = 6,
+            scale = 1.2,
+            crop_pad = False,
+            erode = False,
+            invert = False,
+            threshold = 0,
+            digits_only = False,
+            fix_regexps = False,
+            check_known_errors = False,
+            correct_words = False,
+        )[0]
+        msg += f": {ocr_result.text.splitlines()[0]}"
+        Logger.debug(f"[Terrorized] msg={msg}")
+        #change self._do_runs
+        #tab key
+        keyboard.send("tab")
 
         # Start a new run
         started_run = False

@@ -289,6 +289,41 @@ class Bot:
             else:
                 Logger.error("Failed to detect if /nopickup command was applied or not")
 
+        # Check Terrorized
+        #when first time && one hour
+        keyboard.send("tab")
+        wait(0.5, 0.1)
+        img = grab()
+        keyboard.send("tab")
+        x, y, w, h = Config().ui_roi["terror_zone_msg"]
+        ocr_result = ocr.image_to_text(
+            images = cut_roi(img, [x, y, w, h]),
+            model = "hover-eng_inconsolata_inv_th_fast",
+            psm = 6,
+            scale = 1.2,
+            crop_pad = False,
+            erode = False,
+            invert = False,
+            threshold = 0,
+            digits_only = False,
+            fix_regexps = False,
+            check_known_errors = False,
+            correct_words = False,
+        )[0]
+        Logger.debug(f"[Terrorized] read_msg={ocr_result.text.splitlines()}")
+        terror_zone = False
+        for msg_zone in ocr_result.text.splitlines():
+            for terror_zone in self._terror_zones:
+                if msg_zone in terror_zone["trigger"]:
+                    self._do_runs_prev = self._do_runs
+                    self._do_runs = {terror_zone.target: True}
+                    terror_zone = True
+                    Logger.debug(f"[Terrorized] run={terror_zone.target}")
+        if not terror_zone and self._do_runs_prev:
+            Logger.debug(f"[Terrorized] prev run={self._do_runs_prev}")
+            self._do_runs = self._do_runs_prev
+            self._do_runs_prev = []
+
         self._game_stats.log_exp()
 
         self.trigger_or_stop("maintenance")
@@ -413,43 +448,6 @@ class Bot:
                 common.close()
             if not self._curr_loc:
                 return self.trigger_or_stop("end_game", failed=True)
-
-        # Check Terrorized
-        #when first time && one hour
-        keyboard.send("tab")
-        wait(0.5, 0.1)
-        img = grab()
-        keyboard.send("tab")
-        x, y, w, h = Config().ui_roi["terror_zone_msg"]
-        msg=""
-        ocr_result = ocr.image_to_text(
-            images = cut_roi(img, [x, y, w, h]),
-            model = "hover-eng_inconsolata_inv_th_fast",
-            psm = 6,
-            scale = 1.2,
-            crop_pad = False,
-            erode = False,
-            invert = False,
-            threshold = 0,
-            digits_only = False,
-            fix_regexps = False,
-            check_known_errors = False,
-            correct_words = False,
-        )[0]
-        Logger.debug(f"[Terrorized] read_msg={ocr_result.text.splitlines()}")
-        terror_zone = False
-        for msg_zone in ocr_result.text.splitlines():
-            for terror_zone in self._terror_zones:
-                if msg_zone in terror_zone["trigger"]:
-                    self._do_runs_prev = self._do_runs
-                    self._do_runs = {terror_zone.target: True}
-                    terror_zone = True
-                    Logger.debug(f"[Terrorized] run={terror_zone.target}")
-
-        if not terror_zone and self._do_runs_prev:
-            Logger.debug(f"[Terrorized] prev run={self._do_runs_prev}")
-            self._do_runs = self._do_runs_prev
-            self._do_runs_prev = []
 
         # Start a new run
         started_run = False

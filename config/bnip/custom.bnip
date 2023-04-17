@@ -55,6 +55,8 @@
 [Name] >= Helrune && [Name] <= Zodrune
 [Name] == Ralrune
 [Name] == Talrune
+[Name] == Nefrune
+[Name] == Tirrune
 //[Name] == Elrune
 //[Name] == Eldrune
 //[Name] == Tirrune
@@ -95,7 +97,7 @@
 
 //[Name] == Chippedamethyst
 //[Name] == Chippeddiamond
-//[Name] == Chippedemerald
+[Name] == Chippedemerald
 //[Name] == Chippedruby
 //[Name] == Chippedsapphire
 //[Name] == Chippedskull

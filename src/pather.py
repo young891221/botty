@@ -14,6 +14,7 @@ from screen import convert_screen_to_monitor, convert_abs_to_screen, convert_abs
 import template_finder
 from char import IChar
 from ui_manager import detect_screen_object, ScreenObjects, is_visible, select_screen_object_match, get_closest_non_hud_pixel
+from ui import view
 
 class Location:
     # A5 Town
@@ -504,7 +505,8 @@ class Pather:
         if not char.capabilities.can_teleport_natively:
             error_msg = "Teleport is required for static pathing"
             Logger.error(error_msg)
-            raise ValueError(error_msg)
+            view.save_and_exit()
+            #raise ValueError(error_msg)
         char.pre_move()
         if type(key) == str:
             path = Config().path[key]

@@ -1,46 +1,45 @@
-from transitions import Machine
-import time
-import keyboard
-import time
+import math
 import os
 import random
-import cv2
-import math
-from copy import copy
+import time
 from collections import OrderedDict
+from copy import copy
 
-from health_manager import set_pause_state
-from transmute import Transmute
-from utils.misc import wait, hms, cut_roi
-from utils.restart import safe_exit, restart_game
-from game_stats import GameStats
-from logger import Logger
-from config import Config
-from screen import grab
+import cv2
+import keyboard
+from d2r_image import ocr
+from transitions import Machine
+
 import template_finder
 from char import IChar
-from item.pickit import PickIt
-from item import consumables
-from pather import Pather, Location
-from char.sorceress import LightSorc, BlizzSorc, NovaSorc,HydraSorc
-from char.trapsin import Trapsin
-from char.paladin.hammerdin import Hammerdin
-from char.paladin import FoHdin
 from char.barbarian import Barbarian
-from char.necro import Necro
-from char.poison_necro import Poison_Necro
-from char.bone_necro import Bone_Necro
 from char.basic import Basic
 from char.basic_ranged import Basic_Ranged
-from ui_manager import wait_until_hidden, wait_until_visible, ScreenObjects, is_visible, detect_screen_object
-from ui import meters, skills, view, character_select, main_menu
+from char.bone_necro import Bone_Necro
+from char.necro import Necro
+from char.paladin import FoHdin
+from char.paladin.hammerdin import Hammerdin
+from char.poison_necro import Poison_Necro
+from char.sorceress import LightSorc, BlizzSorc, NovaSorc, HydraSorc
+from char.trapsin import Trapsin
+from config import Config
+from game_stats import GameStats
+from health_manager import set_pause_state
 from inventory import personal, vendor, belt, common
-from d2r_image import ocr
-
-from run import Pindle, ShenkEld, Trav, Nihlathak, Arcane, Diablo
-from town import TownManager, A1, A2, A3, A4, A5, town_manager
-
+from item import consumables
+from item.pickit import PickIt
+from logger import Logger
 from messages import Messenger
+from pather import Pather, Location
+from run import Pindle, ShenkEld, Trav, Nihlathak, Arcane, Diablo
+from screen import grab
+from town import TownManager, A1, A2, A3, A4, A5, town_manager
+from transmute import Transmute
+from ui import meters, skills, view, character_select, main_menu
+from ui_manager import wait_until_hidden, wait_until_visible, ScreenObjects, is_visible
+from utils.misc import wait, hms, cut_roi
+from utils.restart import safe_exit, restart_game
+
 
 class Bot:
 
@@ -97,7 +96,7 @@ class Bot:
             "run_shenk": Config().routes.get("run_eldritch") or Config().routes.get("run_eldritch_shenk"),
             "run_nihlathak": Config().routes.get("run_nihlathak"),
             "run_arcane": Config().routes.get("run_arcane"),
-            "run_diablo": Config().routes.get("run_diablo"),
+            #"run_diablo": Config().routes.get("run_diablo"),
         }
         # Adapt order to the config
         self._do_runs = OrderedDict((k, self._do_runs[k]) for k in Config().routes_order if k in self._do_runs and self._do_runs[k])
@@ -320,7 +319,7 @@ class Bot:
                             self._do_runs_prev = self._do_runs
                             self._do_runs = {terror_zone["target"]: True}
                             terror_zone = True
-                            Logger.info(f"[Terrorized] run={terror_zone.target}")
+                            Logger.info(f'[Terrorized] run={terror_zone["target"]}')
                             break
             if not terror_zone and self._do_runs_prev:
                 Logger.info(f"[Terrorized] prev run={self._do_runs_prev}")

@@ -318,7 +318,7 @@ class Bot:
                         if msg_zone.find(trigger) != -1:
                             Logger.debug(f"[Terrorized] match msg_zone={msg_zone}, trigger={trigger}")
                             self._do_runs_prev = self._do_runs
-                            self._do_runs = {terror_zone.target: True}
+                            self._do_runs = {terror_zone["target"]: True}
                             terror_zone = True
                             Logger.info(f"[Terrorized] run={terror_zone.target}")
                             break

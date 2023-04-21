@@ -8,7 +8,7 @@ from town.town_manager import TownManager
 from utils.misc import wait
 from dataclasses import dataclass
 from chest import Chest
-from ui import waypoint
+from ui import waypoint, view
 from health_manager import set_pause_state
 
 class Arcane:
@@ -34,7 +34,9 @@ class Arcane:
         Logger.info("Run Arcane")
         set_pause_state(True)
         if not self._char.capabilities.can_teleport_natively:
-            raise ValueError("Arcane requires teleport")
+            Logger.error("Arcane requires teleport")
+            view.save_and_exit()
+            #raise ValueError("Arcane requires teleport")
         if not self._town_manager.open_wp(start_loc):
             return False
         wait(0.4)

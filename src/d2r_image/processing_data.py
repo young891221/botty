@@ -105,3 +105,4 @@ class Runeword(Enum):
     Wisdom = 'WISDOM'
     Wrath = 'WRATH'
     Zephyr = 'ZEPHYR'
+    ANEVILFORCE = 'ANEVILFORCE'

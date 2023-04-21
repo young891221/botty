@@ -41,6 +41,9 @@ def should_keep(item_data) -> tuple[bool, str]:
             str: The raw expression to use for the keep condition.
 
     """
+    if str(item_data["Name"]) == "ANEVILFORCE":
+        return True, "Keep ANEVILFORCE"
+
     for expression in bnip_expressions:
         try:
             if eval(expression.transpiled):

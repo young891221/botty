@@ -57,6 +57,7 @@
 [Name] == Talrune
 [Name] == Nefrune
 [Name] == Tirrune
+[Name] == Solrune
 //[Name] == Elrune
 //[Name] == Eldrune
 //[Name] == Tirrune
@@ -624,7 +625,7 @@
 //----------------------------------------------
 
 // <<<<<<<<< [ Non-Ethereal Non-Socketed Armor ] >>>>>>>>>
-//[Name] == Archonplate && [Quality] == Normal && [Flag] != Ethereal # [Sockets] == 0          // Plain
+[Name] == Archonplate && [Quality] == Normal && [Flag] != Ethereal # [Sockets] == 0 && [Defense] >= 520          // Plain
 //[Name] == Duskshroud && [Quality] == Normal && [Flag] != Ethereal # [Sockets] == 0          // Plain
 [Name] == Mageplate && [Quality] == Normal && [Flag] != Ethereal # [Sockets] == 0 && [Defense] >= 260        // Plain
 //[Name] == Greathauberk && [Quality] == Normal && [Flag] != Ethereal # [Sockets] == 0          // Plain
@@ -635,9 +636,9 @@
 [Name] == Sacredarmor && [Quality] == Normal && [Flag] != Ethereal # [Sockets] == 0          // Plain
 
 // <<<<<<<<< [ Non-Ethereal Socketed Armor ] >>>>>>>>>
-//[Name] == Archonplate && [Quality] == Normal && [Flag] != Ethereal # [Sockets] >= 3          // Socketed
+[Name] == Archonplate && [Quality] == Normal && [Flag] != Ethereal # [Sockets] >= 3 && [Defense] >= 520      // Socketed
 //[Name] == Duskshroud && [Quality] == Normal && [Flag] != Ethereal # [Sockets] >= 3          // Socketed
-//[Name] == Mageplate && [Quality] == Normal && [Flag] != Ethereal # [Sockets] >= 3          // Socketed
+[Name] == Mageplate && [Quality] == Normal && [Flag] != Ethereal # [Sockets] >= 3 && [Defense] >= 260          // Socketed
 //[Name] == Greathauberk && [Quality] == Normal && [Flag] != Ethereal # [Sockets] >= 3          // Socketed
 //[Name] == Wirefleece && [Quality] == Normal && [Flag] != Ethereal # [Sockets] >= 3          // Socketed
 //[Name] == Scarabhusk && [Quality] == Normal && [Flag] != Ethereal # [Sockets] >= 3          // Socketed
@@ -657,7 +658,7 @@
 //[Name] == Sacredarmor && [Quality] == Superior && [Flag] != Ethereal # [Sockets] == 0 && [Enhanceddefense] >= 10           // Plain Superior
 
 // <<<<<<<<< [ Non-Ethereal Superior Socketed Armor ] >>>>>>>>>
-[Name] == Archonplate && [Quality] == Superior && [Flag] != Ethereal # [Enhanceddefense] >= 10 && [Sockets] >= 3          // Socketed Sup
+[Name] == Archonplate && [Quality] == Superior && [Flag] != Ethereal # [Enhanceddefense] >= 8 && [Sockets] >= 3          // Socketed Sup
 [Name] == Duskshroud && [Quality] == Superior && [Flag] != Ethereal # [Enhanceddefense] >= 10 && [Sockets] >= 3          // Socketed Sup
 [Name] == Mageplate && [Quality] == Superior && [Flag] != Ethereal # [Enhanceddefense] >= 10 && [Sockets] >= 3          // Socketed Sup
 [Name] == Greathauberk && [Quality] == Superior && [Flag] != Ethereal # [Enhanceddefense] >= 10 && [Sockets] >= 3          // Socketed Sup

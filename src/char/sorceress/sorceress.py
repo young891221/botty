@@ -1,4 +1,5 @@
 import keyboard
+import cv2
 from typing import Callable
 from utils.custom_mouse import mouse
 from char import IChar
@@ -11,6 +12,9 @@ from pather import Pather
 from config import Config
 from ui_manager import ScreenObjects, is_visible
 from item.pickit import PickIt #for Diablo
+from utils.misc import cut_roi
+from logger import Logger
+from ui import skills
 
 class Sorceress(IChar):
     def __init__(self, skill_hotkeys: dict, pather: Pather, pickit: PickIt):
@@ -70,7 +74,30 @@ class Sorceress(IChar):
 
     def pre_buff(self):
         if Config().char["cta_available"]:
-            self._pre_buff_cta()
+            # Save current skill img
+            skill_before = cut_roi(grab(), Config().ui_roi["skill_right"])
+            # Try to switch weapons and select bo until we find the skill on the right skill slot
+            start = time.time()
+            switch_sucess = False
+            while time.time() - start < 4:
+                keyboard.send(Config().char["weapon_switch"])
+                wait(0.3, 0.35)
+                self._select_skill(skill = "battle_command", mouse_click_type="right", delay=(0.1, 0.2))
+                if skills.is_right_skill_selected(["BC", "BO"]):
+                    switch_sucess = True
+                    break
+
+            if not switch_sucess:
+                Logger.warning("You dont have Battle Command bound, or you do not have CTA. ending CTA buff")
+                Config().char["cta_available"] = 0
+            else:
+                # We switched succesfully, let's pre buff
+                mouse.click(button="right")
+                wait(self._cast_duration + 0.16, self._cast_duration + 0.18)
+                self._select_skill(skill = "battle_orders", mouse_click_type="right", delay=(0.1, 0.2))
+                mouse.click(button="right")
+                wait(self._cast_duration + 0.16, self._cast_duration + 0.18)
+
         if self._skill_hotkeys["energy_shield"]:
             keyboard.send(self._skill_hotkeys["energy_shield"])
             wait(0.1, 0.13)
@@ -86,6 +113,20 @@ class Sorceress(IChar):
             wait(0.1, 0.13)
             mouse.click(button="right")
             wait(self._cast_duration)
+
+        if Config().char["cta_available"]:
+            # Make sure the switch back to the original weapon is good
+            start = time.time()
+            while time.time() - start < 4:
+                keyboard.send(Config().char["weapon_switch"])
+                wait(0.3, 0.35)
+                skill_after = cut_roi(grab(), Config().ui_roi["skill_right"])
+                _, max_val, _, _ = cv2.minMaxLoc(cv2.matchTemplate(skill_after, skill_before, cv2.TM_CCOEFF_NORMED))
+                if max_val > 0.9:
+                    break
+                else:
+                    Logger.warning("Failed to switch weapon, try again")
+                    wait(0.5)
 
     def _cast_static(self, duration: float = 1.4):
         if self._skill_hotkeys["static_field"]:

@@ -488,8 +488,8 @@
 // <<<<<<<<< [ Rare Misc. Circlets ] >>>>>>>>>
 //[Type] == Circlet && [Quality] == Rare # [Itemchargedskill] == 54        // Rare Tele Circlet
 //[Type] == Circlet && [Quality] == Rare # [Barbarianskills] == 2 && [Itemgoldbonus] == 70 && [Sockets] >= 0      // Gf Barb
-//[Type] == Circlet && [Quality] == Rare # [Itemaddclassskills] >= 2 && [Fcr] >= 20 && [Sockets] == 2        // All 2 Class Skills/20/2 Fcr Circlets
-//[Type] == Circlet && [Quality] == Rare # [Itemaddskilltab] >= 2 && [Fcr] >= 20 && [Sockets] == 2        // All 2 Tree Skills/20/2 Fcr Circlets
+[Type] == Circlet && [Quality] == Rare # [Itemaddclassskills] >= 2 && [Fcr] >= 20 && [Sockets] == 2        // All 2 Class Skills/20/2 Fcr Circlets
+[Type] == Circlet && [Quality] == Rare # [Itemaddskilltab] >= 2 && [Fcr] >= 20 && [Sockets] == 2        // All 2 Tree Skills/20/2 Fcr Circlets
 
 // <<<<<<<<< [ Rare Caster Circlets ] >>>>>>>>>
 [Type] == Circlet && [Quality] == Rare # [Druidskills] == 2 && [Fcr] == 20 && ([Dexterity] >= 15 || [Strength] >= 15) && ([Maxhp] >= 30 || [Maxmana] >= 60 || [Fireresist]+[Coldresist]+[Lightresist]+[Poisonresist] >= 60) && [Sockets] >= 0      // Fcr Stat Circlet
@@ -512,13 +512,13 @@
 //------------------------------------------
 
 // <<<<<<<<< [ Elite/Visionary Helms ] >>>>>>>>>
-//[Type] == Helm && [Quality] == Rare && [Class] == Elite && [Flag] == Ethereal # [Itemtohitpercentperlevel] >= 1 && [Sockets] == 2 && [Itemreplenishdurability] >= 1 && ([Enhanceddefense] >= 100 || [Maxhp] >= 20 || [Fhr] == 10 || [Itempoisonlengthresist] == 25 || [Palicombatskilltab] == 2)
-//[Type] == Helm && [Quality] == Rare && [Flag] != Ethereal # [Itemtohitpercentperlevel] >= 1 && [Maxhp] >= 30 && ([Enhanceddefense] >= 100 || [Fhr] == 10 || [Itempoisonlengthresist] == 25 || [Palicombatskilltab] == 2) && [Sockets] == 2
-//[Type] == Helm && [Quality] == Rare && [Flag] != Ethereal # [Itemtohitpercentperlevel] >= 1 && [Fhr] == 10 && ([Enhanceddefense] >= 100 || [Itempoisonlengthresist] == 25 || [Palicombatskilltab] == 2) && [Sockets] == 2
-//[Type] == Helm && [Quality] == Rare && [Flag] != Ethereal # [Itemtohitpercentperlevel] >= 1 && [Enhanceddefense] >= 100 && ([Itempoisonlengthresist] == 25 || [Palicombatskilltab] == 2) && [Sockets] == 2
-//[Type] == Helm && [Quality] == Rare && [Flag] != Ethereal # [Itemtohitpercentperlevel] >= 1 && [Itempoisonlengthresist] == 25 && [Palicombatskilltab] == 2 && [Sockets] == 2
-//[Name] == Bonevisage && [Quality] == Rare # [Itemtohitpercentperlevel] >= 1 && [Itemtohitpercent] >= 5 && [Sockets] == 2
-//[Name] == Corona && [Quality] == Rare # [Itemtohitpercentperlevel] >= 1 && [Itemtohitpercent] >= 5 && [Sockets] == 2
+[Type] == Helm && [Quality] == Rare && [Class] == Elite && [Flag] == Ethereal # [Itemtohitpercentperlevel] >= 1 && [Sockets] == 2 && [Itemreplenishdurability] >= 1 && ([Enhanceddefense] >= 100 || [Maxhp] >= 20 || [Fhr] == 10 || [Itempoisonlengthresist] == 25 || [Palicombatskilltab] == 2)
+[Type] == Helm && [Quality] == Rare && [Flag] != Ethereal # [Itemtohitpercentperlevel] >= 1 && [Maxhp] >= 30 && ([Enhanceddefense] >= 100 || [Fhr] == 10 || [Itempoisonlengthresist] == 25 || [Palicombatskilltab] == 2) && [Sockets] == 2
+[Type] == Helm && [Quality] == Rare && [Flag] != Ethereal # [Itemtohitpercentperlevel] >= 1 && [Fhr] == 10 && ([Enhanceddefense] >= 100 || [Itempoisonlengthresist] == 25 || [Palicombatskilltab] == 2) && [Sockets] == 2
+[Type] == Helm && [Quality] == Rare && [Flag] != Ethereal # [Itemtohitpercentperlevel] >= 1 && [Enhanceddefense] >= 100 && ([Itempoisonlengthresist] == 25 || [Palicombatskilltab] == 2) && [Sockets] == 2
+[Type] == Helm && [Quality] == Rare && [Flag] != Ethereal # [Itemtohitpercentperlevel] >= 1 && [Itempoisonlengthresist] == 25 && [Palicombatskilltab] == 2 && [Sockets] == 2
+[Name] == Bonevisage && [Quality] == Rare # [Itemtohitpercentperlevel] >= 1 && [Itemtohitpercent] >= 5 && [Sockets] == 2
+[Name] == Corona && [Quality] == Rare # [Itemtohitpercentperlevel] >= 1 && [Itemtohitpercent] >= 5 && [Sockets] == 2
 
 // <<<<<<<<< [ Rare Barb Helms ] >>>>>>>>>
 [Type] == Primalhelm && [Quality] == Rare # ([Skillbattleorders] >= 2 && [Warcriesskilltab] == 3 || [Skillbattleorders] == 3 && [Barbarianskills] == 2) && [Sockets] >= 0

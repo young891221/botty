@@ -92,7 +92,7 @@ class NovaSorc(Sorceress):
         #attack more range for safe
         self._move_and_attack((100, 50), atk_len)
         self._move_and_attack((-200, -150), atk_len)
-        self._move_and_attack((200, 200), atk_len)
+        #self._move_and_attack((200, 200), atk_len)
         return True
 
     def kill_summoner(self) -> bool:

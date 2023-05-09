@@ -676,7 +676,7 @@
 [Name] == Wirefleece && [Quality] == Normal && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 3)           // Socketed Eth
 [Name] == Scarabhusk && [Quality] == Normal && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 3)           // Socketed Eth
 [Name] == Wyrmhide && [Quality] == Normal && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 3)           // Socketed Eth
-[Name] == Lightplate && [Quality] == Normal && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 3)           // Socketed Eth
+//[Name] == Lightplate && [Quality] == Normal && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 3)           // Socketed Eth
 [Name] == Sacredarmor && [Quality] == Normal && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] == 4)           // Socketed Eth
 
 // <<<<<<<<< [ Ethereal Superior Socketed/Non-Socketed Armor ] >>>>>>>>>
@@ -687,7 +687,7 @@
 [Name] == Wirefleece && [Quality] == Superior && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 3) && [Enhanceddefense] >= 10          // Socketed Eth Sup
 [Name] == Scarabhusk && [Quality] == Superior && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 3) && [Enhanceddefense] >= 10          // Socketed Eth Sup
 [Name] == Wyrmhide && [Quality] == Superior && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 3) && [Enhanceddefense] >= 10          // Socketed Eth Sup
-[Name] == Lightplate && [Quality] == Superior && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] == 3) && [Enhanceddefense] >= 10           // Socketed Eth Sup
+//[Name] == Lightplate && [Quality] == Superior && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] == 3) && [Enhanceddefense] >= 10           // Socketed Eth Sup
 [Name] == Sacredarmor && [Quality] == Superior && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 4) && [Enhanceddefense] >= 8           // Socketed Eth Sup
 
 //-----------------------------------------------
@@ -768,13 +768,13 @@
 
 // <<<<<<<<< [ Non-Ethereal Superior 1h Non-Socketed Weapons ] >>>>>>>>>
 [Name] == Berserkeraxe && [Quality] == Superior && [Flag] != Ethereal # [Sockets] == 0 && [Enhanceddamage] >= 10           // Plain Superior
-[Name] == Crystalsword && [Quality] == Superior && [Flag] != Ethereal # [Sockets] == 0 && [Enhanceddamage] == 15           // Plain Superior
+//[Name] == Crystalsword && [Quality] == Superior && [Flag] != Ethereal # [Sockets] == 0 && [Enhanceddamage] == 15           // Plain Superior
 [Name] == Flail && [Quality] == Superior && [Flag] != Ethereal # [Sockets] == 0 && [Enhanceddamage] >= 10           // Plain Superior
 [Name] == Phaseblade && [Quality] == Superior && [Flag] != Ethereal # [Sockets] == 0 && [Enhanceddamage] >= 10           // Plain Superior
 [Name] == Warscepter && [Quality] == Superior && [Flag] != Ethereal # [Sockets] == 0 && ([Skillblessedhammer] >= 2 || [Skillconviction] >= 2 || [Skillfistoftheheavens] >= 2 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3) && [Enhanceddamage] >= 0           // Plain Superior
 [Name] == Divinescepter && [Quality] == Superior && [Flag] != Ethereal # [Sockets] == 0 && ([Skillblessedhammer] >= 2 || [Skillconviction] >= 2 || [Skillfistoftheheavens] >= 2 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3) && [Enhanceddamage] >= 0           // Plain Superior
 [Name] == Caduceus && [Quality] == Superior && [Flag] != Ethereal # [Sockets] == 0 && ([Skillblessedhammer] >= 3 || [Skillconviction] >= 3 || [Skillfistoftheheavens] >= 3 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3) && [Enhanceddamage] >= 0           // Plain Superior
-[Name] == Crypticsword && [Quality] == Superior && [Flag] != Ethereal # [Sockets] == 0 && [Enhanceddamage] >= 10           // Plain Superior
+//[Name] == Crypticsword && [Quality] == Superior && [Flag] != Ethereal # [Sockets] == 0 && [Enhanceddamage] >= 10           // Plain Superior
 [Name] == Mythicalsword && [Quality] == Superior && [Flag] != Ethereal # [Sockets] == 0 && [Enhanceddamage] >= 10           // Plain Superior
 
 // <<<<<<<<< [ Non-Ethereal 1h Socketed Weapons ] >>>>>>>>>
@@ -786,7 +786,7 @@
 [Name] == Divinescepter && [Quality] == Normal && [Flag] != Ethereal # ([Skillblessedhammer] >= 2 || [Skillconviction] >= 2 || [Skillfistoftheheavens] >= 2 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3) && [Sockets] == 5          // Socketed
 //[Name] == Caduceus && [Quality] == Normal && [Flag] != Ethereal # ([Skillblessedhammer] >= 3 || [Skillconviction] >= 3 || [Skillfistoftheheavens] >= 3 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3)          // Socketed
 //[Name] == Caduceus && [Quality] == Normal && [Flag] != Ethereal # ([Skillblessedhammer] >= 3 || [Skillconviction] >= 3 || [Skillfistoftheheavens] >= 3 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3) && [Sockets] == 5          // Socketed
-[Name] == Crypticsword && [Quality] == Normal && [Flag] != Ethereal # [Sockets] == 3           // Socketed
+[Name] == Crypticsword && [Quality] == Normal && [Flag] != Ethereal # [Sockets] == 5           // Socketed
 //[Name] == Mythicalsword && [Quality] == Normal && [Flag] != Ethereal # [Sockets] == 3           // Socketed
 
 // <<<<<<<<< [ Non-Ethereal Superior 1h Socketed Weapons ] >>>>>>>>>
@@ -797,7 +797,7 @@
 //[Name] == Warscepter && [Quality] == Superior && [Flag] != Ethereal # ([Skillblessedhammer] >= 3 || [Skillconviction] >= 3 || [Skillfistoftheheavens] >= 3 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3) && [Sockets] == 5 && [Enhanceddamage] >= 0          // Socketed Superior
 //[Name] == Divinescepter && [Quality] == Superior && [Flag] != Ethereal # ([Skillblessedhammer] >= 3 || [Skillconviction] >= 3 || [Skillfistoftheheavens] >= 3 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3) && [Sockets] == 5 && [Enhanceddamage] >= 0          // Socketed Superior
 [Name] == Caduceus && [Quality] == Superior && [Flag] != Ethereal # ([Skillblessedhammer] >= 3 || [Skillconviction] >= 3 || [Skillfistoftheheavens] >= 3 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3) && [Sockets] == 5 && [Enhanceddamage] >= 0          // Socketed Superior
-[Name] == Crypticsword && [Quality] == Superior && [Flag] != Ethereal # [Sockets] == 3           // Socketed Superior
+[Name] == Crypticsword && [Quality] == Superior && [Flag] != Ethereal # [Sockets] == 5           // Socketed Superior
 [Name] == Mythicalsword && [Quality] == Superior && [Flag] != Ethereal # [Sockets] == 3           // Socketed Superior
 
 // <<<<<<<<< [ Ethereal 1h Superior/Non-Superior Socketed/Non-Socketed Weapons ] >>>>>>>>>
@@ -808,7 +808,7 @@
 [Name] == Warscepter && ([Quality] == Normal || [Quality] == Superior) && [Flag] == Ethereal # ([Skillblessedhammer] >= 2 || [Skillconviction] >= 2 || [Skillfistoftheheavens] >= 2 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3) && ([Sockets] == 0 || [Sockets] == 5)          // Socketed Eth
 [Name] == Divinescepter && ([Quality] == Normal || [Quality] == Superior) && [Flag] == Ethereal # ([Skillblessedhammer] >= 2 || [Skillconviction] >= 2 || [Skillfistoftheheavens] >= 2 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3) && ([Sockets] == 0 || [Sockets] == 5)          // Socketed Eth
 [Name] == Caduceus && ([Quality] == Normal || [Quality] == Superior) && [Flag] == Ethereal # ([Skillblessedhammer] >= 3 || [Skillconviction] >= 3 || [Skillfistoftheheavens] >= 3 || [Skillfanaticism] >= 3 || [Skillholyshield] >= 3) && ([Sockets] == 0 || [Sockets] == 5)          // Socketed Eth
-[Name] == Crypticsword && ([Quality] == Normal || [Quality] == Superior) && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] == 3)           // Socketed Eth
+//[Name] == Crypticsword && ([Quality] == Normal || [Quality] == Superior) && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] == 3)           // Socketed Eth
 [Name] == Mythicalsword && ([Quality] == Normal || [Quality] == Superior) && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] == 3)           // Socketed Eth
 
 // <<<<<<<<< [ Ethereal Superior 1h Socketed/Non-Socketed Weapons ] >>>>>>>>>
@@ -885,8 +885,8 @@
 //------------------------------------------------------
 
 // <<<<<<<<< [ Non-Ethereal Superior/Non-Superior Assassin Claws ] >>>>>>>>>
-[Type] == Assassinclaw && [Class] == Elite && ([Quality] == Normal || [Quality] == Superior) && [Flag] != Ethereal # [skillphoenixstrike] >= 1  && [Sockets] == 0 // mozaik
-[Type] == Assassinclaw && [Class] == Elite && ([Quality] == Normal || [Quality] == Superior) && [Flag] != Ethereal # [skillphoenixstrike] >= 1  && [Sockets] == 3 // mozaik
+[Type] == Assassinclaw && [Class] == Elite && ([Quality] == Normal || [Quality] == Superior) && [Flag] != Ethereal # [skillphoenixstrike] >= 2  && [Sockets] == 0 // mozaik
+[Type] == Assassinclaw && [Class] == Elite && ([Quality] == Normal || [Quality] == Superior) && [Flag] != Ethereal # [skillphoenixstrike] >= 2  && [Sockets] == 3 // mozaik
 //[Type] == Assassinclaw && [Class] == Elite && ([Quality] == Normal || [Quality] == Superior) && [Flag] != Ethereal # ([Skilllightningsentry] >= 3 || [Skilldeathsentry] >= 3) && [Sockets] == 0 // Chaos
 //[Type] == Assassinclaw && [Class] == Elite && ([Quality] == Normal || [Quality] == Superior) && [Flag] != Ethereal # ([Skilllightningsentry] >= 3 || [Skilldeathsentry] >= 3) && [Sockets] == 3 // Chaos Socketed
 //[Type] == Assassinclaw && [Class] == Elite && ([Quality] == Normal || [Quality] == Superior) && [Flag] != Ethereal # ([Skillweaponblock] >= 3 || [Skillclawmastery] >= 2 || [Skillfade] >= 2 || [Skillbladeshield] >= 2 || [Skilldragonflight] >= 2 || [Skillmindblast] >= 1) && [Sockets] == 0  // Chaos

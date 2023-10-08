@@ -52,13 +52,13 @@ class Bot:
         # Create Character
         match Config().char["type"]:
             case "sorceress" | "light_sorc":
-                self._char: IChar = LightSorc(Config().light_sorc, self._pather)
+                self._char: IChar = LightSorc(Config().light_sorc, self._pather, self._pickit)
             case "blizz_sorc":
-                self._char: IChar = BlizzSorc(Config().blizz_sorc, self._pather)
+                self._char: IChar = BlizzSorc(Config().blizz_sorc, self._pather, self._pickit)
             case "nova_sorc":
                 self._char: IChar = NovaSorc(Config().nova_sorc, self._pather, self._pickit) #pickit added for diablo
             case "hydra_sorc":
-                self._char: IChar = HydraSorc(Config().hydra_sorc, self._pather)
+                self._char: IChar = HydraSorc(Config().hydra_sorc, self._pather, self._pickit)
             case "hammerdin" | "paladin":
                 self._char: IChar = Hammerdin(Config().hammerdin, self._pather, self._pickit) #pickit added for diablo
             case "fohdin":

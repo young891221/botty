@@ -24,9 +24,9 @@ class HydraSorc(Sorceress):
             y = cast_pos_abs[1] + (random.random() * 2 * spray - spray)
             cast_pos_monitor = convert_abs_to_monitor((x, y))
             mouse.move(*cast_pos_monitor)
-            mouse.press(button="right")
+            mouse.press(button="left")
             wait(delay[0], delay[1])
-            mouse.release(button="right")
+            mouse.release(button="left")
         keyboard.send(Config().char["stand_still"], do_press=False)
 
     def _hydra(self, cast_pos_abs: tuple[float, float], spray: float = 10):
@@ -114,7 +114,6 @@ class HydraSorc(Sorceress):
         # move mouse to center
         pos_m = convert_abs_to_monitor((0, 0))
         mouse.move(*pos_m, randomize=80, delay_factor=[0.5, 0.7])
-        self._cast_static(0.6)
 
         cast_pos_abs = [0, 0]
         for _ in range(int(Config().char["atk_len_nihlathak"])):

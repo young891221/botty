@@ -46,12 +46,16 @@ class NovaSorc(Sorceress):
         self._pather.traverse_nodes_fixed([(675, 30)], self)
         self._cast_static(0.6)
         self._nova(Config().char["atk_len_eldritch"])
+        atk_len = Config().char["atk_len_nihlathak"] * 0.3
+        self._move_and_attack((120, -120), atk_len)
         return True
 
     def kill_shenk(self) -> bool:
         self._pather.traverse_nodes((Location.A5_SHENK_SAFE_DIST, Location.A5_SHENK_END), self, timeout=1.0)
         self._cast_static(0.6)
         self._nova(Config().char["atk_len_shenk"])
+        atk_len = Config().char["atk_len_nihlathak"] * 0.3
+        self._move_and_attack((60, -60), atk_len)
         return True
 
     def kill_council(self) -> bool:

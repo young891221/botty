@@ -41,7 +41,15 @@ class HydraSorc(Sorceress):
             mouse.move(*cast_pos_monitor)
             mouse.press(button="right")
             wait(2,3)
-            mouse.release(button="right")        
+            mouse.release(button="right")
+
+    def _move_and_attack(self, abs_move: tuple[int, int], atk_len: float, cast_pos_abs: tuple[float, float]):
+        pos_m = convert_abs_to_monitor(abs_move)
+        self.pre_move()
+        self.move(pos_m, force_move=True)
+        for _ in range(int(atk_len)):
+            self._hydra(cast_pos_abs, spray=0)
+            self._alt_attack(cast_pos_abs, spray=11)
 
     def kill_pindle(self) -> bool:
         pindle_pos_abs = convert_screen_to_abs(Config().path["pindle_end"][0])
@@ -97,4 +105,23 @@ class HydraSorc(Sorceress):
         wait(self._cast_duration, self._cast_duration + 0.2)
         self._pather.traverse_nodes((Location.A5_SHENK_SAFE_DIST, Location.A5_SHENK_END), self, timeout=1.4, force_tp=True)
         self._hydra_time = None
+        return True
+
+    def kill_nihlathak(self, end_nodes: list[int]) -> bool:
+        atk_len = Config().char["atk_len_nihlathak"] * 0.3
+        # Move close to nihlathak
+        self._pather.traverse_nodes(end_nodes, self, timeout=0.8, do_pre_move=False)
+        # move mouse to center
+        pos_m = convert_abs_to_monitor((0, 0))
+        mouse.move(*pos_m, randomize=80, delay_factor=[0.5, 0.7])
+        self._cast_static(0.6)
+
+        cast_pos_abs = [0, 0]
+        for _ in range(int(Config().char["atk_len_nihlathak"])):
+            self._hydra(cast_pos_abs, spray=0)
+            self._alt_attack(cast_pos_abs, spray=90)
+        #attack more range for safe
+        self._move_and_attack((100, 50), atk_len, cast_pos_abs)
+        self._move_and_attack((-200, -150), atk_len, cast_pos_abs)
+        #self._move_and_attack((200, 200), atk_len)
         return True

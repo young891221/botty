@@ -227,6 +227,12 @@ class IChar:
         else:
             mouse.click(button="left")
 
+    def tp_town_move_another_position(self):
+        pos_m = convert_abs_to_monitor((60, 60))
+        self.pre_move()
+        self.move(pos_m)
+        self.tp_town()
+
     def tp_town(self):
         # will check if tp is available and select the skill
         if not skills.has_tps():

@@ -310,18 +310,18 @@ class Bot:
                 correct_words = False,
             )[0]
             Logger.debug(f"[Terrorized] read_msg={ocr_result.text.splitlines()}")
-            terror_zone = False
+            is_terror_zone = False
             for msg_zone in ocr_result.text.splitlines():
                 for terror_zone in self._terror_zones:
                     for trigger in terror_zone["trigger"]:
-                        if msg_zone.find(trigger) != -1:
+                        if msg_zone.lower().find(trigger.lower()) != -1:
                             Logger.debug(f"[Terrorized] match msg_zone={msg_zone}, trigger={trigger}")
                             self._do_runs_prev = self._do_runs
                             self._do_runs = {terror_zone["target"]: True}
-                            terror_zone = True
+                            is_terror_zone = True
                             Logger.info(f'[Terrorized] run={terror_zone["target"]}')
                             break
-            if not terror_zone and self._do_runs_prev:
+            if not is_terror_zone and self._do_runs_prev:
                 Logger.info(f"[Terrorized] prev run={self._do_runs_prev}")
                 self._do_runs = self._do_runs_prev
                 self._do_runs_prev = []

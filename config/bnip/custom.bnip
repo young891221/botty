@@ -589,6 +589,12 @@
 [Type] == Bow && [Quality] == Rare # [Ias] >= 20 && ([Enhanceddamage] >= 300 || ([Enhanceddamage] >= 225 && [Itemskillonattack] == 66) || ([Enhanceddamage] >= 250 && [Itemtohitperlevel] >= 1)) && [Sockets] >= 0
 //[Type] == Bow && [Quality] == Rare && [Flag] != Ethereal # [Enhanceddamage] >= 250 && [218] >= 4 && [224] >= 33
 
+// <<<<<<<<< [ Rare weaphons ] >>>>>>>>>
+[Name] == Berserkeraxe && [Quality] == Rare && [Flag] == Ethereal
+[Name] == Phaseblade && [Quality] == Rare && [Flag] == Ethereal
+[Name] == Crypticsword && [Quality] == Rare && [Flag] == Ethereal
+[Name] == Mythicalsword && [Quality] == Rare && [Flag] == Ethereal
+
 //----------------------------------------
 //================= Belts ================
 //----------------------------------------
@@ -688,6 +694,16 @@
 [Name] == Wyrmhide && [Quality] == Superior && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 3) && [Enhanceddefense] >= 10          // Socketed Eth Sup
 //[Name] == Lightplate && [Quality] == Superior && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] == 3) && [Enhanceddefense] >= 10           // Socketed Eth Sup
 [Name] == Sacredarmor && [Quality] == Superior && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 3) && [Enhanceddefense] >= 8           // Socketed Eth Sup
+
+// <<<<<<<<< [ Magic Armor ] >>>>>>>>>
+[Name] == Archonplate && [Quality] == Magic && [Flag] != Ethereal # ([Sockets] >= 3)
+[Name] == Duskshroud && [Quality] == Magic && [Flag] != Ethereal # ([Sockets] >= 3)
+[Name] == Mageplate && [Quality] == Magic && [Flag] != Ethereal # ([Sockets] >= 3)
+[Name] == Greathauberk && [Quality] == Magic && [Flag] != Ethereal # ([Sockets] >= 3)
+[Name] == Wirefleece && [Quality] == Magic && [Flag] != Ethereal # ([Sockets] >= 3)
+[Name] == Scarabhusk && [Quality] == Magic && [Flag] != Ethereal # ([Sockets] >= 3)
+[Name] == Wyrmhide && [Quality] == Magic && [Flag] != Ethereal # ([Sockets] >= 3)
+[Name] == Sacredarmor && [Quality] == Magic && [Flag] != Ethereal # ([Sockets] >= 3)
 
 //-----------------------------------------------
 //================= Helmet Bases ================

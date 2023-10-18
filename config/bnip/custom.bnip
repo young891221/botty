@@ -590,10 +590,9 @@
 //[Type] == Bow && [Quality] == Rare && [Flag] != Ethereal # [Enhanceddamage] >= 250 && [218] >= 4 && [224] >= 33
 
 // <<<<<<<<< [ Rare weaphons ] >>>>>>>>>
-[Name] == Berserkeraxe && [Quality] == Rare && [Flag] == Ethereal # [itemreplenishdurability] > 0 && [Enhanceddamage] >= 250 && [Sockets] >= 0
-[Name] == Phaseblade && [Quality] == Rare && [Flag] == Ethereal # [itemreplenishdurability] > 0 && [Enhanceddamage] >= 250 && [Sockets] >= 0
-[Name] == Crypticsword && [Quality] == Rare && [Flag] == Ethereal # [itemreplenishdurability] > 0 && [Enhanceddamage] >= 250 && [Sockets] >= 0
-[Name] == Mythicalsword && [Quality] == Rare && [Flag] == Ethereal # [itemreplenishdurability] > 0 && [Enhanceddamage] >= 250 && [Sockets] >= 0
+[Type] == sword && ([Class] == Elite || [Class] == exceptional) && [Quality] == Rare && [Flag] == Ethereal # [itemreplenishdurability] > 0 && [Enhanceddamage] >= 250 && [Sockets] >= 0
+[Type] == axe && ([Class] == Elite || [Class] == exceptional) && [Quality] == Rare && [Flag] == Ethereal # [itemreplenishdurability] > 0 && [Enhanceddamage] >= 250 && [Sockets] >= 0
+[Type] == hammer && ([Class] == Elite || [Class] == exceptional) && [Quality] == Rare && [Flag] == Ethereal # [itemreplenishdurability] > 0 && [Enhanceddamage] >= 250 && [Sockets] >= 0
 
 //----------------------------------------
 //================= Belts ================
@@ -706,17 +705,7 @@
 [Name] == Sacredarmor && [Quality] == Magic && [Flag] != Ethereal # ([Sockets] >= 3)
 
 // <<<<<<<<< [ Rare Armor ] >>>>>>>>>
-[Name] == Archonplate && [Quality] == Rare && [Flag] == Ethereal # [itemreplenishdurability] > 0 && [Sockets] >= 0 && [Defense] >= 2000
-[Name] == Duskshroud && [Quality] == Rare && [Flag] == Ethereal # [itemreplenishdurability] > 0 && [Sockets] >= 0 && [Defense] >= 2000
-[Name] == Mageplate && [Quality] == Rare && [Flag] == Ethereal # [itemreplenishdurability] > 0 && [Sockets] >= 0 && [Defense] >= 2000
-[Name] == Greathauberk && [Quality] == Rare && [Flag] == Ethereal # [itemreplenishdurability] > 0 && [Sockets] >= 0 && [Defense] >= 2000
-[Name] == Wirefleece && [Quality] == Rare && [Flag] == Ethereal # [itemreplenishdurability] > 0 && [Sockets] >= 0 && [Defense] >= 2000
-[Name] == Scarabhusk && [Quality] == Rare && [Flag] == Ethereal # [itemreplenishdurability] > 0 && [Sockets] >= 0 && [Defense] >= 2000
-[Name] == Wyrmhide && [Quality] == Rare && [Flag] == Ethereal # [itemreplenishdurability] > 0 && [Sockets] >= 0 && [Defense] >= 2000
-[Name] == Sacredarmor && [Quality] == Rare && [Flag] == Ethereal # [itemreplenishdurability] > 0 && [Sockets] >= 0 && [Defense] >= 2000
-[name] == ornateplate && [quality] == Rare && [flag] == Ethereal # [itemreplenishdurability] > 0 && [sockets] >= 0 && [Defense] >= 2000
-[name] == ancientarmor && [quality] == Rare && [flag] == Ethereal #  [itemreplenishdurability] > 0 && [sockets] >= 0 && [Defense] >= 2000
-
+[Type] == armor && ([Class] == Elite || [Class] == exceptional) && [Quality] == Rare && [Flag] == Ethereal # [itemreplenishdurability] > 0 && [Sockets] >= 0 && [Defense] >= 2000
 
 //-----------------------------------------------
 //================= Helmet Bases ================

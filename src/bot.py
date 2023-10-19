@@ -154,7 +154,7 @@ class Bot:
             { 'trigger': ['Travincal'], 'target': "run_trav"},
             { 'trigger': ['Nihlathak', 'Temple Halls'], 'target': "run_nihlathak"},
             { 'trigger': ['Arcane'], 'target': "run_arcane"},
-            { 'trigger': ['Chaos'], 'target': "run_diablo"},
+            #{ 'trigger': ['Chaos'], 'target': "run_diablo"},
         ]
 
 
@@ -291,7 +291,7 @@ class Bot:
         # Check Terrorized
         if Config().terror_routes:
             keyboard.send("tab")
-            wait(0.5, 0.1)
+            wait(0.9, 0.5)
             img = grab()
             keyboard.send("tab")
             x, y, w, h = Config().ui_roi["terror_zone_msg"]

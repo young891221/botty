@@ -53,22 +53,22 @@
 //----------------------------------------
 
 [Name] >= Helrune && [Name] <= Zodrune
-[Name] == Ithrune
+//[Name] == Ithrune
 [Name] == Talrune
 [Name] == Ralrune
-//[Name] == Ortrune
-//[Name] == Thulrune
+[Name] == Ortrune
+[Name] == Thulrune
 [Name] == Amnrune
 [Name] == Dolrune
-//[Name] == Nefrune
+[Name] == Nefrune
 //[Name] == Tirrune
 //[Name] == Solrune
 //[Name] == Elrune
 //[Name] == Eldrune
 //[Name] == Nefrune
-[Name] == Ethrune
+//[Name] == Ethrune
 //[Name] == Solrune
-[Name] == Shaelrune
+//[Name] == Shaelrune
 //[Name] == Dolrune
 //[Name] == Helrune
 //[Name] == Iorune
@@ -101,9 +101,9 @@
 //[Name] == Chippedsapphire
 //[Name] == Chippedskull
 //[Name] == Chippedtopaz
-[Name] == Flawedamethyst
+//[Name] == Flawedamethyst
 //[Name] == Flaweddiamond
-[Name] == Flawedemerald
+//[Name] == Flawedemerald
 //[Name] == Flawedruby
 //[Name] == Flawedsapphire
 //[Name] == Flawedskull
@@ -695,14 +695,14 @@
 [Name] == Sacredarmor && [Quality] == Superior && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 3) && [Enhanceddefense] >= 8           // Socketed Eth Sup
 
 // <<<<<<<<< [ Magic Armor ] >>>>>>>>>
-[Name] == Archonplate && [Quality] == Magic && [Flag] != Ethereal # ([Sockets] >= 3)
-[Name] == Duskshroud && [Quality] == Magic && [Flag] != Ethereal # ([Sockets] >= 3)
-[Name] == Mageplate && [Quality] == Magic && [Flag] != Ethereal # ([Sockets] >= 3)
-[Name] == Greathauberk && [Quality] == Magic && [Flag] != Ethereal # ([Sockets] >= 3)
-[Name] == Wirefleece && [Quality] == Magic && [Flag] != Ethereal # ([Sockets] >= 3)
-[Name] == Scarabhusk && [Quality] == Magic && [Flag] != Ethereal # ([Sockets] >= 3)
-[Name] == Wyrmhide && [Quality] == Magic && [Flag] != Ethereal # ([Sockets] >= 3)
-[Name] == Sacredarmor && [Quality] == Magic && [Flag] != Ethereal # ([Sockets] >= 3)
+[Name] == Archonplate && [Quality] == Magic && [Flag] != Ethereal # ([Sockets] >= 3) && ([Maxhp] >= 80 || [Enhanceddefense] == 15)
+[Name] == Duskshroud && [Quality] == Magic && [Flag] != Ethereal # ([Sockets] >= 3) && ([Maxhp] >= 80 || [Enhanceddefense] == 15)
+[Name] == Mageplate && [Quality] == Magic && [Flag] != Ethereal # ([Sockets] >= 3) && ([Maxhp] >= 80 || [Enhanceddefense] == 15)
+[Name] == Greathauberk && [Quality] == Magic && [Flag] != Ethereal # ([Sockets] >= 3) && ([Maxhp] >= 80 || [Enhanceddefense] == 15)
+[Name] == Wirefleece && [Quality] == Magic && [Flag] != Ethereal # ([Sockets] >= 3) && ([Maxhp] >= 80 || [Enhanceddefense] == 15)
+[Name] == Scarabhusk && [Quality] == Magic && [Flag] != Ethereal # ([Sockets] >= 3) && ([Maxhp] >= 80 || [Enhanceddefense] == 15)
+[Name] == Wyrmhide && [Quality] == Magic && [Flag] != Ethereal # ([Sockets] >= 3) && ([Maxhp] >= 80 || [Enhanceddefense] == 15)
+[Name] == Sacredarmor && [Quality] == Magic && [Flag] != Ethereal # ([Sockets] >= 3) && ([Maxhp] >= 80 || [Enhanceddefense] == 15)
 
 // <<<<<<<<< [ Rare Armor ] >>>>>>>>>
 [Type] == armor && ([Class] == Elite || [Class] == exceptional) && [Quality] == Rare && [Flag] == Ethereal # [itemreplenishdurability] > 0 && [Sockets] >= 0 && [Defense] >= 2000
@@ -1231,9 +1231,9 @@
 //================= Tal-Rasha's Wrappings ================
 //--------------------------------------------------------
 
-//[Name] == Swirlingcrystal && [Quality] == Set     // Tal Rasha's Lidless Eye
+[Name] == Swirlingcrystal && [Quality] == Set     // Tal Rasha's Lidless Eye
 [Name] == Swirlingcrystal && [Quality] == Set # [Plusskillcoldmastery] == 2 && [Plusskillfiremastery] == 2 && [Plusskilllightningmastery] == 2     // Tal Rasha's Lidless Eye Perfect
-//[Name] == Deathmask && [Quality] == Set     // Tal Rasha's Horadric Crest
+[Name] == Deathmask && [Quality] == Set     // Tal Rasha's Horadric Crest
 [Name] == Lacqueredplate && [Quality] == Set      // Tal Rasha's Guardianship
 //[Name] == Lacqueredplate && [Quality] == Set # [Defense] >= 941     // Tal Rasha's Guardianship Perfect
 [Type] == Amulet && [Quality] == Set # [Sorceressskills] == 2   	// Tal Rasha's Adjucation
@@ -1427,8 +1427,8 @@
 [Name] == Mesharmor && [Quality] == Unique && [Flag] == Ethereal # [Enhanceddefense] >= 180     // Eth Shaftstop
 [Name] == Mesharmor && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] == 220     // Shaftstop Perfect
 //[Name] == Mesharmor && [Quality] == Unique && [Flag] == Ethereal # [Enhanceddefense] == 220     // Eth Shaftstop Perfect
-[Name] == Russetarmor && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 160     // Skullder's Ire
-[Name] == Russetarmor && [Quality] == Unique && [Flag] == Ethereal # [Enhanceddefense] >= 160     // Eth Skullder's Ire
+//[Name] == Russetarmor && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 160     // Skullder's Ire
+//[Name] == Russetarmor && [Quality] == Unique && [Flag] == Ethereal # [Enhanceddefense] >= 160     // Eth Skullder's Ire
 //[Name] == Russetarmor && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] == 200     // Skullder's Ire Perfect
 //[Name] == Russetarmor && [Quality] == Unique && [Flag] == Ethereal # [Enhanceddefense] == 200     // Eth Skullder's Ire Perfect
 //[Name] == Mageplate && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 140 && [Magicdamagereduction] >= 6     // Que-Hegan's Wisdom

@@ -8,7 +8,7 @@ dependencies:
   - leptonica
   - tesseract=5.1.0
   - pkg-config
-  - rapidfuzz
+  - rapidfuzz=2.15.1
   - pip:
     - pyinstaller
     - pyparsing

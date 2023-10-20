@@ -56,12 +56,12 @@
 //[Name] == Ithrune
 [Name] == Talrune
 [Name] == Ralrune
-[Name] == Ortrune
-[Name] == Thulrune
-[Name] == Amnrune
+//[Name] == Ortrune
+//[Name] == Thulrune
+//[Name] == Amnrune
 [Name] == Dolrune
-[Name] == Nefrune
-//[Name] == Tirrune
+//[Name] == Nefrune
+[Name] == Tirrune
 //[Name] == Solrune
 //[Name] == Elrune
 //[Name] == Eldrune
@@ -96,7 +96,7 @@
 
 //[Name] == Chippedamethyst
 //[Name] == Chippeddiamond
-//[Name] == Chippedemerald
+[Name] == Chippedemerald
 //[Name] == Chippedruby
 //[Name] == Chippedsapphire
 //[Name] == Chippedskull
@@ -942,6 +942,7 @@
 //---------------------------------------------------
 
 // <<<<<<<<< [ Socketed Amazon Bows ] >>>>>>>>>
+[Type] == Bow && [Class] == normal && [Quality] == Normal # [Sockets] == 3       // imsi
 //[Type] == Bow && [Class] == Elite && [Quality] == Normal # [Sockets] == 0       // Faith
 //[Type] == Bow && [Class] == Elite && [Quality] == Normal # [Sockets] >= 4       // Faith/Mist Socketed
 //[Type] == Amazonbow && [Class] == Elite && [Quality] == Normal # [Bowandcrossbowskilltab] == 3 && [Sockets] == 0       // Faith

@@ -58,7 +58,7 @@
 [Name] == Ralrune
 //[Name] == Ortrune
 //[Name] == Thulrune
-//[Name] == Amnrune
+[Name] == Amnrune
 [Name] == Dolrune
 //[Name] == Nefrune
 //[Name] == Tirrune
@@ -68,7 +68,7 @@
 //[Name] == Nefrune
 //[Name] == Ethrune
 //[Name] == Solrune
-//[Name] == Shaelrune
+[Name] == Shaelrune
 //[Name] == Dolrune
 //[Name] == Helrune
 //[Name] == Iorune
@@ -138,6 +138,7 @@
 //================= Grand Charms ================
 //-----------------------------------------------
 
+//[Name] == Grandcharm && [Quality] == Magic
 [Name] == Grandcharm && [Quality] == Magic # [Coldresist]+[Fireresist]+[Lightresist]+[Poisonresist] >= 56 // Plain +14 All Res
 [Name] == Grandcharm && [Quality] == Magic # [Itemaddskilltab] >= 1 // All Plain Skillers
 //[Name] == Grandcharm && [Quality] == Magic # ([Coldresist] >= 30 || [Fireresist] >= 30 || [Lightresist] >= 30 || [Poisonresist] >= 30)      // All +30 Single Res Gc
@@ -316,7 +317,7 @@
 //------------------------------------------
 
 // <<<<<<<<< [ Magic Jewels ] >>>>>>>>>
-//[Name] == Jewel && [Quality] == Magic //all
+[Name] == Jewel && [Quality] == Magic //all
 [Name] == Jewel && [Quality] == Magic # [Ias] >= 15
 [Name] == Jewel && [Quality] == Magic # [Enhanceddamage] >= 35
 //[Name] == Jewel && [Quality] == Magic # [Enhanceddamage] >= 35 && ([Ias] == 15 || [Itemreqpercent] <= -15 || [Fireresist] >= 30 || [Mindamage] >= 10 || [Maxdamage] >= 15)		// Ruby Jewel Of X
@@ -384,7 +385,7 @@
 //[Name] == Throwingspear && [Quality] == Magic # [Warcriesskilltab] >= 3
 
 // <<<<<<<<< [ Gg Club ] >>>>>>>>>
-([Name] == Club || [Name] == Spikedclub) && [Quality] == Magic # [Warcriesskilltab] >= 3 && [Strength] > 0
+//([Name] == Club || [Name] == Spikedclub) && [Quality] == Magic # [Warcriesskilltab] >= 3 && [Strength] > 0
 
 // <<<<<<<<< [ Magic Scepters ] >>>>>>>>>
 [Type] == Scepter && [Quality] == Magic # [Paladinskills]+[Skillblessedhammer] >= 5 && ([Skillconcentration] >= 3 || [Fcr] >= 10 && [Skillconcentration] >= 2)

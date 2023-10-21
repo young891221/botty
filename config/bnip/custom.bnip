@@ -420,7 +420,6 @@
 //------------------------------------------
 
 ([Name] == Archonplate || [Name] == Duskshroud || [Name] == Wirefleece || [Name] == Greathauberk || [Name] == Sacredarmor) && [Quality] == Magic && [Flag] != Ethereal # [Maxhp] >= 85      // Jeweler's Armor Of The Whale
-([Name] == Archonplate || [Name] == Duskshroud || [Name] == Wirefleece || [Name] == Greathauberk || [Name] == Sacredarmor) && [Quality] == Magic && [Flag] != Ethereal # [Fhr] >= 24        // Jeweler's Armor Of Stability
 ([Name] == Archonplate || [Name] == Duskshroud || [Name] == Wirefleece || [Name] == Greathauberk || [Name] == Sacredarmor) && [Quality] == Magic && [Flag] != Ethereal # [Itemfasterblockrate] == 30        // Jeweler's Armor Of Deflecting
 //([Name] == Mageplate || [Name] == Breastplate || [Name] == Lightplate) && [Quality] == Magic # [Sockets] == 3 && ([Maxhp] == 80 || [Itemlevelreq] <= 30)      // Artisan's Armor Of X
 

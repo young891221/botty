@@ -52,12 +52,12 @@
 //================= Runes ================
 //----------------------------------------
 
-[Name] >= Helrune && [Name] <= Zodrune
+[Name] >= Korune && [Name] <= Zodrune
 //[Name] == Ithrune
 [Name] == Talrune
 [Name] == Ralrune
 //[Name] == Ortrune
-//[Name] == Thulrune
+[Name] == Thulrune
 [Name] == Amnrune
 [Name] == Dolrune
 //[Name] == Nefrune
@@ -68,9 +68,9 @@
 //[Name] == Nefrune
 //[Name] == Ethrune
 //[Name] == Solrune
-[Name] == Shaelrune
-//[Name] == Dolrune
-//[Name] == Helrune
+//[Name] == Shaelrune
+[Name] == Dolrune
+[Name] == Helrune
 //[Name] == Iorune
 //[Name] == Lumrune
 //[Name] == Korune

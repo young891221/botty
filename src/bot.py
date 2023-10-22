@@ -151,7 +151,7 @@ class Bot:
         self._do_runs_prev = []
         self._terror_zones = [
             { 'trigger': ['Foothills', 'Frigid', 'Highlands'], 'target': "run_shenk"},
-            { 'trigger': ['Travincal'], 'target': "run_trav"},
+            #{ 'trigger': ['Travincal'], 'target': "run_trav"},
             { 'trigger': ['Nihlathak', 'Temple Halls'], 'target': "run_nihlathak"},
             { 'trigger': ['Arcane'], 'target': "run_arcane"},
             #{ 'trigger': ['Chaos'], 'target': "run_diablo"},

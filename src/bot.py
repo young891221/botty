@@ -545,10 +545,9 @@ class Bot:
     def on_run_shenk(self):
         res = False
         self._do_runs["run_shenk"] = False
-        if self._pre_buffed:
-            self._curr_loc = self._shenk.pre_buff_approach(self._curr_loc)
+        #self._curr_loc = self._shenk.pre_buff_approach(self._curr_loc)
         if self._curr_loc:
-            self._shenk.pre_buff(not self._pre_buffed)
+            #self._shenk.pre_buff(not self._pre_buffed)
             set_pause_state(False)
             res = self._shenk.battle(Config().routes.get("run_eldritch_shenk"), not self._pre_buffed, self._game_stats)
         self._ending_run_helper(res)

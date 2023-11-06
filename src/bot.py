@@ -545,7 +545,8 @@ class Bot:
     def on_run_shenk(self):
         res = False
         self._do_runs["run_shenk"] = False
-        self._curr_loc = self._shenk.pre_buff_approach(self._curr_loc)
+        if self._pre_buffed:
+            self._curr_loc = self._shenk.pre_buff_approach(self._curr_loc)
         if self._curr_loc:
             self._shenk.pre_buff(not self._pre_buffed)
             set_pause_state(False)

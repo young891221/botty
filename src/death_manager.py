@@ -41,9 +41,13 @@ class DeathManager:
                 cv2.imwrite(self._last_death_screenshot, img)
             # first wait a bit to make sure health manager is done with its chicken stuff which obviously failed
             if self._callback is not None:
+                Logger.debug("[Death Manager] callback")
+                time.sleep(1)
                 self._callback()
                 self._callback = None
             # clean up key presses that might be pressed
+            Logger.debug("[Death Manager] release")
+            time.sleep(1)
             keyboard.release(Config().char["stand_still"])
             wait(0.1, 0.2)
             keyboard.release(Config().char["show_items"])
@@ -55,6 +59,7 @@ class DeathManager:
             if is_visible(ScreenObjects.MainMenu):
                 # in this case chicken executed and left the game, but we were still dead.
                 return True
+            Logger.debug("[Death Manager] esc")
             keyboard.send("esc")
             self._died = True
             return True

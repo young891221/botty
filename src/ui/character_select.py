@@ -131,4 +131,4 @@ def select_char() -> bool:
                 scrolls_attempts += 1
                 wait(0.4, 0.6)
         Logger.error(f"select_char: unable to find saved profile after {scrolls_attempts} scroll attempts")
-        return False
+        return True

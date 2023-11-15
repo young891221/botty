@@ -39,7 +39,7 @@ def save_and_exit() -> bool:
     # if exit button isn't detected already, press escape
     attempts = 1
     success = False
-    while attempts <= 5 and not success:
+    while attempts <= 3 and not success:
         if not (exit_button := detect_screen_object(ScreenObjects.SaveAndExit)).valid:
             Logger.debug("[save_and_exit] ESC")
             wait(0.3, 0.5)

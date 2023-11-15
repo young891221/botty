@@ -52,16 +52,16 @@
 //================= Runes ================
 //----------------------------------------
 
-[Name] >= Korune && [Name] <= Zodrune
+[Name] >= Lumrune && [Name] <= Zodrune
 //[Name] == Ithrune
 [Name] == Talrune
 [Name] == Ralrune
 //[Name] == Ortrune
-[Name] == Thulrune
+//[Name] == Thulrune
 [Name] == Amnrune
-[Name] == Dolrune
+//[Name] == Dolrune
 //[Name] == Nefrune
-//[Name] == Tirrune
+[Name] == Tirrune
 //[Name] == Solrune
 //[Name] == Elrune
 //[Name] == Eldrune
@@ -76,7 +76,7 @@
 //[Name] == Korune
 //[Name] == Falrune
 //[Name] == Lemrune
-//[Name] == PulruneI
+//[Name] == Pulrune
 //[Name] == Umrune
 //[Name] == Malrune
 //[Name] == Istrune
@@ -101,7 +101,7 @@
 //[Name] == Chippedsapphire
 //[Name] == Chippedskull
 //[Name] == Chippedtopaz
-//[Name] == Flawedamethyst
+[Name] == Flawedamethyst
 //[Name] == Flaweddiamond
 //[Name] == Flawedemerald
 //[Name] == Flawedruby
@@ -317,7 +317,7 @@
 //------------------------------------------
 
 // <<<<<<<<< [ Magic Jewels ] >>>>>>>>>
-[Name] == Jewel && [Quality] == Magic //all
+//[Name] == Jewel && [Quality] == Magic //all
 [Name] == Jewel && [Quality] == Magic # [Ias] >= 15
 [Name] == Jewel && [Quality] == Magic # [Enhanceddamage] >= 35
 //[Name] == Jewel && [Quality] == Magic # [Enhanceddamage] >= 35 && ([Ias] == 15 || [Itemreqpercent] <= -15 || [Fireresist] >= 30 || [Mindamage] >= 10 || [Maxdamage] >= 15)		// Ruby Jewel Of X
@@ -420,8 +420,7 @@
 //================= Armors  ================
 //------------------------------------------
 
-([Name] == Archonplate || [Name] == Duskshroud || [Name] == Wirefleece || [Name] == Greathauberk || [Name] == Sacredarmor) && [Quality] == Magic && [Flag] != Ethereal # [Maxhp] >= 85      // Jeweler's Armor Of The Whale
-([Name] == Archonplate || [Name] == Duskshroud || [Name] == Wirefleece || [Name] == Greathauberk || [Name] == Sacredarmor) && [Quality] == Magic && [Flag] != Ethereal # [Itemfasterblockrate] == 30        // Jeweler's Armor Of Deflecting
+([Name] == Archonplate || [Name] == Duskshroud || [Name] == Wirefleece || [Name] == Greathauberk || [Name] == Sacredarmor) && [Quality] == Magic && [Flag] != Ethereal # ([Maxhp] >= 85 && [Sockets] == 4)      // Jeweler's Armor Of The Whale
 //([Name] == Mageplate || [Name] == Breastplate || [Name] == Lightplate) && [Quality] == Magic # [Sockets] == 3 && ([Maxhp] == 80 || [Itemlevelreq] <= 30)      // Artisan's Armor Of X
 
 //------------------------------------------
@@ -902,8 +901,8 @@
 //------------------------------------------------------
 
 // <<<<<<<<< [ Non-Ethereal Superior/Non-Superior Assassin Claws ] >>>>>>>>>
-[Type] == Assassinclaw && [Class] == Elite && ([Quality] == Normal || [Quality] == Superior) && [Flag] != Ethereal # [skillphoenixstrike] >= 2  && [Sockets] == 0 // mozaik
-[Type] == Assassinclaw && [Class] == Elite && ([Quality] == Normal || [Quality] == Superior) && [Flag] != Ethereal # [skillphoenixstrike] >= 2  && [Sockets] == 3 // mozaik
+[Type] == Assassinclaw && [Class] == Elite && ([Quality] == Normal || [Quality] == Superior) && [Flag] != Ethereal # [skillphoenixstrike] == 3  && [Sockets] == 0 // mozaik
+[Type] == Assassinclaw && [Class] == Elite && ([Quality] == Normal || [Quality] == Superior) && [Flag] != Ethereal # [skillphoenixstrike] == 3  && [Sockets] == 3 // mozaik
 //[Type] == Assassinclaw && [Class] == Elite && ([Quality] == Normal || [Quality] == Superior) && [Flag] != Ethereal # ([Skilllightningsentry] >= 3 || [Skilldeathsentry] >= 3) && [Sockets] == 0 // Chaos
 //[Type] == Assassinclaw && [Class] == Elite && ([Quality] == Normal || [Quality] == Superior) && [Flag] != Ethereal # ([Skilllightningsentry] >= 3 || [Skilldeathsentry] >= 3) && [Sockets] == 3 // Chaos Socketed
 //[Type] == Assassinclaw && [Class] == Elite && ([Quality] == Normal || [Quality] == Superior) && [Flag] != Ethereal # ([Skillweaponblock] >= 3 || [Skillclawmastery] >= 2 || [Skillfade] >= 2 || [Skillbladeshield] >= 2 || [Skilldragonflight] >= 2 || [Skillmindblast] >= 1) && [Sockets] == 0  // Chaos
@@ -1249,7 +1248,7 @@
 //[Name] == Chaosarmor && [Quality] == Set      // Trang-Oul's Scales
 //[Name] == Cantortrophy && [Quality] == Set        // Trang-Oul's Wing
 //[Name] == Trollbelt && [Quality] == Set       // Trang-Oul's Girth
-[Name] == Heavybracers && [Quality] == Set        // Trang-Oul's Claws
+//[Name] == Heavybracers && [Quality] == Set        // Trang-Oul's Claws
 
 //==========================================================================//
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<< Unique Items >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//

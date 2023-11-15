@@ -81,13 +81,17 @@ class GameController:
                 Logger.error("Could not recover from a max game length violation. Restarting the Game.")
                 if messenger.enabled:
                     messenger.send_message("Got stuck and will now restart D2R")
-                if restart_game(Config().general["d2r_path"], Config().advanced_options["launch_options"]):
-                    self.game_stats.log_end_game(failed=max_game_length_reached)
-                    if self.setup_screen():
-                        self.start_health_manager_thread()
-                        self.start_death_manager_thread()
-                        self.game_recovery = GameRecovery(self.death_manager)
-                        return self.run_bot()
+                #if restart_game(Config().general["d2r_path"], Config().advanced_options["launch_options"]):
+                # self.game_stats.log_end_game(failed=max_game_length_reached)
+                # if self.setup_screen():
+                #     self.start_health_manager_thread()
+                #     self.start_death_manager_thread()
+                #     self.game_recovery = GameRecovery(self.death_manager)
+                #     return self.run_bot()
+                self.death_manager.reset_death_flag()
+                self.health_manager.reset_chicken_flag()
+                self.game_stats.log_end_game(failed = (max_game_length_reached or force_stopped))
+                return self.run_bot()
                 Logger.error("Could not restart the game. Quitting.")
                 if messenger.enabled:
                     messenger.send_message("Got stuck and could not restart the game. Quitting.")

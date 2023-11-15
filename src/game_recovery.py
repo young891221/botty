@@ -6,6 +6,7 @@ from ui_manager import ScreenObjects, is_visible
 from ui import view, loading
 from utils.misc import set_d2r_always_on_top
 from messages import Messenger
+from logger import Logger
 
 class GameRecovery:
     def __init__(self, death_manager: DeathManager):
@@ -32,12 +33,13 @@ class GameRecovery:
                 return True
             # would have been too easy, maybe we have died?
             if self._death_manager.handle_death_screen():
-                sleep_minute = 60 * 5
+                sleep_minute = 30
                 self._messenger.send_message(f"[Death Manager] wait time={sleep_minute}s")
                 time.sleep(sleep_minute)
                 continue
             # check for save/exit button
             if is_visible(ScreenObjects.SaveAndExit):
+                Logger.debug("[GameRecovery] SaveAndExit")
                 view.save_and_exit()
                 continue
             # maybe we are in-game in stash/inventory, press escape

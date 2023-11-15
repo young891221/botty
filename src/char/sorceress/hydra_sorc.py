@@ -13,7 +13,7 @@ class HydraSorc(Sorceress):
     def __init__(self, *args, **kwargs):
         Logger.info("Setting up HydraSorc Sorc")
         super().__init__(*args, **kwargs)
-        self._hydra_time = None        
+        self._hydra_time = None
 
     def _alt_attack(self, cast_pos_abs: tuple[float, float], delay: tuple[float, float] = (0.16, 0.23), spray: float = 10):
         keyboard.send(Config().char["stand_still"], do_release=False)
@@ -34,7 +34,7 @@ class HydraSorc(Sorceress):
             if not self._skill_hotkeys["hydra"]:
                 raise ValueError("You did not set a hotkey for hydra!")
             keyboard.send(self._skill_hotkeys["hydra"])
-            self._hydra_time = time.time()            
+            self._hydra_time = time.time()
             x = cast_pos_abs[0] + (random.random() * 2 * spray - spray)
             y = cast_pos_abs[1] + (random.random() * 2 * spray - spray)
             cast_pos_monitor = convert_abs_to_monitor((x, y))

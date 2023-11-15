@@ -18,43 +18,34 @@ class NovaSorc(Sorceress):
         # we want to change positions a bit of end points
         self._pather.offset_node(149, (70, 10))
 
-    def _nova(self, time_in_s: float):
-        if not self._skill_hotkeys["nova"]:
-            raise ValueError("You did not set nova hotkey!")
-        keyboard.send(self._skill_hotkeys["nova"])
-        wait(0.05, 0.1)
-        start = time.time()
-        while (time.time() - start) < time_in_s:
-            wait(0.03, 0.04)
-            mouse.press(button="right")
-            wait(0.12, 0.2)
-            mouse.release(button="right")
+    def _cast_nova(self, min_duration: float = 0) -> bool:
+        return self._cast_simple(skill_name = "nova", mouse_click_type = "right", duration = min_duration)
 
     def _move_and_attack(self, abs_move: tuple[int, int], atk_len: float):
         pos_m = convert_abs_to_monitor(abs_move)
         self.pre_move()
         self.move(pos_m, force_move=True)
-        self._nova(atk_len)
+        self._cast_nova(atk_len)
 
     def kill_pindle(self) -> bool:
         self._pather.traverse_nodes_fixed("pindle_end", self)
         self._cast_static(0.6)
-        self._nova(Config().char["atk_len_pindle"])
+        self._cast_nova(Config().char["atk_len_pindle"])
         return True
 
     def kill_eldritch(self) -> bool:
         self._pather.traverse_nodes_fixed([(675, 30)], self)
         self._cast_static(0.6)
-        self._nova(Config().char["atk_len_eldritch"])
-        atk_len = Config().char["atk_len_nihlathak"] * 0.3
+        self._cast_nova(Config().char["atk_len_eldritch"])
+        atk_len = Config().char["atk_len_eldritch"] * 0.3
         self._move_and_attack((120, -120), atk_len)
         return True
 
     def kill_shenk(self) -> bool:
         self._pather.traverse_nodes((Location.A5_SHENK_SAFE_DIST, Location.A5_SHENK_END), self, timeout=1.0)
         self._cast_static(0.6)
-        self._nova(Config().char["atk_len_shenk"])
-        atk_len = Config().char["atk_len_nihlathak"] * 0.3
+        self._cast_nova(Config().char["atk_len_shenk"])
+        atk_len = Config().char["atk_len_shenk"] * 0.3
         self._move_and_attack((60, -60), atk_len)
         return True
 
@@ -67,13 +58,13 @@ class NovaSorc(Sorceress):
         def clear_inside():
             self._pather.traverse_nodes_fixed([(1110, 120)], self)
             self._pather.traverse_nodes([229], self, timeout=0.8, force_tp=True)
-            self._nova(atk_len)
+            self._cast_nova(atk_len)
             self._move_and_attack((-40, -20), atk_len)
             self._move_and_attack((40, 20), atk_len)
             self._move_and_attack((40, 20), atk_len)
         def clear_outside():
             self._pather.traverse_nodes([226], self, timeout=0.8, force_tp=True)
-            self._nova(atk_len)
+            self._cast_nova(atk_len)
             self._move_and_attack((45, -20), atk_len)
             self._move_and_attack((-45, 20), atk_len)
         clear_inside()
@@ -87,12 +78,12 @@ class NovaSorc(Sorceress):
     def kill_nihlathak(self, end_nodes: list[int]) -> bool:
         atk_len = Config().char["atk_len_nihlathak"] * 0.3
         # Move close to nihlathak
-        self._pather.traverse_nodes(end_nodes, self, timeout=0.8, do_pre_move=False)
+        self._pather.traverse_nodes(end_nodes, self, timeout=0.8)
         # move mouse to center
         pos_m = convert_abs_to_monitor((0, 0))
         mouse.move(*pos_m, randomize=80, delay_factor=[0.5, 0.7])
         self._cast_static(0.6)
-        self._nova(atk_len)
+        self._cast_nova(atk_len)
         #attack more range for safe
         self._move_and_attack((100, 50), atk_len)
         self._move_and_attack((-200, -150), atk_len)
@@ -104,11 +95,11 @@ class NovaSorc(Sorceress):
         pos_m = convert_abs_to_monitor((0, 20))
         mouse.move(*pos_m, randomize=80, delay_factor=[0.5, 0.7])
         # Attack
-        self._nova(Config().char["atk_len_arc"])
+        self._cast_nova(Config().char["atk_len_arc"])
         # Move a bit back and another round
         self._move_and_attack((0, 80), Config().char["atk_len_arc"] * 0.5)
         wait(0.1, 0.15)
-        self._nova(Config().char["atk_len_arc"] * 0.5)
+        self._cast_nova(Config().char["atk_len_arc"] * 0.5)
         return True
 
     def kill_diablo(self) -> bool:

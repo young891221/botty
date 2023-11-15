@@ -26,7 +26,7 @@ class Sorceress(IChar):
 
     def pick_up_item(self, pos: tuple[float, float], item_name: str = None, prev_cast_start: float = 0):
         if any(x in item_name for x in ['potion', 'misc_gold', 'tp_scroll']) and self._set_active_skill(mouse_click_type="right", skill="telekinesis"):
-            self._cast_telekinesis(*pos)
+            self._cast_telekinesis(cast_pos_abs=pos_abs)
             # need about 0.4s delay before next capture for the item not to persist on screen
             cast_start = time.time()
             interval = (cast_start - prev_cast_start)
@@ -57,7 +57,7 @@ class Sorceress(IChar):
             template_match = template_finder.search(template_type, grab(), threshold=threshold)
             if template_match.valid:
                 pos_abs = convert_screen_to_abs(template_match.center)
-                self._cast_telekinesis(*pos_abs)
+                self._cast_telekinesis(cast_pos_abs=pos_abs)
                 # check the successfunction for 2 sec, if not found, try again
                 check_success_start = time.time()
                 while time.time() - check_success_start < 2:
@@ -77,16 +77,16 @@ class Sorceress(IChar):
             wait(self._cast_duration + 0.1)
 
     def _cast_static(self, duration: float = 1.4) -> bool:
-        return self._cast_simple(skill_name="static_field", mouse_click_type = "right", duration=duration)
+        return self._cast_simple(skill_name="static_field", duration=duration)
 
     def _cast_telekinesis(self, cast_pos_abs: tuple[float, float]) -> bool:
-        return self._cast_at_position(skill_name="telekinesis", cast_pos_abs = cast_pos_abs, spray = 0, mouse_click_type = "right")
+        return self._cast_at_position(skill_name="telekinesis", cast_pos_abs = cast_pos_abs, spray = 0)
 
     def _cast_thunder_storm(self) -> bool:
-        return self._cast_simple(skill_name="thunder_storm", mouse_click_type="right")
+        return self._cast_simple(skill_name="thunder_storm")
 
     def _cast_energy_shield(self) -> bool:
-        return self._cast_simple(skill_name="energy_shield", mouse_click_type="right")
+        return self._cast_simple(skill_name="energy_shield")
 
     def _cast_frozen_armor(self) -> bool:
-        return self._cast_simple(skill_name="frozen_armor", mouse_click_type="right")
+        return self._cast_simple(skill_name="frozen_armor")

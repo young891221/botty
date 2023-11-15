@@ -40,6 +40,7 @@ class IChar:
         self._last_cast_time = 0
         self._last_cast_skill = ""
         self._current_fcr = Config().char["faster_cast_rate"]
+        self._cast_duration = 0.1
 
     """
     MOUSE AND KEYBOARD METHODS
@@ -217,7 +218,7 @@ class IChar:
             self._send_skill(skill_name = skill_name, cooldown = True, hold_time = delay)
         return True
 
-    def _cast_simple(self, skill_name: str, duration: float | list | tuple | None = None, cooldown = True) -> bool:
+    def _cast_simple(self, skill_name: str, duration: float | list | tuple | None = None, cooldown = True, mouse_click_type: str = "left") -> bool:
         """
         Casts a skill
         """
@@ -243,6 +244,7 @@ class IChar:
         teleport_frequency: float = 0,
         use_target_detect = False,
         aura: str = None,
+        mouse_click_type: str = "left",
     ) -> bool:
         """
         Casts a skill toward a given target.

@@ -17,16 +17,20 @@ class LightSorc(Sorceress):
         super().__init__(*args, **kwargs)
 
     def _cast_chain_lightning(self, cast_pos_abs: tuple[float, float], spray: float = 20, duration: float = 0) -> bool:
+        for _ in range(int(duration)*3):
+            self._cast_at_position(skill_name="chain_lightning", spray = spray, cast_pos_abs = cast_pos_abs, duration = duration)
         return self._cast_at_position(skill_name="chain_lightning", spray = spray, cast_pos_abs = cast_pos_abs, duration = duration)
 
     def _cast_lightning(self, cast_pos_abs: tuple[float, float], spray: float = 20, duration: float = 0) -> bool:
+        for _ in range(int(duration)*4):
+            self._cast_at_position(skill_name="lightning", spray = spray, cast_pos_abs = cast_pos_abs, duration = duration)
         return self._cast_at_position(skill_name="lightning", spray = spray, cast_pos_abs = cast_pos_abs, duration = duration)
 
     def _cast_frozen_orb(self, cast_pos_abs: tuple[float, float], spray: float = 10, duration: float = 0) -> bool:
         return self._cast_at_position("frozen_orb", cast_pos_abs, spray = spray, duration = duration)
 
     def _generic_light_sorc_attack_sequence(self, cast_pos_abs: tuple[float, float], chain_spray: float = 20, duration: float = 0):
-        self._cast_lightning(cast_pos_abs, spray=5)
+        self._cast_lightning(cast_pos_abs, spray=5, duration=duration)
         wait(self._cast_duration, self._cast_duration + 0.2)
         self._cast_chain_lightning(cast_pos_abs, spray=chain_spray, duration=duration)
         wait(self._cast_duration, self._cast_duration + 0.2)
@@ -161,7 +165,7 @@ class LightSorc(Sorceress):
 
     def kill_nihlathak(self, end_nodes: list[int]) -> bool:
         # Find nilhlatak position
-        delay = [0.2, 0.3]
+        delay = 0.1
         atk_len = int(Config().char["atk_len_nihlathak"])
         nihlathak_pos_abs = None
         for i in range(atk_len):
@@ -176,6 +180,7 @@ class LightSorc(Sorceress):
 
             if nihlathak_pos_abs is not None:
                 cast_pos_abs = np.array([nihlathak_pos_abs[0] * 0.9, nihlathak_pos_abs[1] * 0.9])
+                self._cast_lightning(cast_pos_abs, spray=60)
                 self._cast_lightning(cast_pos_abs, spray=60)
                 self._cast_chain_lightning(cast_pos_abs, delay, 90)
                 # Do some tele "dancing" after each sequence

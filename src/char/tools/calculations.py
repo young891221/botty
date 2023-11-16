@@ -1,4 +1,6 @@
 import random
+from typing import Tuple
+
 import numpy as np
 from math import cos, sin, dist, pi, radians, degrees
 
@@ -20,7 +22,7 @@ def spray(pos_abs: tuple[float, float], r: float) -> tuple[int, int]:
     x1, y1 = pos_abs
     x2 = random.uniform(x1-r, x1+r)
     y2 = random.uniform(y1-r, y1+r)
-    return tuple([round(i) for i in (x2, y2)])
+    return tuple([np.round(i) for i in (x2, y2)])
 
 # rotate a vector by angle degrees
 def rotate_vec(vec: np.ndarray, deg: float) -> np.ndarray:

@@ -40,7 +40,7 @@ class IChar:
         self._last_cast_time = 0
         self._last_cast_skill = ""
         self._current_fcr = Config().char["faster_cast_rate"]
-        self._cast_duration = 0.1
+        self._cast_duration = 0
 
     """
     MOUSE AND KEYBOARD METHODS
@@ -169,7 +169,7 @@ class IChar:
     @staticmethod
     def _log_cast(skill_name: str, cast_pos_abs: tuple[float, float], spray: float, spread_deg: float, min_duration: float, max_duration: float, aura: str):
         msg = f"Casting skill {skill_name}"
-        if cast_pos_abs:
+        if cast_pos_abs is not None:
             msg += f" at screen coordinate {convert_abs_to_screen(cast_pos_abs)}"
         if spray:
             msg += f" with spray of {spray}"
@@ -245,6 +245,7 @@ class IChar:
         use_target_detect = False,
         aura: str = None,
         mouse_click_type: str = "left",
+        duration: float = 0
     ) -> bool:
         """
         Casts a skill toward a given target.

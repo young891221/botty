@@ -76,7 +76,7 @@ class NovaSorc(Sorceress):
         return True
 
     def kill_nihlathak(self, end_nodes: list[int]) -> bool:
-        atk_len = Config().char["atk_len_nihlathak"] * 0.3
+        atk_len = Config().char["atk_len_nihlathak"] * 0.4
         # Move close to nihlathak
         self._pather.traverse_nodes(end_nodes, self, timeout=0.8)
         # move mouse to center

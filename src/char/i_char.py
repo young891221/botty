@@ -63,7 +63,7 @@ class IChar:
         keyboard.send(key, do_release=False)
         self._handle_delay(hold_time)
         keyboard.send(key, do_press=False)
-        Logger.debug(f"Pressed key: {key} for {hold_time}s at {round(time.time(),3)}")
+        #Logger.debug(f"Pressed key: {key} for {hold_time}s at {round(time.time(),3)}")
         self._key_held[key] = False
 
     def _key_hold(self, key: str, enable: bool = True):

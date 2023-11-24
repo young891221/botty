@@ -701,7 +701,7 @@ class Pather:
                         last_direction = node_pos_abs
                         # wait until there's a change on screen
                         img, score, _ = self._wait_for_screen_update(img, roi = self._roi_middle_half, score_threshold=0.5)
-                        Logger.debug(f"moved toward node {node_idx} at {node_pos_abs}, screen update score: {score}")
+                        #Logger.debug(f"moved toward node {node_idx} at {node_pos_abs}, screen update score: {score}")
                     last_node_pos_abs = node_pos_abs
         return True
 

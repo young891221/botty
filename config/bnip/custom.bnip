@@ -61,7 +61,7 @@
 [Name] == Amnrune
 //[Name] == Dolrune
 //[Name] == Nefrune
-[Name] == Tirrune
+//[Name] == Tirrune
 //[Name] == Solrune
 //[Name] == Elrune
 //[Name] == Eldrune
@@ -605,9 +605,9 @@
 //================= Boots ================
 //----------------------------------------
 
-[Type] == Boots && [Quality] == Rare && [Flag] != Ethereal # [Frw] >= 10 && [Fhr] >= 10 && [Dexterity] >= 8 && [Fireresist]+[Lightresist]+[Coldresist]+[Poisonresist] >= 60
+[Type] == Boots && [Quality] == Rare && [Flag] != Ethereal # [Frw] >= 10 && [Fhr] >= 10 && [Fireresist]+[Lightresist]+[Coldresist]+[Poisonresist] >= 60
 //[Type] == Boots && [Quality] == Rare && [Flag] != Ethereal # [Frw] >= 30 && [Fhr] >= 10 && [Dexterity] >= 8 && [Fireresist]+[Lightresist]+[Coldresist]+[Poisonresist] >= 60       // Tri Res
-[Type] == Boots && [Quality] == Rare && [Flag] == Ethereal # [Frw] >= 20 && [Fhr] >= 10 && [Dexterity] >= 8 && [Fireresist]+[Lightresist]+[Coldresist]+[Poisonresist] >= 60 && [Itemreplenishdurability] >= 1       // Eth Rep
+[Type] == Boots && [Quality] == Rare && [Flag] == Ethereal # [Frw] >= 20 && [Fhr] >= 10 [Fireresist]+[Lightresist]+[Coldresist]+[Poisonresist] >= 60 && [Itemreplenishdurability] >= 1       // Eth Rep
 
 //-----------------------------------------
 //================= Gloves ================

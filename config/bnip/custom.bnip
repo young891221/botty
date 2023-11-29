@@ -317,7 +317,7 @@
 //------------------------------------------
 
 // <<<<<<<<< [ Magic Jewels ] >>>>>>>>>
-//[Name] == Jewel && [Quality] == Magic //all
+[Name] == Jewel && [Quality] == Magic # [Itemlevelreq] > 25 //all
 [Name] == Jewel && [Quality] == Magic # [Ias] >= 15
 [Name] == Jewel && [Quality] == Magic # [Enhanceddamage] >= 35
 //[Name] == Jewel && [Quality] == Magic # [Enhanceddamage] >= 35 && ([Ias] == 15 || [Itemreqpercent] <= -15 || [Fireresist] >= 30 || [Mindamage] >= 10 || [Maxdamage] >= 15)		// Ruby Jewel Of X
@@ -332,6 +332,7 @@
 [Name] == Jewel && [Quality] == Magic # [Poisonmindam] >= 103		// Jewel Of Envy (Vlld)
 
 // <<<<<<<<< [ Magic Amulets ] >>>>>>>>>
+[Name] == Amulet && [Quality] == Magic # [Itemlevelreq] >= 50		//all
 //[Name] == Amulet && [Quality] == Magic # [Itemchargedskill] == 54		// Tele Amulet
 [Type] == Amulet && [Quality] == Magic # [Itemaddskilltab] >= 3 && ([Fcr] >= 10 || [Itemmagicbonus] >= 35)        // +3 Skill Fcr/Mf Amulet
 

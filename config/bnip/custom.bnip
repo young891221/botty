@@ -52,17 +52,16 @@
 //================= Runes ================
 //----------------------------------------
 
-[Name] >= Lumrune && [Name] <= Zodrune
+[Name] >= Dolrune && [Name] <= Zodrune
 //[Name] == Ithrune
 [Name] == Talrune
 [Name] == Ralrune
-//[Name] == Ortrune
-//[Name] == Thulrune
+[Name] == Ortrune
+[Name] == Thulrune
 [Name] == Amnrune
-//[Name] == Dolrune
 //[Name] == Nefrune
 [Name] == Tirrune
-//[Name] == Solrune
+[Name] == Solrune
 //[Name] == Elrune
 //[Name] == Eldrune
 //[Name] == Nefrune
@@ -101,7 +100,7 @@
 //[Name] == Chippedsapphire
 //[Name] == Chippedskull
 //[Name] == Chippedtopaz
-[Name] == Flawedamethyst
+//[Name] == Flawedamethyst
 //[Name] == Flaweddiamond
 //[Name] == Flawedemerald
 //[Name] == Flawedruby
@@ -304,11 +303,11 @@
 [Name] == Smallcharm && [Quality] == Magic # [Frw] >= 3 && [Tohit] >= 36
 
 // <<<<<<<<< [ +Fhr Small Charms ] >>>>>>>>>
-[Name] == Smallcharm && [Quality] == Magic # [Fhr] >= 5 && [Fireresist] >= 11
-[Name] == Smallcharm && [Quality] == Magic # [Fhr] >= 5 && [Coldresist] >= 11
-[Name] == Smallcharm && [Quality] == Magic # [Fhr] >= 5 && [Lightresist] >= 11
-[Name] == Smallcharm && [Quality] == Magic # [Fhr] >= 5 && [Poisonresist] >= 11
-[Name] == Smallcharm && [Quality] == Magic # [Fhr] >= 5 && [Coldresist]+[Fireresist]+[Lightresist]+[Poisonresist] >= 20
+[Name] == Smallcharm && [Quality] == Magic # [Fhr] >= 5 && [Fireresist] >= 10
+[Name] == Smallcharm && [Quality] == Magic # [Fhr] >= 5 && [Coldresist] >= 10
+[Name] == Smallcharm && [Quality] == Magic # [Fhr] >= 5 && [Lightresist] >= 10
+[Name] == Smallcharm && [Quality] == Magic # [Fhr] >= 5 && [Poisonresist] >= 10
+[Name] == Smallcharm && [Quality] == Magic # [Fhr] >= 5 && [Coldresist]+[Fireresist]+[Lightresist]+[Poisonresist] >= 16
 [Name] == Smallcharm && [Quality] == Magic # [Fhr] >= 5 && [Tohit] >= 20 && [Maxdamage] >= 3
 [Name] == Smallcharm && [Quality] == Magic # [Fhr] >= 5 && [Tohit] >= 36
 
@@ -317,7 +316,7 @@
 //------------------------------------------
 
 // <<<<<<<<< [ Magic Jewels ] >>>>>>>>>
-[Name] == Jewel && [Quality] == Magic # [Itemlevelreq] > 25 //all
+//[Name] == Jewel && [Quality] == Magic # [Itemlevelreq] > 25 //all
 [Name] == Jewel && [Quality] == Magic # [Ias] >= 15
 [Name] == Jewel && [Quality] == Magic # [Enhanceddamage] >= 35
 //[Name] == Jewel && [Quality] == Magic # [Enhanceddamage] >= 35 && ([Ias] == 15 || [Itemreqpercent] <= -15 || [Fireresist] >= 30 || [Mindamage] >= 10 || [Maxdamage] >= 15)		// Ruby Jewel Of X
@@ -332,8 +331,9 @@
 [Name] == Jewel && [Quality] == Magic # [Poisonmindam] >= 103		// Jewel Of Envy (Vlld)
 
 // <<<<<<<<< [ Magic Amulets ] >>>>>>>>>
-[Name] == Amulet && [Quality] == Magic # [Itemlevelreq] >= 50		//all
+//[Name] == Amulet && [Quality] == Magic # [Itemlevelreq] >= 50		//all
 //[Name] == Amulet && [Quality] == Magic # [Itemchargedskill] == 54		// Tele Amulet
+[Type] == Amulet && [Quality] == Magic # [Itemaddskilltab] >= 3 // 3skill
 [Type] == Amulet && [Quality] == Magic # [Itemaddskilltab] >= 3 && ([Fcr] >= 10 || [Itemmagicbonus] >= 35)        // +3 Skill Fcr/Mf Amulet
 
 //-------------------------------------------
@@ -606,7 +606,8 @@
 //================= Boots ================
 //----------------------------------------
 
-[Type] == Boots && [Quality] == Rare && [Flag] != Ethereal # [Frw] >= 10 && [Fhr] >= 10 && [Dexterity] >= 8 && [Fireresist]+[Lightresist]+[Coldresist]+[Poisonresist] >= 60
+[Type] == Boots && [Quality] == Rare && [Flag] != Ethereal # [Frw] >= 10 && [Fireresist]+[Lightresist]+[Coldresist]+[Poisonresist] >= 60 //only regi
+[Type] == Boots && [Quality] == Rare && [Flag] != Ethereal # [Frw] >= 10 && [Fhr] >= 10 && [Fireresist]+[Lightresist]+[Coldresist]+[Poisonresist] >= 60
 //[Type] == Boots && [Quality] == Rare && [Flag] != Ethereal # [Frw] >= 30 && [Fhr] >= 10 && [Dexterity] >= 8 && [Fireresist]+[Lightresist]+[Coldresist]+[Poisonresist] >= 60       // Tri Res
 [Type] == Boots && [Quality] == Rare && [Flag] == Ethereal # [Frw] >= 20 && [Fhr] >= 10 && [Dexterity] >= 8 && [Fireresist]+[Lightresist]+[Coldresist]+[Poisonresist] >= 60 && [Itemreplenishdurability] >= 1       // Eth Rep
 
@@ -673,15 +674,15 @@
 [Name] == Sacredarmor && [Quality] == Superior && [Flag] != Ethereal # [Enhanceddefense] >= 10 && [Sockets] >= 3          // Socketed Sup
 
 // <<<<<<<<< [ Ethereal Socketed/Non-Socketed Armor ] >>>>>>>>>
-[Name] == Archonplate && [Quality] == Normal && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 3) && [Defense] >= 800           // Socketed Eth
-[Name] == Duskshroud && [Quality] == Normal && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 3) && [Defense] >= 800          // Socketed Eth
+[Name] == Archonplate && [Quality] == Normal && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 3) && [Defense] >= 700           // Socketed Eth
+[Name] == Duskshroud && [Quality] == Normal && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 3) && [Defense] >= 700          // Socketed Eth
 //[Name] == Mageplate && [Quality] == Normal && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] == 3)           // Socketed Eth
 //[Name] == Greathauberk && [Quality] == Normal && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 3)           // Socketed Eth
-[Name] == Wirefleece && [Quality] == Normal && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 3) && [Defense] >= 800          // Socketed Eth
-[Name] == Scarabhusk && [Quality] == Normal && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 3) && [Defense] >= 800           // Socketed Eth
-[Name] == Wyrmhide && [Quality] == Normal && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 3) && [Defense] >= 800          // Socketed Eth
+[Name] == Wirefleece && [Quality] == Normal && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 3) && [Defense] >= 700          // Socketed Eth
+[Name] == Scarabhusk && [Quality] == Normal && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 3) && [Defense] >= 700           // Socketed Eth
+[Name] == Wyrmhide && [Quality] == Normal && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 3) && [Defense] >= 700          // Socketed Eth
 //[Name] == Lightplate && [Quality] == Normal && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 3)           // Socketed Eth
-[Name] == Sacredarmor && [Quality] == Normal && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 3) && [Defense] >= 800           // Socketed Eth
+[Name] == Sacredarmor && [Quality] == Normal && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 3) && [Defense] >= 700           // Socketed Eth
 
 // <<<<<<<<< [ Ethereal Superior Socketed/Non-Socketed Armor ] >>>>>>>>>
 [Name] == Archonplate && [Quality] == Superior && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 3) && [Enhanceddefense] >= 10          // Socketed Eth Sup

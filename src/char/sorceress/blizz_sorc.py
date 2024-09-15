@@ -129,13 +129,14 @@ class BlizzSorc(Sorceress):
         self.move(pos_m, force_move=True)
         #teledance attack 2
         self._cast_static()
-        self._blizzard((450, -250), spray=10)
-        self._ice_blast((150, -100), spray=60)
-        self._blizzard((0, -250), spray=10)
+        self._blizzard((100, -50), spray=10)
+        self._ice_blast((100, -50), spray=60)
+        self._blizzard((100, -50), spray=10)
         wait(0.3)
         #Shenk Kill
         self._cast_static()
         self._blizzard((100, -50), spray=10)
+        self._ice_blast((150, -100), spray=60)
         # Move to items
         self._pather.traverse_nodes((Location.A5_SHENK_SAFE_DIST, Location.A5_SHENK_END), self, timeout=1.4, force_tp=True)
         return True

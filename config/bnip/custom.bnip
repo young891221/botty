@@ -52,7 +52,7 @@
 //================= Runes ================
 //----------------------------------------
 
-[Name] >= Lumrune && [Name] <= Zodrune
+[Name] >= Korune && [Name] <= Zodrune
 //[Name] == Ithrune
 [Name] == Talrune
 [Name] == Ralrune
@@ -61,7 +61,7 @@
 [Name] == Amnrune
 //[Name] == Dolrune
 //[Name] == Nefrune
-[Name] == Tirrune
+//[Name] == Tirrune
 //[Name] == Solrune
 //[Name] == Elrune
 //[Name] == Eldrune
@@ -351,7 +351,7 @@
 //------------------------------------------
 
 // <<<<<<<<< [ Magic Visionary Helms ] >>>>>>>>>
-//([Name] == Demonhead || [Name] == Bonevisage || [Name] == Spiredhelm || [Name] == Corona) && [Quality] == Magic # [Itemtohitpercentperlevel] >= 1 && ([Fhr] == 10 || [Maxhp] >= 30)
+([Name] == Demonhead || [Name] == Bonevisage || [Name] == Spiredhelm || [Name] == Corona) && [Quality] == Magic # [Itemtohitpercentperlevel] >= 1 && ([Fhr] == 10 || [Maxhp] >= 30)
 
 // <<<<<<<<< [ Magic Barbarian Helmets ] >>>>>>>>>
 //[Type] == Primalhelm && [Quality] == Magic && [Flag] != Ethereal # ([Barbarianskills] == 2 || [Warcriesskilltab] >= 2) && [Skillbattleorders] >= 3        // All B.O Helms
@@ -710,10 +710,14 @@
 //-----------------------------------------------
 //================= Helmet Bases ================
 //-----------------------------------------------
-//([Name] == Corona || [Name] == Demonhead || [Name] == Bonevisage || [Name] == Diadem) && [Quality] == Normal && [Flag] != Ethereal # [Sockets] == 0
-//([Name] == Corona || [Name] == Demonhead || [Name] == Bonevisage || [Name] == Diadem) && [Quality] == Normal && [Flag] != Ethereal # [Sockets] == 3       // 3os Socketed
+([Name] == Diadem) && [Quality] == Normal && [Flag] != Ethereal # [Sockets] == 0
+([Name] == Diadem) && [Quality] == Normal && [Flag] != Ethereal # [Sockets] == 3
+([Name] == Corona || [Name] == Demonhead || [Name] == Bonevisage) && [Quality] == Normal && [Flag] != Ethereal # [Sockets] == 0 && [Defense] >= 153
+([Name] == Corona || [Name] == Demonhead || [Name] == Bonevisage) && [Quality] == Normal && [Flag] != Ethereal # [Sockets] == 3 && [Defense] >= 153      // 3os Socketed
 ([Name] == Corona || [Name] == Demonhead || [Name] == Bonevisage || [Name] == Diadem) && [Quality] == Superior && [Flag] != Ethereal # [Enhanceddefense] >= 10 && [Sockets] == 0         // Delirium Or Dream Perfect
 ([Name] == Corona || [Name] == Demonhead || [Name] == Bonevisage || [Name] == Diadem) && [Quality] == Superior && [Flag] != Ethereal # [Enhanceddefense] >= 10 && [Sockets] == 3         // 3os Socketed Delirium Or Dream Perfect
+([Name] == Corona || [Name] == Demonhead || [Name] == Bonevisage || [Name] == Spiredhelm) && [Flag] = Ethereal # [Sockets] == 0
+([Name] == Corona || [Name] == Demonhead || [Name] == Bonevisage || [Name] == Spiredhelm) && [Flag] = Ethereal # [Sockets] == 3
 
 //-------------------------------------------------------
 //================= Barbarian Helm Bases ================

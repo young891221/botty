@@ -1242,8 +1242,8 @@
 [Name] == Lacqueredplate && [Quality] == Set      // Tal Rasha's Guardianship
 //[Name] == Lacqueredplate && [Quality] == Set # [Defense] >= 941     // Tal Rasha's Guardianship Perfect
 [Type] == Amulet && [Quality] == Set # [Sorceressskills] == 2   	// Tal Rasha's Adjucation
-[Name] == Meshbelt && [Quality] == Set # [Itemmagicbonus] >= 10   	// Tal Rasha's Fine-Spun Cloth
-//[Name] == Meshbelt && [Quality] == Set # [Itemmagicbonus] == 15   	// Tal Rasha's Fine-Spun Cloth Perfect
+//[Name] == Meshbelt && [Quality] == Set # [Itemmagicbonus] >= 10   	// Tal Rasha's Fine-Spun Cloth
+[Name] == Meshbelt && [Quality] == Set # [Itemmagicbonus] == 15   	// Tal Rasha's Fine-Spun Cloth Perfect
 
 //----------------------------------------------------
 //================= Trang-Ouls Avatar ================
@@ -1318,10 +1318,10 @@
 
 //[Name] == Heavygloves && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 10     	// Bloodfist
 //[Name] == Heavygloves && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 20     	// Bloodfist Perfect
-[Name] == Chaingloves && [Quality] == Unique && [Flag] != Ethereal # [Itemmagicbonus] >= 25    	// Chance Guards
-//[Name] == Chaingloves && [Quality] == Unique && [Flag] != Ethereal # [Itemmagicbonus] >= 40 && [Enhanceddefense] >= 30      // Chance Guards Perfect
-[Name] == Lightgauntlets && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 20     // Magefist
-//[Name] == Lightgauntlets && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 30     // Magefist Perfect
+//[Name] == Chaingloves && [Quality] == Unique && [Flag] != Ethereal # [Itemmagicbonus] >= 25    	// Chance Guards
+[Name] == Chaingloves && [Quality] == Unique && [Flag] != Ethereal # [Itemmagicbonus] >= 40 && [Enhanceddefense] >= 30      // Chance Guards Perfect
+//[Name] == Lightgauntlets && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 20     // Magefist
+[Name] == Lightgauntlets && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 30     // Magefist Perfect
 //[Name] == Gauntlets && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 10     	// Frostburn
 //[Name] == Gauntlets && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 20     	// Frostburn Perfect
 [Name] == Vampirebonegloves && [Quality] == Unique && [Flag] != Ethereal # [Strength] == 10      // Dracul's Grasp
@@ -1341,8 +1341,8 @@
 //[Name] == Sharkskinbelt && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 150 && [Plusdefense] >= 15     // Razortail Perfect
 //[Name] == Battlebelt && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 130        // Snowclash
 //[Name] == Battlebelt && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 170        // Snowclash Perfect
-[Name] == Warbelt && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 160       // Thundergod's Vigor
-//[Name] == Warbelt && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 200       // Thundergod's Vigor Perfect
+//[Name] == Warbelt && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 160       // Thundergod's Vigor
+[Name] == Warbelt && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 200       // Thundergod's Vigor Perfect
 [Name] == Spiderwebsash && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 90 // Arachnid Mesh
 //[Name] == Spiderwebsash && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 120      // Arachnid Mesh Perfect
 //[Name] == Vampirefangbelt && [Quality] == Unique && [Flag] != Ethereal # [Lifeleech] >= 5 && [Defense] >= 50         // Nosferatu's Coil
@@ -1397,7 +1397,7 @@
 [Name] == Shako && [Quality] == Unique && [Flag] != Ethereal # [Defense] >= 98     // Harlequin Crest Shako
 //[Name] == Shako && [Quality] == Unique && [Flag] != Ethereal # [Defense] >= 141     // Harlequin Crest Shako Perfect
 //[Name] == Armet && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 100 && [Manaleech] >= 4     // Steel Shade
-[Name] == Spiredhelm && [Quality] == Unique && [Flag] != Ethereal # [Allres] >= 50       // Veil Of Steel
+//[Name] == Spiredhelm && [Quality] == Unique && [Flag] != Ethereal # [Allres] >= 50       // Veil Of Steel
 [Name] == Spiredhelm && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 90 && [Dexterity] >= 10 && [Itemabsorbcold] >= 5 && [Passivecoldmastery] >= 8       // Nightwing's Veil
 //[Name] == Spiredhelm && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] == 120 && [Dexterity] == 20 && [Itemabsorbcold] == 9 && [Passivecoldmastery] == 15       // Nightwing's Veil Perfect
 [Name] == Demonhead && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 100 && [Lifeleech] >= 8 && [Strength] >= 25      // Andariel's Visage

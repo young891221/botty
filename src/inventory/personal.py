@@ -1,27 +1,27 @@
-import itertools
-from game_stats import GameStats
-import keyboard
 import cv2
-import time
+import itertools
+import keyboard
 import numpy as np
-from dataclasses import dataclass
-import parse
-
-from logger import Logger
-from config import Config
 import template_finder
-from utils.misc import wait, is_in_roi, mask_by_roi
-from utils.custom_mouse import mouse
-from inventory import stash, common, vendor
-from ui import view
-from ui_manager import detect_screen_object, is_visible, select_screen_object_match, wait_until_visible, ScreenObjects, center_mouse, wait_for_update
-from messages import Messenger
-from d2r_image import processing as d2r_image
-from d2r_image.data_models import HoveredItem, ItemText
-from screen import grab, convert_screen_to_monitor
-from item import consumables
+import time
 from bnip.NTIPAliasStat import NTIPAliasStat as NTIP_STATS
 from bnip.actions import should_id, should_keep
+from d2r_image import processing as d2r_image
+from d2r_image.data_models import HoveredItem, ItemText
+from dataclasses import dataclass
+from game_stats import GameStats
+from inventory import stash, common, vendor
+from item import consumables
+from logger import Logger
+from messages import Messenger
+from screen import grab, convert_screen_to_monitor
+from ui import view
+from ui_manager import detect_screen_object, is_visible, select_screen_object_match, wait_until_visible, ScreenObjects, \
+    center_mouse, wait_for_update
+from utils.custom_mouse import mouse
+from utils.misc import wait, is_in_roi, mask_by_roi
+
+from config import Config
 
 inv_gold_full = False
 messenger = Messenger()
@@ -321,8 +321,12 @@ def inspect_items(inp_img: np.ndarray = None, close_window: bool = True, game_st
 
                         # sell if not keeping item, vendor is open, and item type can be traded
                         if vendor_open and item_can_be_traded and not (box.keep or box.need_id):
-                            box.sell = True
-                            transfer_items([box], action = "sell")
+                            #엘리트일 경우에만 판매
+                            if item_properties.as_dict()["Class"] != "Elite":
+                                transfer_items([box], action = "drop")
+                            else:
+                                box.sell = True
+                                transfer_items([box], action = "sell")
                             continue
 
                         # if item is to be kept and is already ID'd or doesn't need ID, log and stash

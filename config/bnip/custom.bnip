@@ -718,8 +718,8 @@
 ([Name] == Corona || [Name] == Demonhead || [Name] == Bonevisage || [Name] == Diadem) && [Quality] == Superior && [Flag] != Ethereal # [Enhanceddefense] >= 10 && [Sockets] == 3         // 3os Socketed Delirium Or Dream Perfect
 ([Name] == Corona || [Name] == Demonhead || [Name] == Bonevisage || [Name] == Spiredhelm) && [Quality] == Normal && [Flag] == Ethereal # [Sockets] == 0
 ([Name] == Corona || [Name] == Demonhead || [Name] == Bonevisage || [Name] == Spiredhelm) && [Quality] == Normal && [Flag] == Ethereal # [Sockets] == 3
-([Name] == Corona || [Name] == Demonhead || [Name] == Bonevisage || [Name] == Spiredhelm) && [Quality] == Superior && [Flag] == Ethereal && [Sockets] == 0
-([Name] == Corona || [Name] == Demonhead || [Name] == Bonevisage || [Name] == Spiredhelm) && [Quality] == Superior && [Flag] == Ethereal && [Sockets] == 3
+([Name] == Corona || [Name] == Demonhead || [Name] == Bonevisage || [Name] == Spiredhelm) && [Quality] == Superior && [Flag] == Ethereal # [Sockets] == 0
+([Name] == Corona || [Name] == Demonhead || [Name] == Bonevisage || [Name] == Spiredhelm) && [Quality] == Superior && [Flag] == Ethereal # [Sockets] == 3
 
 //-------------------------------------------------------
 //================= Barbarian Helm Bases ================

@@ -278,7 +278,7 @@
 //[Name] == Smallcharm && [Quality] == Magic # [Maxhp] >= 20 && [Lightresist] >= 11
 //[Name] == Smallcharm && [Quality] == Magic # [Maxhp] >= 20 && [Poisonresist] >= 11
 //[Name] == Smallcharm && [Quality] == Magic # [Maxhp] >= 15 && [Coldresist]+[Fireresist]+[Lightresist]+[Poisonresist] >= 20
-[Name] == Smallcharm && [Quality] == Magic # [Maxhp] >= 15 && [Tohit] >= 15 && [Maxdamage] >= 3
+[Name] == Smallcharm && [Quality] == Magic # [Maxhp] >= 15 && [Tohit] >= 15 && [Maxdamage] >= 1
 //[Name] == Smallcharm && [Quality] == Magic # [Maxhp] == 15 && [Tohit] >= 20 && [Maxdamage] >= 3
 //[Name] == Smallcharm && [Quality] == Magic # [Maxhp] == 20 && [Tohit] >= 20 && [Maxdamage] >= 3
 //[Name] == Smallcharm && [Quality] == Magic # [Maxhp] >= 20 && [Tohit] >= 36
@@ -304,11 +304,11 @@
 [Name] == Smallcharm && [Quality] == Magic # [Frw] >= 3 && [Tohit] >= 36
 
 // <<<<<<<<< [ +Fhr Small Charms ] >>>>>>>>>
-[Name] == Smallcharm && [Quality] == Magic # [Fhr] >= 5 && [Fireresist] >= 11
-[Name] == Smallcharm && [Quality] == Magic # [Fhr] >= 5 && [Coldresist] >= 11
-[Name] == Smallcharm && [Quality] == Magic # [Fhr] >= 5 && [Lightresist] >= 11
-[Name] == Smallcharm && [Quality] == Magic # [Fhr] >= 5 && [Poisonresist] >= 11
-[Name] == Smallcharm && [Quality] == Magic # [Fhr] >= 5 && [Coldresist]+[Fireresist]+[Lightresist]+[Poisonresist] >= 20
+[Name] == Smallcharm && [Quality] == Magic # [Fhr] >= 5 && [Fireresist] >= 9
+[Name] == Smallcharm && [Quality] == Magic # [Fhr] >= 5 && [Coldresist] >= 9
+[Name] == Smallcharm && [Quality] == Magic # [Fhr] >= 5 && [Lightresist] >= 9
+[Name] == Smallcharm && [Quality] == Magic # [Fhr] >= 5 && [Poisonresist] >= 9
+[Name] == Smallcharm && [Quality] == Magic # [Fhr] >= 5 && [Coldresist]+[Fireresist]+[Lightresist]+[Poisonresist] >= 15
 [Name] == Smallcharm && [Quality] == Magic # [Fhr] >= 5 && [Tohit] >= 20 && [Maxdamage] >= 3
 [Name] == Smallcharm && [Quality] == Magic # [Fhr] >= 5 && [Tohit] >= 36
 

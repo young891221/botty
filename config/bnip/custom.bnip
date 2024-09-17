@@ -319,7 +319,7 @@
 // <<<<<<<<< [ Magic Jewels ] >>>>>>>>>
 //[Name] == Jewel && [Quality] == Magic # [Itemlevelreq] > 25 //all
 [Name] == Jewel && [Quality] == Magic # [Ias] >= 15
-[Name] == Jewel && [Quality] == Magic # [Enhanceddamage] >= 35
+[Name] == Jewel && [Quality] == Magic # [Enhanceddamage] >= 38
 //[Name] == Jewel && [Quality] == Magic # [Enhanceddamage] >= 35 && ([Ias] == 15 || [Itemreqpercent] <= -15 || [Fireresist] >= 30 || [Mindamage] >= 10 || [Maxdamage] >= 15)		// Ruby Jewel Of X
 [Name] == Jewel && [Quality] == Magic # [Fireresist]+[Coldresist]+[Lightresist]+[Poisonresist] >= 60 && [Ias] >= 15		// Scintillating Jewel Of Fervor
 //[Name] == Jewel && [Quality] == Magic # [Tohit] >= 100 && [Ias] >= 15		// Argent Jewel Of Fervor
@@ -334,6 +334,9 @@
 // <<<<<<<<< [ Magic Amulets ] >>>>>>>>>
 //[Name] == Amulet && [Quality] == Magic # [Itemchargedskill] == 54		// Tele Amulet
 [Type] == Amulet && [Quality] == Magic # [Itemaddskilltab] >= 3 && ([Fcr] >= 10 || [Itemmagicbonus] >= 35)        // +3 Skill Fcr/Mf Amulet
+
+// <<<<<<<<< [ Magic Ring ] >>>>>>>>>
+[Type] == Ring && [Quality] == Magic # [Fcr] >= 10 && ([Allresist] >= 10 || [Itemmagicbonus] >= 35)        // Fcr/Mf ring
 
 //-------------------------------------------
 //================= Circlets ================

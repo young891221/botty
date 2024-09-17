@@ -57,7 +57,7 @@
 [Name] == Talrune
 [Name] == Ralrune
 //[Name] == Ortrune
-//[Name] == Thulrune
+[Name] == Thulrune
 [Name] == Amnrune
 //[Name] == Dolrune
 //[Name] == Nefrune
@@ -96,12 +96,12 @@
 
 //[Name] == Chippedamethyst
 //[Name] == Chippeddiamond
-//[Name] == Chippedemerald
+[Name] == Chippedemerald
 //[Name] == Chippedruby
 //[Name] == Chippedsapphire
 //[Name] == Chippedskull
 //[Name] == Chippedtopaz
-[Name] == Flawedamethyst
+//[Name] == Flawedamethyst
 //[Name] == Flaweddiamond
 //[Name] == Flawedemerald
 //[Name] == Flawedruby
@@ -278,7 +278,7 @@
 //[Name] == Smallcharm && [Quality] == Magic # [Maxhp] >= 20 && [Lightresist] >= 11
 //[Name] == Smallcharm && [Quality] == Magic # [Maxhp] >= 20 && [Poisonresist] >= 11
 //[Name] == Smallcharm && [Quality] == Magic # [Maxhp] >= 15 && [Coldresist]+[Fireresist]+[Lightresist]+[Poisonresist] >= 20
-//[Name] == Smallcharm && [Quality] == Magic # [Maxhp] >= 15 && [Tohit] >= 15 && [Maxdamage] >= 3
+[Name] == Smallcharm && [Quality] == Magic # [Maxhp] >= 15 && [Tohit] >= 15 && [Maxdamage] >= 3
 //[Name] == Smallcharm && [Quality] == Magic # [Maxhp] == 15 && [Tohit] >= 20 && [Maxdamage] >= 3
 //[Name] == Smallcharm && [Quality] == Magic # [Maxhp] == 20 && [Tohit] >= 20 && [Maxdamage] >= 3
 //[Name] == Smallcharm && [Quality] == Magic # [Maxhp] >= 20 && [Tohit] >= 36
@@ -317,7 +317,7 @@
 //------------------------------------------
 
 // <<<<<<<<< [ Magic Jewels ] >>>>>>>>>
-[Name] == Jewel && [Quality] == Magic # [Itemlevelreq] > 25 //all
+//[Name] == Jewel && [Quality] == Magic # [Itemlevelreq] > 25 //all
 [Name] == Jewel && [Quality] == Magic # [Ias] >= 15
 [Name] == Jewel && [Quality] == Magic # [Enhanceddamage] >= 35
 //[Name] == Jewel && [Quality] == Magic # [Enhanceddamage] >= 35 && ([Ias] == 15 || [Itemreqpercent] <= -15 || [Fireresist] >= 30 || [Mindamage] >= 10 || [Maxdamage] >= 15)		// Ruby Jewel Of X
@@ -332,7 +332,6 @@
 [Name] == Jewel && [Quality] == Magic # [Poisonmindam] >= 103		// Jewel Of Envy (Vlld)
 
 // <<<<<<<<< [ Magic Amulets ] >>>>>>>>>
-[Name] == Amulet && [Quality] == Magic # [Itemlevelreq] >= 50		//all
 //[Name] == Amulet && [Quality] == Magic # [Itemchargedskill] == 54		// Tele Amulet
 [Type] == Amulet && [Quality] == Magic # [Itemaddskilltab] >= 3 && ([Fcr] >= 10 || [Itemmagicbonus] >= 35)        // +3 Skill Fcr/Mf Amulet
 
@@ -712,8 +711,8 @@
 //-----------------------------------------------
 ([Name] == Diadem) && [Quality] == Normal && [Flag] != Ethereal # [Sockets] == 0
 ([Name] == Diadem) && [Quality] == Normal && [Flag] != Ethereal # [Sockets] == 3
-([Name] == Corona || [Name] == Demonhead || [Name] == Bonevisage) && [Quality] == Normal && [Flag] != Ethereal # [Sockets] == 0 && [Defense] >= 153
-([Name] == Corona || [Name] == Demonhead || [Name] == Bonevisage) && [Quality] == Normal && [Flag] != Ethereal # [Sockets] == 3 && [Defense] >= 153      // 3os Socketed
+([Name] == Corona || [Name] == Demonhead || [Name] == Bonevisage) && [Quality] == Normal && [Flag] != Ethereal # [Sockets] == 0 && [Defense] >= 154
+([Name] == Corona || [Name] == Demonhead || [Name] == Bonevisage) && [Quality] == Normal && [Flag] != Ethereal # [Sockets] == 3 && [Defense] >= 154      // 3os Socketed
 ([Name] == Corona || [Name] == Demonhead || [Name] == Bonevisage || [Name] == Diadem) && [Quality] == Superior && [Flag] != Ethereal # [Enhanceddefense] >= 10 && [Sockets] == 0         // Delirium Or Dream Perfect
 ([Name] == Corona || [Name] == Demonhead || [Name] == Bonevisage || [Name] == Diadem) && [Quality] == Superior && [Flag] != Ethereal # [Enhanceddefense] >= 10 && [Sockets] == 3         // 3os Socketed Delirium Or Dream Perfect
 ([Name] == Corona || [Name] == Demonhead || [Name] == Bonevisage || [Name] == Spiredhelm) && [Quality] == Normal && [Flag] == Ethereal # [Sockets] == 0
@@ -755,7 +754,7 @@
 // <<<<<<<<< [ White/Eth Superior/Non-Superior Socketed/Non-Socketed Shields ] >>>>>>>>>
 //([Name] == Akarantarge || [Name] == Akaranrondache || [Name] == Crownshield) && ([Quality] == Normal || [Quality] == Superior) && [Flag] != Ethereal # [Allresist] >= 40		// V/Lld Paladin Shield Base
 //[Name] == Monarch && [Quality] == Normal # [Sockets] == 0       // Plain Monarch
-[Name] == Monarch && [Quality] == Normal # [Sockets] == 4		//4os Monarch
+[Name] == Monarch && [Quality] == Normal && [Defense] >= 140 # [Sockets] == 4		//4os Monarch
 [Name] == Monarch && [Quality] == Superior # [Enhanceddefense] >= 10 && [Sockets] == 0	//Superior Plain Monarch
 [Name] == Monarch && [Quality] == Superior # [Enhanceddefense] >= 10 && [Sockets] == 4	//4os Superior Monarch
 [Name] == Monarch && [Quality] == Superior && [Flag] == Ethereal # [Enhanceddefense] >= 10 && ([Sockets] == 0 || [Sockets] == 4)         //4os Eth Monarch
@@ -934,6 +933,8 @@
 //([Name] == Gnarledstaff || [Name] == Battlestaff) && ([Quality] == Normal || [Quality] == Superior) # [Skillthunderstorm] == 3 && ([Skillenergyshield] == 3 || [Skillenchant] >= 1) && [Sockets] >= 4		// Memory Socketed
 ([Name] == Warstaff || [Name] == Runestaff || [Name] == Archonstaff) && ([Quality] == Normal || [Quality] == Superior) # [Skilllightningmastery] == 3 && ([Skilllightning] == 3 || [Skillchainlightning] == 3 || [Skillthunderstorm] == 3) && [Skillenergyshield] >= 1 && [Sockets] == 0	// Cta/Obsession
 ([Name] == Warstaff || [Name] == Runestaff || [Name] == Archonstaff) && ([Quality] == Normal || [Quality] == Superior) # [Skilllightningmastery] == 3 && ([Skilllightning] == 3 || [Skillchainlightning] == 3 || [Skillthunderstorm] == 3) && [Skillenergyshield] >= 1 && [Sockets] >= 5	// Cta/Obsession Socketed
+([Name] == Warstaff || [Name] == Runestaff || [Name] == Archonstaff) && ([Quality] == Normal || [Quality] == Superior) # [Skillenergyshield] >= 3 && [Sockets] == 0	// Cta/Obsession Socketed
+([Name] == Warstaff || [Name] == Runestaff || [Name] == Archonstaff) && ([Quality] == Normal || [Quality] == Superior) # [Skillenergyshield] >= 3 && [Sockets] == 5	// Cta/Obsession Socketed
 
 //---------------------------------------------------------
 //================= Necromancer Wand Bases ================
@@ -1626,7 +1627,7 @@
 //[Idname] == Lycandersflank      // Lycander's Flank
 //[Idname] == Lycandersaim        // Lycander's Aim
 //[Name] == Ceremonialbow && [Quality] == Unique # [Enhanceddamage] >= 190 && [Manaleech] >= 8     	// Lycander's Aim Perfect
-[Idname] == Titansrevenge       // Titan's Revenge
+//[Idname] == Titansrevenge       // Titan's Revenge
 [Name] == Ceremonialjavelin && [Quality] == Unique && [Flag] == Ethereal # [Enhanceddamage] >= 150 && [Lifeleech] >= 5    // Eth Titan's Revenge
 //[Idname] == Thunderstroke   // Thunderstroke
 [Name] == Matriarchaljavelin && [Quality] == Unique && [Flag] != Ethereal # [Javelinandspearskilltab] >= 4 && [Enhanceddamage] >= 150   // Thunderstroke Perfect
@@ -1647,7 +1648,8 @@
 //--------------------------------------------------------------
 
 [Name] == Hierophanttrophy && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 150      // Homunculus
-[Name] == Succubusskull && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 120 && [Necromancerskills] >= 1 && [Allresist] >= 20       // Boneflame
+//[Name] == Succubusskull && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 120 && [Necromancerskills] >= 1 && [Allresist] >= 20       // Boneflame
+[Name] == Succubusskull && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 120 && [Necromancerskills] >= 3 && [Allresist] >= 29       // Boneflame
 [Name] == Bloodlordskull && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 140 && [Necromancersummoningskilltab] >= 1 && [Poisonandboneskilltab] >= 1 && [Cursesskilltab] >= 1        // Darkforce Spawn
 
 //------------------------------------------------------------
@@ -1673,14 +1675,14 @@
 //[Name] == Eldritchorb && [Quality] == Unique # [Sorceressskills] == 3 && [Passivefiremastery] == 20 && [Passiveltngmastery] == 20 && [Energy] == 30     // Eschuta's Temper Perfect
 [Name] == Dimensionalshard && [Quality] == Unique # [Passivecoldpierce] >= 15 && [Lightresist] >= 25       // Death's Fathom
 //[Name] == Dimensionalshard && [Quality] == Unique # [Passivecoldpierce] == 30 && [Lightresist] == 40       // Death's Fathom Perfect
-[Name] == Swirlingcrystal && [Quality] == Unique # [Sorceressskills] >= 3       // The Oculus
+//[Name] == Swirlingcrystal && [Quality] == Unique # [Sorceressskills] >= 3       // The Oculus
 
 //-----------------------------------------------------
 //================= Unique Druid Pelts ================
 //-----------------------------------------------------
 
-[Name] == Totemicmask && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 150     // Jalal's Mane
-//[Name] == Totemicmask && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] == 200     // Jalal's Mane Perfect
+//[Name] == Totemicmask && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 150     // Jalal's Mane
+[Name] == Totemicmask && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] == 200     // Jalal's Mane Perfect
 //[Name] == Bloodspirit && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 130 && [Itemtohitpercent] >= 60 && [Lifeleech] >= 7 && [Shapeshiftingskilltab] >= 2 && [Skillferalrage] >= 1       // Cerebus' Bite
 //[Name] == Bloodspirit && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] == 140 && [Itemtohitpercent] == 120 && [Lifeleech] == 10 && [Shapeshiftingskilltab] == 4 && [Skillferalrage] == 2       // Cerebus' Bite Perfect
 [Name] == Skyspirit && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 120 && [Passivefirepierce] >= 10 && [Fireresist] >= 15     // Ravenlore

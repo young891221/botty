@@ -322,11 +322,12 @@ def inspect_items(inp_img: np.ndarray = None, close_window: bool = True, game_st
                         # sell if not keeping item, vendor is open, and item type can be traded
                         if vendor_open and item_can_be_traded and not (box.keep or box.need_id):
                             #엘리트일 경우에만 판매
-                            if item_properties.as_dict()["Class"] != "Elite":
-                                transfer_items([box], action = "drop")
-                            else:
-                                box.sell = True
-                                transfer_items([box], action = "sell")
+                            #Logger.debug(f"log item={item_properties.as_dict()}.")
+                            #if item_properties.as_dict()["Class"] != "Elite":
+                            #    transfer_items([box], action = "drop")
+                            #else:
+                            box.sell = True
+                            transfer_items([box], action = "sell")
                             continue
 
                         # if item is to be kept and is already ID'd or doesn't need ID, log and stash

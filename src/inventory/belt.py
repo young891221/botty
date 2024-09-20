@@ -113,8 +113,9 @@ def update_pot_needs():
             Logger.error("Could not find potions in belt. Most likely due to \"show_belt\" in params.ini having the incorrect hotkey.")
             Logger.error("Closing in 10 seconds..")
             messenger.send_message("Could not find potions in belt. Most likely due to \"show_belt\" in params.ini having the incorrect hotkey.")
-            wait(10)
-            os._exit(1)
+            #불필요한 종료 스킵
+            #wait(10)
+            #os._exit(1)
         if potion_type and potion_type != "empty":
             rows_left[potion_type] -= 1
             if rows_left[potion_type] < 0:

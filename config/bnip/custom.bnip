@@ -104,7 +104,7 @@
 //[Name] == Flawedamethyst
 //[Name] == Flaweddiamond
 //[Name] == Flawedemerald
-[Name] == Flawedruby
+//[Name] == Flawedruby
 //[Name] == Flawedsapphire
 //[Name] == Flawedskull
 //[Name] == Flawedtopaz
@@ -887,12 +887,12 @@
 
 // <<<<<<<<< [ Ethereal 2h Socketed/Non-Socketed Weapons ] >>>>>>>>>
 //[Name] == Warpike && [Quality] == Normal && [Flag] == Ethereal # [Sockets] == 6
-//[Name] == Colossusvoulge && [Quality] == Normal && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 4)          // Socketed Eth
+[Name] == Colossusvoulge && [Quality] == Normal && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] == 4)          // Socketed Eth
 [Name] == Thresher && [Quality] == Normal && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 4)          // Socketed Eth
 [Name] == Giantthresher && [Quality] == Normal && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 4)          // Socketed Eth
 //[Name] == Crypticaxe && [Quality] == Normal && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 4)          // Socketed Eth
 [Name] == Greatpoleaxe && [Quality] == Normal && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 4)          // Socketed Eth
-[Name] == Ghostspear && [Quality] == Normal && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 4)          // Socketed Eth
+//[Name] == Ghostspear && [Quality] == Normal && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 4)          // Socketed Eth
 [Name] == Mancatcher && [Quality] == Normal && [Flag] == Ethereal # ([Sockets] == 0 || [Sockets] >= 4)          // Socketed Eth
 
 // <<<<<<<<< [ Ethereal Superior 2h Socketed/Non-Socketed Weapons ] >>>>>>>>>
@@ -1557,7 +1557,7 @@
 //[Name] == Ogreaxe && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddamage] >= 270       // Bonehew
 //[Name] == Ogreaxe && [Quality] == Unique && [Flag] == Ethereal # [Enhanceddamage] >= 270       // Eth Bonehew
 [Name] == Ogreaxe && [Quality] == Unique && [Flag] == Ethereal # [Enhanceddamage] == 320      // Eth Bonehew Perfect
-//[Name] == Thresher && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddamage] >= 190     // The Reaper's Toll
+[Name] == Thresher && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddamage] >= 190     // The Reaper's Toll
 [Name] == Thresher && [Quality] == Unique && [Flag] == Ethereal # [Enhanceddamage] >= 190     // Eth The Reaper's Toll
 //[Name] == Thresher && [Quality] == Unique && [Flag] == Ethereal # [Enhanceddamage] == 240 && [Lifeleech] == 15     // Eth The Reaper's Toll Perfect
 //[Name] == Crypticaxe && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddamage] >= 200 && [Sockets] >= 1     // Tomb Reaver
@@ -1593,7 +1593,7 @@
 //[Name] == Quarterstaff && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddamage] >= 200       // Ribcracker
 //[Name] == Quarterstaff && [Quality] == Unique && [Flag] == Ethereal # [Enhanceddamage] >= 200       // Eth Ribcracker
 [Name] == Quarterstaff && [Quality] == Unique && [Flag] == Ethereal # [Enhanceddamage] == 300       // Eth Ribcracker Perfect
-//[Name] == Elderstaff && [Quality] == Unique # [Itemaddskilltab] >= 2      // Ondal's Wisdom (Eth/Non-Eth)
+[Name] == Elderstaff && [Quality] == Unique # [Itemaddskilltab] >= 2      // Ondal's Wisdom (Eth/Non-Eth)
 [Name] == Elderstaff && [Quality] == Unique # [Itemaddskilltab] == 4 && [Magicdamagereduction] == 8 && [Energy] == 50 && [Plusdefense] == 550      // Ondal's Wisdom (Eth/Non-Eth) Perfect
 //[Idname] == Mangsongslesson     // Mang Song's Lesson
 

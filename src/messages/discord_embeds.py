@@ -15,6 +15,7 @@ class DiscordEmbeds(GenericApi):
         self._psnURL = "https://i.psnprofiles.com/games/3bffee/trophies/"
         self._webhook = self._get_webhook(Config().general["custom_message_hook"])
         self._loot_webhook = self._get_webhook(Config().general["custom_loot_message_hook"])
+        self._alert_webhook = self._get_webhook(Config().general["custom_alert_message_hook"])
 
     def _get_webhook(self, hook_url: str):
         hook = None
@@ -64,7 +65,7 @@ class DiscordEmbeds(GenericApi):
         e.description=(f"Died at {location}")
         e.set_thumbnail(url=f"{self._psnURL}33L5e3600.png")
         e.set_image(url="attachment://death.png")
-        self._send_embed(e, self._webhook, file)
+        self._send_embed(e, self._alert_webhook, file)
 
     def send_chicken(self, location, image_path):
         file = self._add_file(image_path, "chicken.png")
@@ -73,21 +74,21 @@ class DiscordEmbeds(GenericApi):
         e.description=(f"chickened at {location}")
         e.set_thumbnail(url=f"{self._psnURL}39Ldf113b.png")
         e.set_image(url="attachment://chicken.png")
-        self._send_embed(e, self._webhook, file)
+        self._send_embed(e, self._alert_webhook, file)
 
     def send_stash(self):
         e = discord.Embed(title=f"{Config().general['name']} has a full stash!", color=Color.dark_grey())
         e.title=(f"{Config().general['name']} has a full stash!")
         e.description=(f"{Config().general['name']} has to quit. \n They cannot store anymore items!")
         e.set_thumbnail(url=f"{self._psnURL}35L63a9df.png")
-        self._send_embed(e, self._webhook)
+        self._send_embed(e, self._alert_webhook)
 
     def send_gold(self):
         e = discord.Embed(title=f"{Config().general['name']} is rich!", color=Color.dark_grey())
         e.title=(f"{Config().general['name']} is Rich!")
         e.description=(f"{Config().general['name']} can't store any more money!\n turning off gold pickup.")
         e.set_thumbnail(url=f"{self._psnURL}6L341955.png")
-        self._send_embed(e, self._webhook)
+        self._send_embed(e, self._alert_webhook)
 
     def send_message(self, msg: str):
         msg = f"{Config().general['name']}: {msg}"

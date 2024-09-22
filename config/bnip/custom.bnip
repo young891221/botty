@@ -148,25 +148,25 @@
 
 
 // <<<<<<<<< [ Plain Skillers ] >>>>>>>>>
-//[Name] == Grandcharm && [Quality] == Magic # [Fireskilltab] >= 1
-//[Name] == Grandcharm && [Quality] == Magic # [Coldskilltab] >= 1
-//[Name] == Grandcharm && [Quality] == Magic # [Lightningskilltab] >= 1
+[Name] == Grandcharm && [Quality] == Magic # [Fireskilltab] >= 1
+[Name] == Grandcharm && [Quality] == Magic # [Coldskilltab] >= 1
+[Name] == Grandcharm && [Quality] == Magic # [Lightningskilltab] >= 1
 //[Name] == Grandcharm && [Quality] == Magic # [Trapsskilltab] >= 1
 //[Name] == Grandcharm && [Quality] == Magic # [Shadowdisciplinesskilltab] >= 1
-//[Name] == Grandcharm && [Quality] == Magic # [Martialartsskilltab] >= 1
-//[Name] == Grandcharm && [Quality] == Magic # [Javelinandspearskilltab] >= 1
+[Name] == Grandcharm && [Quality] == Magic # [Martialartsskilltab] >= 1
+[Name] == Grandcharm && [Quality] == Magic # [Javelinandspearskilltab] >= 1
 //[Name] == Grandcharm && [Quality] == Magic # [Passiveandmagicskilltab] >= 1
 //[Name] == Grandcharm && [Quality] == Magic # [Bowandcrossbowskilltab] >= 1
-//[Name] == Grandcharm && [Quality] == Magic # [Palicombatskilltab] >= 1
+[Name] == Grandcharm && [Quality] == Magic # [Palicombatskilltab] >= 1
 //[Name] == Grandcharm && [Quality] == Magic # [Defensiveaurasskilltab] >= 1
 //[Name] == Grandcharm && [Quality] == Magic # [Offensiveaurasskilltab] >= 1
 //[Name] == Grandcharm && [Quality] == Magic # [Elementalskilltab] >= 1
 //[Name] == Grandcharm && [Quality] == Magic # [Shapeshiftingskilltab] >= 1
 //[Name] == Grandcharm && [Quality] == Magic # [Druidsummoningskilltab] >= 1
-//[Name] == Grandcharm && [Quality] == Magic # [Warcriesskilltab] >= 1
+[Name] == Grandcharm && [Quality] == Magic # [Warcriesskilltab] >= 1
 //[Name] == Grandcharm && [Quality] == Magic # [Masteriesskilltab] >= 1
 //[Name] == Grandcharm && [Quality] == Magic # [Barbcombatskilltab] >= 1
-//[Name] == Grandcharm && [Quality] == Magic # [Poisonandboneskilltab] >= 1
+[Name] == Grandcharm && [Quality] == Magic # [Poisonandboneskilltab] >= 1
 //[Name] == Grandcharm && [Quality] == Magic # [Necromancersummoningskilltab] >= 1
 //[Name] == Grandcharm && [Quality] == Magic # [Cursesskilltab] >= 1
 
@@ -217,27 +217,27 @@
 //[Name] == Grandcharm && [Quality] == Magic # [Frw] >= 7 && [Cursesskilltab] >= 1
 
 // <<<<<<<<< [ +35 Hp Skillers ] >>>>>>>>>
-//[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Fireskilltab] >= 1
-//[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Coldskilltab] >= 1
-//[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Lightningskilltab] >= 1
-//[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Trapsskilltab] >= 1
-//[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Shadowdisciplinesskilltab] >= 1
-//[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Martialartsskilltab] >= 1
-//[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Javelinandspearskilltab] >= 1
-//[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Passiveandmagicskilltab] >= 1
-//[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Bowandcrossbowskilltab] >= 1
-//[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Palicombatskilltab] >= 1
-//[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Defensiveaurasskilltab] >= 1
-//[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Offensiveaurasskilltab] >= 1
-//[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Elementalskilltab] >= 1
-//[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Shapeshiftingskilltab] >= 1
-//[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Druidsummoningskilltab] >= 1
-//[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Warcriesskilltab] >= 1
-//[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Masteriesskilltab] >= 1
-//[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Barbcombatskilltab] >= 1
-//[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Poisonandboneskilltab] >= 1
-//[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Necromancersummoningskilltab] >= 1
-//[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Cursesskilltab] >= 1
+[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Fireskilltab] >= 1
+[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Coldskilltab] >= 1
+[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Lightningskilltab] >= 1
+[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Trapsskilltab] >= 1
+[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Shadowdisciplinesskilltab] >= 1
+[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Martialartsskilltab] >= 1
+[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Javelinandspearskilltab] >= 1
+[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Passiveandmagicskilltab] >= 1
+[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Bowandcrossbowskilltab] >= 1
+[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Palicombatskilltab] >= 1
+[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Defensiveaurasskilltab] >= 1
+[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Offensiveaurasskilltab] >= 1
+[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Elementalskilltab] >= 1
+[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Shapeshiftingskilltab] >= 1
+[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Druidsummoningskilltab] >= 1
+[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Warcriesskilltab] >= 1
+[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Masteriesskilltab] >= 1
+[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Barbcombatskilltab] >= 1
+[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Poisonandboneskilltab] >= 1
+[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Necromancersummoningskilltab] >= 1
+[Name] == Grandcharm && [Quality] == Magic # [Maxhp] >= 35 && [Cursesskilltab] >= 1
 
 // <<<<<<<<< [ All Res Grand Charms ] >>>>>>>>>
 //[Name] == Grandcharm && [Quality] == Magic # [Coldresist]+[Fireresist]+[Lightresist]+[Poisonresist] >= 60 && [Frw] >= 7

@@ -247,8 +247,19 @@ class Transmute:
                 next_batch = algorithm.next_batch()
                 is_cube_empty = self.check_cube_empty(gemsToTransmute) if is_cube_empty is None else is_cube_empty
                 if not is_cube_empty:
-                    Logger.warning("Some items detected in the cube. Skipping transmute")
-                    break
+                    Logger.warning("Some items detected in the cube.")
+                    self.open_cube()
+                    self.pick_from_cube_at(2, 3)
+                    self.pick_from_cube_at(2, 2)
+                    self.pick_from_cube_at(2, 1)
+                    self.pick_from_cube_at(2, 0)
+                    area = self.inspect_cube(gemsToTransmute)
+                    Logger.warning(f"area={area}")
+                    self.close_cube()
+                    if not area.count_empty() == 12:
+                        break
+                    is_cube_empty = True
+                    self.put_back_all_gems(s,gemsToTransmute,gemsToPutBack)
                 if next_batch is None:
                     Logger.info(f"No more {gemLoggerName}gems to cube")
                     break

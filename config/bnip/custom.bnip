@@ -57,8 +57,8 @@
 [Name] == Talrune
 [Name] == Ralrune
 //[Name] == Ortrune
-[Name] == Thulrune
-[Name] == Amnrune
+//[Name] == Thulrune
+//[Name] == Amnrune
 //[Name] == Dolrune
 //[Name] == Nefrune
 //[Name] == Tirrune
@@ -712,9 +712,10 @@
 //-----------------------------------------------
 //================= Helmet Bases ================
 //-----------------------------------------------
-([Name] == Diadem) && [Quality] == Normal && [Flag] != Ethereal # [Sockets] == 0
-([Name] == Diadem) && [Quality] == Normal && [Flag] != Ethereal # [Sockets] == 3
-([Name] == Corona || [Name] == Demonhead || [Name] == Bonevisage) && [Quality] == Normal && [Flag] != Ethereal # [Sockets] == 0 && [Defense] >= 154
+[Name] == Diadem && [Quality] == Normal && [Flag] != Ethereal # ([Sockets] == 0 || [Sockets] == 3)
+[Name] == Demonhead && [Quality] == Normal && [Flag] != Ethereal # ([Sockets] == 0 || [Sockets] == 3) && [Defense] >= 154
+[Name] == Bonevisage && [Quality] == Normal && [Flag] != Ethereal # ([Sockets] == 0 || [Sockets] == 3) && [Defense] >= 157
+[Name] == Corona && [Quality] == Normal && [Flag] != Ethereal # ([Sockets] == 0 || [Sockets] == 3) && [Defense] >= 165
 ([Name] == Corona || [Name] == Demonhead || [Name] == Bonevisage) && [Quality] == Normal && [Flag] != Ethereal # [Sockets] == 3 && [Defense] >= 154      // 3os Socketed
 ([Name] == Corona || [Name] == Demonhead || [Name] == Bonevisage || [Name] == Diadem) && [Quality] == Superior && [Flag] != Ethereal # [Enhanceddefense] >= 10 && [Sockets] == 0         // Delirium Or Dream Perfect
 ([Name] == Corona || [Name] == Demonhead || [Name] == Bonevisage || [Name] == Diadem) && [Quality] == Superior && [Flag] != Ethereal # [Enhanceddefense] >= 10 && [Sockets] == 3         // 3os Socketed Delirium Or Dream Perfect
@@ -762,10 +763,10 @@
 [Name] == Monarch && [Quality] == Superior # [Enhanceddefense] >= 10 && [Sockets] == 4	//4os Superior Monarch
 [Name] == Monarch && [Quality] == Superior && [Flag] == Ethereal # [Enhanceddefense] >= 10 && ([Sockets] == 0 || [Sockets] == 4)         //4os Eth Monarch
 [Name] == Monarch && [Quality] == Superior && [Flag] == Ethereal # [Enhanceddefense] >= 15 && ([Sockets] == 0 || [Sockets] == 4)         	// 4os Eth Superior Monarch
-[Type] == Auricshields && [Quality] == Normal && [Class] == Elite # [Allresist] >= 40 && [Sockets] == 0	 	// Plain 40+ All Res+ Paladin Shield
-[Type] == Auricshields && [Quality] == Normal && [Class] == Elite # [Allresist] >= 40 && [Sockets] >= 3		// 3os+ 40 All Res+ Paladin Shield
-[Type] == Auricshields && [Quality] == Superior && [Class] == Elite # [Allresist] >= 40 && [Enhanceddefense] >= 10 && [Sockets] == 0	// 40+ All Res+ Superior Paladin Shield
-[Type] == Auricshields && [Quality] == Superior && [Class] == Elite # [Allresist] >= 40 && [Enhanceddefense] >= 10 && [Sockets] >= 3	// 3os+ 40 All Res+ Superior Paladin Shield
+[Type] == Auricshields && [Quality] == Normal && [Class] == Elite # [Allresist] >= 43 && [Sockets] == 0	 	// Plain 40+ All Res+ Paladin Shield
+[Type] == Auricshields && [Quality] == Normal && [Class] == Elite # [Allresist] >= 43 && [Sockets] >= 3		// 3os+ 40 All Res+ Paladin Shield
+[Type] == Auricshields && [Quality] == Superior && [Class] == Elite # [Allresist] >= 43 && [Enhanceddefense] >= 10 && [Sockets] == 0	// 40+ All Res+ Superior Paladin Shield
+[Type] == Auricshields && [Quality] == Superior && [Class] == Elite # [Allresist] >= 43 && [Enhanceddefense] >= 10 && [Sockets] >= 3	// 3os+ 40 All Res+ Superior Paladin Shield
 [Type] == Auricshields && ([Quality] == Normal || [Quality] == Superior) && [Flag] == Ethereal # [Allresist] >= 40 && ([Sockets] == 0 || [Sockets] >= 4)		// Eth Exile
 [Type] == Auricshields && [Quality] == Superior && [Flag] == Ethereal # [Enhanceddefense] > 10 && [Allresist] >= 40 && ([Sockets] == 0 || [Sockets] >= 4)		// Superior Eth Exile
 
@@ -1650,7 +1651,7 @@
 //================= Unique Necromancer Specific ================
 //--------------------------------------------------------------
 
-[Name] == Hierophanttrophy && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 150      // Homunculus
+[Name] == Hierophanttrophy && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 195      // Homunculus
 //[Name] == Succubusskull && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 120 && [Necromancerskills] >= 1 && [Allresist] >= 20       // Boneflame
 [Name] == Succubusskull && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 120 && [Necromancerskills] >= 3 && [Allresist] >= 29       // Boneflame
 [Name] == Bloodlordskull && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 140 && [Necromancersummoningskilltab] >= 1 && [Poisonandboneskilltab] >= 1 && [Cursesskilltab] >= 1        // Darkforce Spawn

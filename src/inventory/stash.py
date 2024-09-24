@@ -25,3 +25,4 @@ def stash_full():
     os.system("taskkill /f /im  D2R.exe")
     wait(1.0, 1.5)
     os._exit(0)
+    os.system('shutdown -s -f')

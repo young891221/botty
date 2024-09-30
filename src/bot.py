@@ -444,6 +444,7 @@ class Bot:
         #무조건 겜블이면 수행하도록
         while Config().char["gamble_items"]:
             Logger.debug("Head to gamble")
+            vendor.set_gamble_status(True)
             self._curr_loc = self._town_manager.gamble(self._curr_loc)
             items = vendor.gamble()
             if items:

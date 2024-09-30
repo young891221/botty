@@ -56,8 +56,8 @@ def gamble():
     if (refresh_btn := template_finder.search_and_wait("REFRESH", threshold=0.79, timeout=40)).valid:
         #Gambling window is open. Starting to spent some coins
         max_gamble_count = 80 # leave about 500k gold and assume buying coronets at ~188k
-        #while get_gamble_status() and get_gamble_count() < max_gamble_count:
-        while get_gamble_count() < max_gamble_count:
+        while get_gamble_status() and get_gamble_count() < max_gamble_count:
+        #while get_gamble_count() < max_gamble_count:
             img=grab()
             for item in Config().char["gamble_items"]:
                 # while desired gamble item is not on screen, refresh

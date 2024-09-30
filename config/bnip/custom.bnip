@@ -344,7 +344,7 @@
 //-------------------------------------------
 
 //[Type] == Circlet && [Quality] == Magic && [Flag] != Ethereal # [Itemchargedskill] == 54		// Tele Circlet
-//[Type] == Circlet && [Quality] == Magic && [Flag] != Ethereal # [Barbarianskills] == 2 && [Itemgoldbonus] >= 70		// Gf Barb
+[Type] == Circlet && [Quality] == Magic && [Flag] != Ethereal # [Barbarianskills] == 2 && [Itemgoldbonus] >= 70		// Gf Barb
 [Type] == Circlet && [Quality] == Magic && [Flag] != Ethereal # [Sockets] == 3 && ([Frw] == 30 || [Strength] >= 25 || [Dexterity] >= 25 || [Itemmagicbonus] == 35 || [Maxhp] == 100 || [Fcr] == 20 || [Normaldamagereduction] == 25)		// Artisan's Circlet Of X
 [Type] == Circlet && [Quality] == Magic && [Flag] != Ethereal # [Maxmana] == 120 && [Normaldamagereduction] == 25		// Bahamut's Circlet Of Life Everlasting
 [Type] == Circlet && [Quality] == Magic && [Flag] != Ethereal # ([Itemaddclassskills] >= 2 || [Itemaddskilltab] == 3) && [Fcr] >= 20		// X Circlet Of The Magus
@@ -489,16 +489,16 @@
 
 // <<<<<<<<< [ Rare Misc. Circlets ] >>>>>>>>>
 //[Type] == Circlet && [Quality] == Rare # [Itemchargedskill] == 54        // Rare Tele Circlet
-//[Type] == Circlet && [Quality] == Rare # [Barbarianskills] == 2 && [Itemgoldbonus] == 70 && [Sockets] >= 0      // Gf Barb
+[Type] == Circlet && [Quality] == Rare # [Barbarianskills] == 2 && [Itemgoldbonus] == 70 && [Sockets] >= 0      // Gf Barb
 [Type] == Circlet && [Quality] == Rare # [Itemaddclassskills] >= 2 && [Fcr] >= 20 && [Sockets] == 2        // All 2 Class Skills/20/2 Fcr Circlets
 [Type] == Circlet && [Quality] == Rare # [Itemaddskilltab] >= 2 && [Fcr] >= 20 && [Sockets] == 2        // All 2 Tree Skills/20/2 Fcr Circlets
 
 // <<<<<<<<< [ Rare Caster Circlets ] >>>>>>>>>
-[Type] == Circlet && [Quality] == Rare # [Druidskills] == 2 && [Fcr] == 20 && ([Dexterity] >= 15 || [Strength] >= 15) && ([Maxhp] >= 30 || [Maxmana] >= 60 || [Fireresist]+[Coldresist]+[Lightresist]+[Poisonresist] >= 60) && [Sockets] >= 0      // Fcr Stat Circlet
-[Type] == Circlet && [Quality] == Rare # [Sorceressskills] == 2 && [Fcr] == 20 && ([Dexterity] >= 15 || [Strength] >= 15) && ([Maxhp] >= 30 || [Maxmana] >= 60 || [Fireresist]+[Coldresist]+[Lightresist]+[Poisonresist] >= 60) && [Sockets] >= 0      // Fcr Stat Circlet
-[Type] == Circlet && [Quality] == Rare # [Assassinskills] == 2 && [Fcr] == 20 && ([Dexterity] >= 15 || [Strength] >= 15) && ([Maxhp] >= 30 || [Maxmana] >= 60 || [Fireresist]+[Coldresist]+[Lightresist]+[Poisonresist] >= 60) && [Sockets] >= 0      // Fcr Stat Circlet
-[Type] == Circlet && [Quality] == Rare # [Paladinskills] == 2 && [Fcr] == 20 && ([Dexterity] >= 15 || [Strength] >= 15) && ([Maxhp] >= 30 || [Maxmana] >= 60 || [Fireresist]+[Coldresist]+[Lightresist]+[Poisonresist] >= 60) && [Sockets] >= 0      // Fcr Stat Circlet
-[Type] == Circlet && [Quality] == Rare # [Barbarianskills] == 2 && [Fcr] == 20 && ([Dexterity] >= 15 || [Strength] >= 15) && ([Maxhp] >= 30 || [Maxmana] >= 60 || [Fireresist]+[Coldresist]+[Lightresist]+[Poisonresist] >= 60) && [Sockets] >= 0      // Fcr Stat Circlet
+[Type] == Circlet && [Quality] == Rare # [Druidskills] == 2 && [Fcr] == 20     // Fcr Stat Circlet
+[Type] == Circlet && [Quality] == Rare # [Sorceressskills] == 2 && [Fcr] == 20       // Fcr Stat Circlet
+[Type] == Circlet && [Quality] == Rare # [Assassinskills] == 2 && [Fcr] == 20     // Fcr Stat Circlet
+[Type] == Circlet && [Quality] == Rare # [Paladinskills] == 2 && [Fcr] == 20       // Fcr Stat Circlet
+[Type] == Circlet && [Quality] == Rare # [Barbarianskills] == 2 && [Fcr] == 20     // Fcr Stat Circlet
 
 // <<<<<<<<< [ Rare Frw Circlets ] >>>>>>>>>
 [Type] == Circlet && [Quality] == Rare # [Necromancerskills] == 2 && [Fcr] == 20 && ([Dexterity] >= 15 || [Strength] >= 15) && ([Maxhp] >= 30 || [Maxmana] >= 60 || [Fireresist]+[Coldresist]+[Lightresist]+[Poisonresist] >= 60) && [Sockets] >= 0      // Fcr Stat Circlet

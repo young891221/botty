@@ -1343,7 +1343,7 @@
 //-----------------------------------------------
 
 //[Name] == Heavybelt && [Quality] == Unique && [Flag] != Ethereal # [Itemgoldbonus] >= 50        // Goldwrap
-[Name] == Heavybelt && [Quality] == Unique && [Flag] != Ethereal # [Itemgoldbonus] >= 80 && [Enhanceddefense] >= 60     // Goldwrap Perfect
+[Name] == Heavybelt && [Quality] == Unique && [Flag] != Ethereal # [Itemgoldbonus] >= 79     // Goldwrap Perfect
 //[Name] == Demonhidesash && [Quality] == Unique && [Flag] != Ethereal # [Lifeleech] >= 6 && [Damageresist] >= 12 && [Magicdamagereduction] >= 12	&& [Enhanceddefense] >= 150     // String Of Ears
 //[Name] == Demonhidesash && [Quality] == Unique && [Flag] != Ethereal # [Lifeleech] >= 8 && [Damageresist] >= 15 && [Magicdamagereduction] >= 15	&& [Enhanceddefense] >= 180     // String Of Ears Perfect
 //[Name] == Sharkskinbelt && [Quality] == Unique && [Flag] != Ethereal # [Enhanceddefense] >= 120 && [Plusdefense] >= 15     // Razortail

@@ -75,6 +75,7 @@ def gamble():
                 # make sure the "not enough gold" message doesn't exist
                 if is_visible(ScreenObjects.NotEnoughGold, img):
                     Logger.warning(f"Out of gold, stop gambling")
+                    #gold 수급 필요
                     keyboard.send("esc")
                     set_gamble_status(False)
                     break

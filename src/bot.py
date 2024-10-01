@@ -331,6 +331,24 @@ class Bot:
         self.trigger_or_stop("maintenance")
 
     def on_maintenance(self):
+        #무조건 겜블이면 수행하도록
+        while Config().char["gamble_items"]:
+            Logger.debug("Head to gamble")
+            vendor.set_gamble_status(True)
+            while vendor.get_gamble_status():
+                self._curr_loc = self._town_manager.gamble(self._curr_loc)
+                items = vendor.gamble()
+                #gold 수급용 메서드
+                if not vendor.get_gamble_status() and not personal.get_inventory_gold_full():
+                    self._curr_loc = self._town_manager.open_stash(self._curr_loc)
+                    if personal.transfer_stash_gold(1):
+                        vendor.set_gamble_status(True)
+                if items:
+                    self._curr_loc, _ = self._town_manager.stash(self._curr_loc, items = items)
+                    common.close()
+                if not self._curr_loc:
+                    return self.trigger_or_stop("end_game", failed=True)
+
         # Pause health manager if not already paused
         set_pause_state(True)
 
@@ -440,9 +458,7 @@ class Bot:
                 return self.trigger_or_stop("end_game", failed=True)
 
         # Gamble if needed
-        #while vendor.get_gamble_status() and Config().char["gamble_items"]:
-        #무조건 겜블이면 수행하도록
-        while Config().char["gamble_items"]:
+        while vendor.get_gamble_status() and Config().char["gamble_items"]:
             Logger.debug("Head to gamble")
             vendor.set_gamble_status(True)
             self._curr_loc = self._town_manager.gamble(self._curr_loc)

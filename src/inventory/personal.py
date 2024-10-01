@@ -70,6 +70,34 @@ def inventory_has_items(img: np.ndarray = None, close_window = False) -> bool:
         return True
     return False
 
+def transfer_stash_gold(curr_tab: int = 1) -> bool:
+    Logger.debug(f"[transfer_stash_gold] head")
+    if curr_tab > 3:
+        return False
+
+    common.select_tab(curr_tab)
+    center_mouse()
+    gold = common.read_gold(grab(), "stash")
+    Logger.debug(f"[transfer_stash_gold] gold={gold}")
+
+    if gold != 0:
+        common.select_tab(curr_tab)
+        gold_btn = detect_screen_object(ScreenObjects.GoldBtnStash)
+        select_screen_object_match(gold_btn)
+        # move cursor away from button to interfere with screen grab
+        mouse.move(-60, 0, absolute=False, randomize=15, delay_factor=[0.1, 0.3])
+        if wait_until_visible(ScreenObjects.DepositBtn, 3).valid:
+            keyboard.send("enter")
+
+        common.select_tab(0)
+        gold_btn = detect_screen_object(ScreenObjects.GoldBtnInventory)
+        select_screen_object_match(gold_btn)
+        # move cursor away from button to interfere with screen grab
+        mouse.move(-60, 0, absolute=False, randomize=15, delay_factor=[0.1, 0.3])
+        if wait_until_visible(ScreenObjects.DepositBtn, 3).valid:
+            keyboard.send("enter")
+
+    transfer_stash_gold(curr_tab + 1)
 
 def stash_all_items(items: list = None):
     """

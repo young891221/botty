@@ -444,6 +444,8 @@
 // <<<<<<<<< [ Rare Misc. Amulets ] >>>>>>>>>
 //[Type] == Amulet && [Quality] == Rare # [Itemchargedskill] == 54        // Rare Tele Amulet
 [Type] == Amulet && [Quality] == Rare # [Barbarianskills] == 2 && ([Itemgoldbonus] >= 70 && [Itemmagicbonus] >= 15 || [Itemgoldbonus] >= 80)      // Gf Amulet
+[Type] == Amulet && [Quality] == Rare # [Manaleech] >= 3 && [Itemgoldbonus] >= 60      // bbing baba
+[Type] == Amulet && [Quality] == Rare # [Warcriesskilltab] >= 2 && [Itemgoldbonus] >= 60      // bbing baba
 
 // <<<<<<<<< [ Rare Caster Amulet ] >>>>>>>>>
 //[Type] == Amulet && [Quality] == Rare # [Itemaddclassskills] >= 2 && [Fcr] >= 10        // All 2/10 Amulets
@@ -1300,7 +1302,7 @@
 //[Type] == Amulet && [Quality] == Unique # [Allres] >= 10 && [Enhanceddefense] >= 10       // The Mahim-Oak Curio
 //[Type] == Amulet && [Quality] == Unique # [Allres] >= 15 && [Strength] >= 12        // Saracen's Chance
 [Type] == Amulet && [Quality] == Unique # [Allres] == 25 && [Strength] >= 12        // Saracen's Chance Perfect
-[Type] == Amulet && [Quality] == Unique # [Dexterity] >= 25 && [Ias] >= 20     // The Cat's Eye
+//[Type] == Amulet && [Quality] == Unique # [Dexterity] >= 25 && [Ias] >= 20     // The Cat's Eye
 //[Type] == Amulet && [Quality] == Unique # [Lifeleech] >= 3 && [Manaleech] >= 11     // Crescent Moon
 [Type] == Amulet && [Quality] == Unique # [Lifeleech] == 6 && [Manaleech] == 15     // Crescent Moon Perfect
 [Type] == Amulet && [Quality] == Unique # [Lightresist] >= 35       // Highlord's Wrath

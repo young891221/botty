@@ -102,6 +102,8 @@ class Sorceress(IChar):
             keyboard.send(self._skill_hotkeys["energy_shield"])
             wait(0.1, 0.13)
             mouse.click(button="right")
+            wait(0.1, 0.13)
+            mouse.click(button="right")
             wait(self._cast_duration)
         if self._skill_hotkeys["thunder_storm"]:
             keyboard.send(self._skill_hotkeys["thunder_storm"])

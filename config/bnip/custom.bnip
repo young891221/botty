@@ -330,7 +330,7 @@
 [Name] == Jewel && [Quality] == Magic # [Enhanceddamage] >= 20 && [Maxdamage] >= 15		// Rusty Jewel Of Carnage (Lld)
 [Name] == Jewel && [Quality] == Magic # [Enhanceddamage] >= 20 && [Maxdamage] >= 9		// Rusty Jewel Of Wrath (Lld)
 [Name] == Jewel && [Quality] == Magic # [Poisonmindam] >= 103		// Jewel Of Envy (Vlld)
-[Name] == Jewel && [Quality] == Magic # [Itemlevelreq] > 25 //all
+//[Name] == Jewel && [Quality] == Magic # [Itemlevelreq] > 1 //all
 
 // <<<<<<<<< [ Magic Amulets ] >>>>>>>>>
 //[Name] == Amulet && [Quality] == Magic # [Itemchargedskill] == 54		// Tele Amulet
